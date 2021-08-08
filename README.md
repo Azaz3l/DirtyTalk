@@ -15,7 +15,7 @@ Go here: https://github.com/jptrrs/SpeakUp/wiki<br>
 Aside from that, you should be able to gather anything you need to know to write your own lines just by looking at the included xmls.</p>
 
 ### **<p>Submitting lines:<br>**
-I'm going to basically do the same for submissions as the speakup devs. You send me a text file nicely formated with your lines and I'll review/add them.<br>
+Send me a text file nicely formated with your lines and I'll review/add them.<br>
 **Here's an example of what I would like your text document to look like:</p>**
 
   ```
