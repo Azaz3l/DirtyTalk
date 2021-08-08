@@ -1,5 +1,5 @@
 # DirtyTalk
-Adds speakup funtionality to RJW sexual interactions
+Adds speakup functionality to RJW sexual interactions
 
 ## **<p>Dependencies:<br>**
 RimJobWorld: https://www.loverslab.com/topic/110270-mod-rimjobworld/<br>
