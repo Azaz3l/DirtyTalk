@@ -1,0 +1,2596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<InteractionDef Name="RapeReply" Abstract="True">
+		<symbol>UI/Icons/noheart</symbol>
+	</InteractionDef>
+	
+<!-- ===AnalRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Anally_Rape</defName>
+		<label>analrape — react to</label>
+		<symbol>UI/Icons/AnalRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [ass], [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! Fill my [ass] with your [cum], [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [exclaim_m] [ass] [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! Pump me full of [cum], [master_m]!</li>	
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...[penis]s-[exclaim_b]...[cum]...</li>
+						<li>broken2_m->[exclaim_b]...more [penis]...my [ass]...</li>
+						<li>broken2_m->[exclaim_b]...[penis]...in my-[exclaim_b]...[ass]...</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...where...? My [ass]...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...[ass]-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, [exclaim_m] my [ass] can't handle anymore [penis]!</li>
+						<li>broken1_m->[exclaim_m]! How many times has my [ass]...[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you...[exclaim_m]...give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Hasn't my [ass] been pumped full of enough [cum], [rapist_m]? [exclaim_m]!</li>
+						<li>broken1_m->No, my [ass] is too sore already! [exclaim_m]!</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off of me!</li>
+					<li>rape_react_m->[exclaim_m]! Get it out!</li>
+					<li>rape_react_m->[exclaim_m]! It hurts!</li>
+					<li>rape_react_m->[exclaim_m]! Pull out!</li>
+					<li>rape_react_m->Not my assho- [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Not my asshole!</li>
+					<li>rape_react_m->[exclaim_m]! Not there!</li>
+					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_m]!</li>
+					<li>rape_react_m->Not my asshole, [rapist_m]! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get out of my asshole, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Pull it out, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->Stop, [rapist_m]! [exclaim_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! I'm your dildo, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [fuck] my [penis] with your [ass], [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...[ass]-[exclaim_b]...[cum]...</li>
+						<li>broken2_f->[exclaim_b]...[ass]...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [ass]?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore [ass]!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+						<li>broken1_f->No, my [penis] is sore! [exclaim_m]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get it out!</li>
+					<li>rape_react_f->[exclaim_f]! Pull out!</li>
+					<li>rape_react_f->[RECIPIENT_nameDef], please don't- [exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get your asshole off of me, [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ARGH</li>
+						<li>exclaim_m->AAH</li>
+						<li>exclaim_m->OH</li>
+						<li>exclaim_m->OGH</li>
+						<li>exclaim_m->EEK</li>
+						<li>exclaim_m->ERGH</li>
+						<li>exclaim_m->OOF</li>
+						<li>exclaim_m->UNG</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>ass->pooper</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>						
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>			
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Anally_RapeF</defName>
+		<label>analrapef — react to</label>
+		<symbol>UI/Icons/AnalRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [ass], [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! Fill my [ass] with your [cum], [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [exclaim_m] [ass] [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! Pump me full of [cum], [master_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...[penis]s-[exclaim_b]...[cum]...</li>
+						<li>broken2_m->[exclaim_b]...more [penis]...my [ass]...</li>
+						<li>broken2_m->[exclaim_b]...[penis]...in my-[exclaim_b]...[ass]...</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...where...? My [ass]...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...[ass]-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, [exclaim_m] my [ass] can't handle anymore [penis]!</li>
+						<li>broken1_m->[exclaim_m]! How many times has my [ass]...[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you...[exclaim_m]...give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Hasn't my [ass] been pumped full of enough [cum], [rapist_m]? [exclaim_m]!</li>
+						<li>broken1_m->No, my [ass] is too sore already! [exclaim_m]!</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off of me!</li>
+					<li>rape_react_m->[exclaim_m]! Get it out!</li>
+					<li>rape_react_m->[exclaim_m]! It hurts!</li>
+					<li>rape_react_m->[exclaim_m]! Pull out!</li>
+					<li>rape_react_m->Not my assho- [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Not my asshole!</li>
+					<li>rape_react_m->[exclaim_m]! Not there!</li>
+					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_m]!</li>
+					<li>rape_react_m->Not my asshole, [rapist_m]! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get out of my asshole, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Pull it out, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->Stop, [rapist_m]! [exclaim_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! I'm your dildo, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [fuck] my [penis] with your [ass], [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...[ass]-[exclaim_b]...[cum]...</li>
+						<li>broken2_f->[exclaim_b]...[ass]...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [ass]?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore [ass]!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get it out!</li>
+					<li>rape_react_f->[exclaim_f]! Pull out!</li>
+					<li>rape_react_f->[RECIPIENT_nameDef], please don't- [exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get your asshole off of me, [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ARGH</li>
+						<li>exclaim_m->AAH</li>
+						<li>exclaim_m->OH</li>
+						<li>exclaim_m->OGH</li>
+						<li>exclaim_m->EEK</li>
+						<li>exclaim_m->ERGH</li>
+						<li>exclaim_m->OOF</li>
+						<li>exclaim_m->UNG</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>ass->pooper</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+
+<!-- ===VaginalRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Vaginally_Rape</defName>
+		<label>vaginalrape — react to</label>
+		<symbol>UI/Icons/VaginalRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>			
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [vagina], [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! Fill my [vagina] with your [cum], [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [exclaim_m] [vagina] [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! Pump me full of [cum], [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! Impregnate me! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...[penis]s-[exclaim_b]...[cum]...</li>
+						<li>broken2_m->[exclaim_b]...more [penis]...my [vagina]...</li>
+						<li>broken2_m->[exclaim_b]...[penis]...in my-[exclaim_b]...[vagina]...</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...where...? My [vagina]...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...[vagina]-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...cum...[exclaim_b]...inside...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, [exclaim_m] my [vagina] can't take one more [penis]!</li>
+						<li>broken1_m->[exclaim_m]! How many times has my [vagina] been [fuck]-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you...[exclaim_m]...give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Hasn't my [vagina] been pumped full of enough [cum], [rapist_m]? [exclaim_m]!</li>
+						<li>broken1_m->No, my [vagina] is too sore already! [exclaim_m]!</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off of me!</li>
+					<li>rape_react_m->[exclaim_m]! Get it out!</li>
+					<li>rape_react_m->[exclaim_m]! It hurts!</li>
+					<li>rape_react_m->[exclaim_m]! Pull out!</li>
+					<li>rape_react_m->Not my pus- [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Not my pussy!</li>
+					<li>rape_react_m->[exclaim_m]! You'll get me pregnant, [rapist_m]!</li>
+					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_m]!</li>
+					<li>rape_react_m->Oh please don't cum inside, [RECIPIENT_nameDef]! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get out of my [vagina], [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Pull it out, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->Stop, [rapist_m]! [exclaim_m]!</li>						
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! I'm your dildo, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [fuck] my [penis] with your [vagina], [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...[vagina]...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [vagina]?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore [vagina]!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->[RECIPIENT_nameDef], please don't... I'll cum inside! [exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off of my [penis], [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ARGH</li>
+						<li>exclaim_m->AAH</li>
+						<li>exclaim_m->OH</li>
+						<li>exclaim_m->OGH</li>
+						<li>exclaim_m->EEK</li>
+						<li>exclaim_m->ERGH</li>
+						<li>exclaim_m->OOF</li>
+						<li>exclaim_m->UNG</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>ass->pooper</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Vaginally_RapeF</defName>
+		<label>vaginalrapef — react to</label>
+		<symbol>UI/Icons/VaginalRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [vagina], [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! Fill my [vagina] with your [cum], [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [exclaim_m] [vagina] [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! Pump me full of [cum], [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! Impregnate me! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...[penis]s-[exclaim_b]...[cum]...</li>
+						<li>broken2_m->[exclaim_b]...more [penis]...my [vagina]...</li>
+						<li>broken2_m->[exclaim_b]...[penis]...in my-[exclaim_b]...[vagina]...</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...where...? My [vagina]...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...[vagina]-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...cum...[exclaim_b]...inside...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, [exclaim_m] my [vagina] can't take one more [penis]!</li>
+						<li>broken1_m->[exclaim_m]! How many times has my [vagina] been [fuck]-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you...[exclaim_m]...give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Hasn't my [vagina] been pumped full of enough [cum], [rapist_m]? [exclaim_m]!</li>
+						<li>broken1_m->No, my [vagina] is too sore already! [exclaim_m]!</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off of me!</li>
+					<li>rape_react_m->[exclaim_m]! Get it out!</li>
+					<li>rape_react_m->[exclaim_m]! It hurts!</li>
+					<li>rape_react_m->[exclaim_m]! Pull out!</li>
+					<li>rape_react_m->Not my pus- [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Not my pussy!</li>
+					<li>rape_react_m->[exclaim_m]! You'll get me pregnant, [rapist_m]!</li>
+					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_m]!</li>
+					<li>rape_react_m->Oh please don't cum inside, [RECIPIENT_nameDef]! [exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get out of my [vagina], [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Pull it out, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->Stop, [rapist_m]! [exclaim_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! I'm your dildo, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [fuck] my [penis] with your [vagina], [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...[vagina]...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [vagina]?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore [vagina]!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->[RECIPIENT_nameDef], please don't... I'll cum inside! [exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off of my [penis], [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ARGH</li>
+						<li>exclaim_m->AAH</li>
+						<li>exclaim_m->OH</li>
+						<li>exclaim_m->OGH</li>
+						<li>exclaim_m->EEK</li>
+						<li>exclaim_m->ERGH</li>
+						<li>exclaim_m->OOF</li>
+						<li>exclaim_m->UNG</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>					
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>ass->pooper</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>												
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+<!-- ===HandjobRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Handjob_Rape</defName>
+		<label>handjobrape — react to</label>
+		<symbol>UI/Icons/HandjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [master_m], cover my face in your [cum]!</li>
+						<li>masochist_m->[exclaim_m]! Use my hands however you want, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! Does this feel good, [master]?</li>
+						<li>masochist_m->Shoot your [cum] all over me [master_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...[penis]s-[exclaim_b]...[cum]...</li>
+						<li>broken2_m->More [penis]s...[exclaim_b]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my hands...? Like this?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...hands? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...[cum]...[exclaim_b]...for me?...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, I don't think I can handle one more [penis]!</li>
+						<li>broken1_m->[exclaim_m]! How many [penis]s have I-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you...[exclaim_m]...give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Please don't cover me in more [cum]...[exclaim_m]!</li>
+						<li>broken1_m->Haven't I jacked off enough [penis]s, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your stinking [penis] away from me, [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My [penis] is yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [master_f], you're too good to me! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], I'm gonna shoot my [cum]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...your hands...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? Hands?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! [exclaim_f]! Get your hands off me, [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Handjob_RapeF</defName>
+		<label>handjobrapeF — react to</label>
+		<symbol>UI/Icons/HandjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [master_m], cover my face in your [cum]!</li>
+						<li>masochist_m->[exclaim_m]! Use my hands however you want, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! Does this feel good, [master]?</li>
+						<li>masochist_m->Shoot your [cum] all over me [master_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...[penis]s-[exclaim_b]...[cum]...</li>
+						<li>broken2_m->More [penis]s...[exclaim_b]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my hands...? Like this?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...hands? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...[cum]...[exclaim_b]...for me?...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, I don't think I can handle one more [penis]!</li>
+						<li>broken1_m->[exclaim_m]! How many [penis]s have I-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you...[exclaim_m]...give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Please don't cover me in more [cum]...[exclaim_m]!</li>
+						<li>broken1_m->Haven't I jacked off enough [penis]s, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your stinking [penis] away from me, [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My [penis] is yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [master_f], you're too good to me! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], I'm gonna shoot my [cum]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...your hands...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? Hands?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! [exclaim_f]! Get your hands off me, [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
+<!-- ===FootjobRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Footjob_Rape</defName>
+		<label>footjobrape — react to</label>
+		<symbol>UI/Icons/FootjobRapeMote</symbol>
+		<logRulesInitiator>
+		<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! Please, [master_m], cover my feet with your [cum]!</li>
+						<li>masochist_m->[exclaim_m]! These feet are yours, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! Does this feel good, [master]?</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->More [penis]s...[exclaim_b]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my feet...? Like this?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...feet? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, I don't want one more stinking [penis] touching my feet!</li>
+						<li>broken1_m->[exclaim_m]! How many [penis]s have I-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->Please don't get [cum] all over my feet again...[exclaim_m]!</li>
+						<li>broken1_m->Can't I at least just use my hands, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your stinking [penis] away from my feet, [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My [penis] is yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], I'm gonna shoot my [cum]! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! Punish my [penis], [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...your feet...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? Feet?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->Just lie down here?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! [exclaim_f]! Get your feet off me, [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Step off, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Footjob_RapeF</defName>
+		<label>footjobrapef — react to</label>
+		<symbol>UI/Icons/FootjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! Please, [master_m], cover my feet with your [cum]!</li>
+						<li>masochist_m->[exclaim_m]! These feet are yours, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! Does this feel good, [master]?</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->More [penis]s...[exclaim_b]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my feet...? Like this?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...feet? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, I don't want one more stinking [penis] touching my feet!</li>
+						<li>broken1_m->[exclaim_m]! How many [penis]s have I-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->Please don't get [cum] all over my feet again...[exclaim_m]!</li>
+						<li>broken1_m->Can't I at least just use my hands, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get off me, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your stinking [penis] away from my feet, [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My [penis] is yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], I'm gonna shoot my [cum]! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! Punish my [penis], [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...your feet...on my-[exclaim_b]...[penis]...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? Feet?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->Just lie down here?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? My [penis]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...[penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore!</li>
+						<li>broken1_f->[exclaim_f]! How many times has my [penis]...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Please don't! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! [exclaim_f]! Get your feet off me, [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Step off, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+<!-- ===FingeringRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fingering_Rape</defName>
+		<label>fingeringrape — react to</label>
+		<symbol>UI/Icons/FingeringRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [master_m], you're too good to me! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! This hole is yours, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! [master_m], [fuck] me with those fingers!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...your fingers...[exclaim_b]!</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my [vagina]-[exclaim_b]...so wet...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...[vagina]? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, I don't want any more fingers digging around in my [vagina]!</li>
+						<li>broken1_m->[exclaim_m]! How many times has this made me-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Just because I'm wet doesn't mean I...[exclaim_m]!</li>
+						<li>broken1_m->Won't you ever leave me alone, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your fingers off me, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim]! Get those out of me, [rapist_m]!!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My fingers are yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], you're so wet! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! Is this good, [master_f]?</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...your [vagina]-[exclaim_b]...so wet...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? My fingers?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->Just like this?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? Your [vagina]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore!</li>
+						<li>broken1_f->[exclaim_f]! How many times have I...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My hands are tired, [rapist_m]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Let go! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [rapist_f]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get my fingers out of your stinking hole, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fingering_RapeF</defName>
+		<label>fingeringrapef — react to</label>
+		<symbol>UI/Icons/FingeringRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [master_m], you're too good to me! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! This hole is yours, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! [master_m], [fuck] me with those fingers!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...your fingers...[exclaim_b]!</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my [vagina]-[exclaim_b]...so wet...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...[vagina]? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m]! Please, I don't want any more fingers digging around in my [vagina]!</li>
+						<li>broken1_m->[exclaim_m]! How many times has this made me-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Just because I'm wet doesn't mean I...[exclaim_m]!</li>
+						<li>broken1_m->Won't you ever leave me alone, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your fingers off me, [rapist_m]!</li>
+					<li>rape_react_m->[exclaim]! Get those out of me, [rapist_m]!!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My fingers are yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], you're so wet! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! Is this good, [master_f]?</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...your [vagina]-[exclaim_b]...so wet...</li>
+						<li>broken2_f->[exclaim_b]...Wha...? My fingers?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->Just like this?...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...where...? Your [vagina]...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Please, [exclaim_f] I can't handle anymore!</li>
+						<li>broken1_f->[exclaim_f]! How many times have I...[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My hands are tired, [rapist_m]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Let go! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [rapist_f]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get my fingers out of your stinking hole, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+<!-- ===FistingRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fisting_Rape</defName>
+		<label>fistingrape — react to</label>
+		<symbol>UI/Icons/FistingRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>					
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] me with that fist, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! [master_m]! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...your fist...[exclaim_b]!</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my [ass]-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...whole fist...[exclaim_b]...in there?</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->No please, another fist will destroy my [ass]! [exclaim_m]!</li>
+						<li>broken1_m->How many fists have I taken up my-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! How many fists do I need to take? [exclaim_m]!</li>
+						<li>broken1_m->Won't you ever leave me alone, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your fucking fist out of me, [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! [fuck] me with your fist, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f]! [exclaim_f]!</li>				
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...your fist...[exclaim_b]!</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my [ass]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...whole fist...[exclaim_b]...in there?</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->No please, another fist will destroy my [ass]! [exclaim_f]!/li>
+						<li>broken1_f->How many fists have I taken up my-[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! How many fists do I need to take? [exclaim_f]!</li>
+						<li>broken1_f->Won't you ever leave me alone, [rapist_f]? [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Let go! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [rapist_f]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get your fucking fist out of me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ARGH</li>
+						<li>exclaim_m->AAH</li>
+						<li>exclaim_m->OH</li>
+						<li>exclaim_m->OGH</li>
+						<li>exclaim_m->EEK</li>
+						<li>exclaim_m->ERGH</li>
+						<li>exclaim_m->OOF</li>
+						<li>exclaim_m->UNG</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ARGH</li>
+						<li>exclaim_f->AAH</li>
+						<li>exclaim_f->OH</li>
+						<li>exclaim_f->OGH</li>
+						<li>exclaim_f->EEK</li>
+						<li>exclaim_f->ERGH</li>
+						<li>exclaim_f->OOF</li>
+						<li>exclaim_f->UNG</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>						
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fisting_RapeF</defName>
+		<label>fistingrapef — react to</label>
+		<symbol>UI/Icons/FistingRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] me with that fist, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! [master_m]! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...your fist...[exclaim_b]!</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my [ass]-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...whole fist...[exclaim_b]...in there?</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->No please, another fist will destroy my [ass]! [exclaim_m]!</li>
+						<li>broken1_m->How many fists have I taken up my-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! How many fists do I need to take? [exclaim_m]!</li>
+						<li>broken1_m->Won't you ever leave me alone, [rapist_m]? [exclaim_m]! </li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your fucking fist out of me, [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! [fuck] me with your fist, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...your fist...[exclaim_b]!</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my [ass]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...whole fist...[exclaim_b]...in there?</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->No please, another fist will destroy my [ass]! [exclaim_f]!/li>
+						<li>broken1_f->How many fists have I taken up my-[exclaim_f]!</li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! How many fists do I need to take? [exclaim_f]!</li>
+						<li>broken1_f->Won't you ever leave me alone, [rapist_f]? [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Let go! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [rapist_f]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get your fucking fist out of me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ARGH</li>
+						<li>exclaim_m->AAH</li>
+						<li>exclaim_m->OH</li>
+						<li>exclaim_m->OGH</li>
+						<li>exclaim_m->EEK</li>
+						<li>exclaim_m->ERGH</li>
+						<li>exclaim_m->OOF</li>
+						<li>exclaim_m->UNG</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ARGH</li>
+						<li>exclaim_f->AAH</li>
+						<li>exclaim_f->OH</li>
+						<li>exclaim_f->OGH</li>
+						<li>exclaim_f->EEK</li>
+						<li>exclaim_f->ERGH</li>
+						<li>exclaim_f->OOF</li>
+						<li>exclaim_f->UNG</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+<!-- ===BreastjobRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Breastjob_Rape</defName>
+		<label>breastjobrape — react to</label>
+		<symbol>UI/Icons/BreastjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! these [boobs] are yours, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [boobs], [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [master_m], cover my [boobs] with your [cum]! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? More [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...My [boobs]?...Like this?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...you want to use these?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...[penis]...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m], just use my [boobs] and get it over with...[exclaim_m]!</li>
+						<li>broken1_m->How many [penis]s have I-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Please don't get [cum] all over my [boobs] again...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Won't you ever leave me alone, [rapist_m]?</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your [penis] out of my [boobs], [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! I don't deserve your [boobs], [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], your [boobs] are so soft! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], you're gonna make me cover your [boobs] in [cum]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...your [boobs]...[exclaim_b]!</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my [penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...so soft...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Just because I'm hard doesn't-[exclaim_f]!/li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->Won't you ever leave me alone, [rapist_f]? [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Let go! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [rapist_f]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get your [boobs] off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>																
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Breastjob_RapeF</defName>
+		<label>breastjobrapef — react to</label>
+		<symbol>UI/Icons/BreastjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! these [boobs] are yours, [master_m]! </li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [boobs], [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [master_m], cover my [boobs] with your [cum]! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? More [penis]?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...My [boobs]?...Like this?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...you want to use these?...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...[penis]...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m], just use my [boobs] and get it over with...[exclaim_m]!</li>
+						<li>broken1_m->How many [penis]s have I-[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Please don't get [cum] all over my [boobs] again...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Won't you ever leave me alone, [rapist_m]?</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_m]!</li>
+					<li>rape_react_m->[exclaim_m]! Get your [penis] out of my [boobs], [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! I don't deserve your [boobs], [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], your [boobs] are so soft! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], you're gonna make me cover your [boobs] in [cum]! [exclaim_f]!</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
+						<li>broken2_f->[exclaim_b]...Wha...? [exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...your [boobs]...[exclaim_b]!</li>
+						<li>broken2_f->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my [penis]-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...so soft...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...my...body-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2_f->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
+						<li>broken1_f->[exclaim_f]! Just because I'm hard doesn't-[exclaim_f]!/li>
+						<li>broken1_f->How many times...[exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! When will you...[exclaim_f]...give me a break, [rapist_f!] [exclaim_f]!</li>
+						<li>broken1_f->Won't you ever leave me alone, [rapist_f]? [exclaim_f]!</li>
+						<li>broken1_f->[exclaim_f]! My balls are totally drained, [rapist_f]! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Wait no! [exclaim_f]!</li>
+					<li>rape_react_f->Let go! [exclaim_f]!</li>
+					<li>rape_react_f->Oh just leave me alone, [rapist_f]...[exclaim_f]!</li>
+					<li>rape_react_f->[exclaim_f]! Get your [boobs] off me, [rapist_f]!</li>
+					<li>rape_react_f->Stop, [rapist_f]! [exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+<!-- ===ScissoringRape=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Scissoring_Rape</defName>
+		<label>scissoringrape — react to</label>
+		<symbol>UI/Icons/ScissoringRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(INITIATOR_trait==masochist, priority=1)->[masochist]!</li>
+						<li>masochist->[exclaim]! This [vagina] is yours, [master]! </li>
+						<li>masochist->[exclaim]! I don't deserve your [vagina], [master]! [exclaim]!</li>		
+				<li>rape_react(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2]</li>
+						<li>broken2->[exclaim_b]...Wha...? [vagina]?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...My hips...moving on their own...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2->Just lie down here?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...[vagina]...[exclaim_b]...grinding...</li>
+						<li>broken2->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...It feels-[exclaim_b]...</li>
+				<li>rape_react(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1]</li>
+						<li>broken1->[exclaim], just grind my [pussy] and get it over with...[exclaim]!</li>
+						<li>broken1->How many times...[exclaim]!</li>
+						<li>broken1->[exclaim]! When will you give me a break, [rapist]! [exclaim]!</li>
+						<li>broken1->[exclaim]! Won't you ever leave me alone, [rapist]?</li>
+				<li>rape_react->Hey sto- [exclaim]!</li>
+				<li>rape_react->Please don't! [exclaim]!</li>
+				<li>rape_react->[RECIPIENT_nameDef], please don't- [exclaim]!</li>
+				<li>rape_react->[exclaim]...just leave me alone, [RECIPIENT_nameDef]...[exclaim]!</li>
+				<li>rape_react->[exclaim]! Get your stinking cunt off me, [rapist]!</li>
+				<li>rape_react->[exclaim]! Get off me, [rapist]!</li>
+				<li>rape_react->Stop, [rapist]...[exclaim]!</li>
+					<li>exclaim->ngh</li>
+					<li>exclaim->mph</li>
+					<li>exclaim->ugh</li>
+					<li>exclaim->ung</li>
+					<li>exclaim->ooh</li>
+					<li>exclaim_b->ngh</li>
+					<li>exclaim_b->mph</li>
+					<li>exclaim_b->ah</li>
+					<li>exclaim_b->aah</li>
+					<li>exclaim_b->ooh</li>
+					<li>rapist->[RECIPIENT_nameDef]</li>
+					<li>rapist->you fuck</li>
+					<li>rapist->fucker</li>
+					<li>rapist->whore</li>
+					<li>rapist->freak</li>
+					<li>rapist->creep</li>
+					<li>vagina->pussy</li>
+					<li>vagina->cunt</li>
+					<li>vagina->slit</li>
+					<li>master->[RECIPIENT_nameDef]</li>
+					<li>master->master</li>
+					<li>fuck->fuck</li>	
+					<li>fuck->pound</li>	
+					<li>fuck->slam</li>	
+					<li>fuck->punish</li>
+					<li>cum->cum</li>	
+					<li>cum->seed</li>
+					<li>cum->sperm</li>
+					<li>cum->splooge</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+	<InteractionDef ParentName="RapeReply">
+		<defName>Scissoring_RapeF</defName>
+		<label>scissoringrapef — react to</label>
+		<symbol>UI/Icons/ScissoringRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(INITIATOR_trait==masochist, priority=1)->[masochist]!</li>
+						<li>masochist->[exclaim]! This [vagina] is yours, [master]! </li>
+						<li>masochist->[exclaim]! I don't deserve your [vagina], [master]! [exclaim]!</li>
+				<li>rape_react(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2]</li>
+						<li>broken2->[exclaim_b]...Wha...? [vagina]?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...My hips...moving on their own...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2->Just lie down here?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...[vagina]...[exclaim_b]...grinding...</li>
+						<li>broken2->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...It feels-[exclaim_b]...</li>
+				<li>rape_react(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1]</li>
+						<li>broken1->[exclaim], just grind my [pussy] and get it over with...[exclaim]!</li>
+						<li>broken1->How many times...[exclaim]!</li>
+						<li>broken1->[exclaim]! When will you give me a break, [rapist]! [exclaim]!</li>
+						<li>broken1->[exclaim]! Won't you ever leave me alone, [rapist]?</li>
+				<li>rape_react->Hey sto- [exclaim]!</li>
+				<li>rape_react->Please don't! [exclaim]!</li>
+				<li>rape_react->[RECIPIENT_nameDef], please don't- [exclaim]!</li>
+				<li>rape_react->[exclaim]...just leave me alone, [RECIPIENT_nameDef]...[exclaim]!</li>
+				<li>rape_react->[exclaim]! Get your stinking cunt off me, [rapist]!</li>
+				<li>rape_react->[exclaim]! Get off me, [rapist]!</li>
+				<li>rape_react->Stop, [rapist]...[exclaim]!</li>
+					<li>exclaim->ngh</li>
+					<li>exclaim->mph</li>
+					<li>exclaim->ugh</li>
+					<li>exclaim->ung</li>
+					<li>exclaim->ooh</li>
+					<li>exclaim_b->ngh</li>
+					<li>exclaim_b->mph</li>
+					<li>exclaim_b->ah</li>
+					<li>exclaim_b->aah</li>
+					<li>exclaim_b->ooh</li>
+					<li>rapist->[RECIPIENT_nameDef]</li>
+					<li>rapist->you fuck</li>
+					<li>rapist->fucker</li>
+					<li>rapist->whore</li>
+					<li>rapist->freak</li>
+					<li>rapist->creep</li>
+					<li>vagina->pussy</li>
+					<li>vagina->cunt</li>
+					<li>vagina->slit</li>
+					<li>master->[RECIPIENT_nameDef]</li>
+					<li>master->master</li>
+					<li>fuck->fuck</li>	
+					<li>fuck->pound</li>	
+					<li>fuck->slam</li>	
+					<li>fuck->punish</li>
+					<li>cum->cum</li>	
+					<li>cum->seed</li>
+					<li>cum->sperm</li>
+					<li>cum->splooge</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+<!-- ===RimmingRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Rimming_Rape</defName>
+		<label>rimmingrape — react to</label>
+		<symbol>UI/Icons/RimmingRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(INITIATOR_trait==masochist, priority=1)->[masochist]!</li>
+						<li>masochist->[exclaim]! This [ass] is yours, [master]! </li>
+						<li>masochist->[exclaim], [master]! [fuck] my [ass] with that tongue! [exclaim]!</li>
+				<li>rape_react(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2]</li>
+						<li>broken2->[exclaim]...Wha...? Tongue on my-[exclaim]...</li>
+						<li>broken2->[exclaim]...I don't-[exclaim]...</li>
+						<li>broken2->[exclaim]...my [ass]-[exclaim]...wet...</li>
+						<li>broken2->[exclaim]...your tongue...[exclaim]</li>
+						<li>broken2->[exclaim]...I can't-[exclaim]...</li>
+						<li>broken2->[exclaim]...Please...[exclaim]...</li>
+						<li>broken2->[exclaim]...No more-[exclaim]...</li>
+						<li>broken2->[exclaim]...It feels-[exclaim]...</li>
+				<li>rape_react(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1]</li>
+						<li>broken1->[exclaim], just get this over with...[exclaim]!</li>
+						<li>broken1->How many times...[exclaim]!</li>
+						<li>broken1->[exclaim]! When will you give me a break, [rapist]! [exclaim]!</li>
+						<li>broken1->My [ass] can't handle another tongue-fucking...[exclaim]!</li>
+						<li>broken1->[exclaim]! Won't you ever leave me alone, [rapist]?</li>
+				<li>rape_react->Hey sto- [exclaim]!</li>
+				<li>rape_react->Get your-[exclaim]...[derogadj] tongue out of my-[exclaim]...[ass], [rapist]!</li>
+				<li>rape_react->Get your-[exclaim]...[derogadj] mouth away from my-[exclaim]...[ass], [rapist]!</li>
+					<li>exclaim->ngh</li>
+					<li>exclaim->mph</li>
+					<li>exclaim->ugh</li>
+					<li>exclaim->ung</li>
+					<li>exclaim->ooh</li>
+					<li>rapist->[RECIPIENT_nameDef]</li>
+					<li>rapist->you fuck</li>
+					<li>rapist->fucker</li>
+					<li>rapist->freak</li>
+					<li>rapist->creep</li>
+					<li>derogadj->nasty</li>
+					<li>derogadj->gross</li>
+					<li>derogadj->disgusting</li>
+					<li>ass->pooper</li>
+					<li>ass->ass</li>
+					<li>ass->asshole</li>
+					<li>master->[RECIPIENT_nameDef]</li>
+					<li>master->master</li>
+					<li>fuck->fuck</li>	
+					<li>fuck->punish</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Rimming_RapeF</defName>
+		<label>rimmingrapef — react to</label>
+		<symbol>UI/Icons/RimmingRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(INITIATOR_trait==masochist, priority=1)->[masochist]!</li>
+						<li>masochist->*[exclaim]* Dis tongue *[exclaim]* ess euoors, [master]! *[exclaim]* </li>
+						<li>masochist->*[exclaim]* [master]! [fuck] my mouf *[exclaim]* wiv euorr [ass]! *[exclaim]*</li>
+				<li>rape_react(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2]</li>
+						<li>broken2->*[exclaim]*...Wha...? Your [ass]?...*[exclaim]*...</li>
+						<li>broken2->*[exclaim]*...I don't-*[exclaim]*...</li>
+						<li>broken2->*[exclaim]*...my tongue-*[exclaim]*...</li>
+						<li>broken2->*[exclaim]*...your [ass]...*[exclaim]*</li>
+						<li>broken2->*[exclaim]*...I can't-*[exclaim]*...</li>
+						<li>broken2->*[exclaim]*...Please...*[exclaim]*...</li>
+						<li>broken2->*[exclaim]*...No more-*[exclaim]*...</li>
+						<li>broken2->*[exclaim]*...It feels-*[exclaim]*...</li>
+				<li>rape_react(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1]</li>
+						<li>broken1->I don't want to taste another-*[exclaim]* [ass]! *[exclaim]*</li>
+						<li>broken1->How many times...*[exclaim]*</li>
+						<li>broken1->*[exclaim]* *[exclaim]* *[exclaim]*</li>
+				<li>rape_react->*[exclaim]* Ged oour [derogadj] *[exclaim]* [ass] oouv my mouph! *[exclaim]*</li>
+				<li>rape_react->*[exclaim]* Phvuck *[exclaim]* eoouh, [rapist] *[exclaim]*</li>
+				<li>rape_react->*[exclaim]* *[exclaim]* *[exclaim]*</li>
+					<li>exclaim->slorp</li>
+					<li>exclaim->mph</li>
+					<li>exclaim->slurp</li>
+					<li>exclaim->ung</li>
+					<li>exclaim->ooh</li>
+					<li>rapist->[RECIPIENT_nameDef]</li>
+					<li>rapist->you fuck</li>
+					<li>rapist->fucker</li>
+					<li>rapist->freak</li>
+					<li>rapist->creep</li>
+					<li>derogadj->nasty</li>
+					<li>derogadj->gross</li>
+					<li>derogadj->disgusting</li>
+					<li>ass->pooper</li>
+					<li>ass->ass</li>
+					<li>ass->asshole</li>
+					<li>master->[RECIPIENT_nameDef]</li>
+					<li>master->master</li>
+					<li>fuck->fuck</li>	
+					<li>fuck->punish</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+<!-- ===CunnilingusRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Cunnilingus_Rape</defName>
+		<label>cunnilingusrape — react to</label>
+		<symbol>UI/Icons/CunnilingusRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [vagina] with that tongue, [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! You're too good to me, [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [master_m], this [vagina] is yours! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? Tongue on my-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my [vagina]-[exclaim_b]...so wet...</li>
+						<li>broken2_m->[exclaim_b]...your tongue...[exclaim_b]</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m], just because I'm wet doesn't mean I like it...[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Don't cover my [vagina] with your nasty slobber again, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Won't you ever leave me alone, [rapist_m]?</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Get your-[exclaim_m]...[derogadj] tongue out of my-[exclaim_m]...[vagina], [rapist_m]!</li>
+					<li>rape_react_m->Get your-[exclaim_m]...[derogadj] mouth away from my-[exclaim_m]...[vagina], [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->*[exclaim_f]* My tongue *[exclaim_f]* ess euoors, [master_f]!</li>
+						<li>masochist_f->*[exclaim_f]* [master_f], I dund desurph *[exclaim_f]* to tasd euoor [vagina] *[exclaim_f]*</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->*[exclaim_f]* Ged oour [derogadj] *[exclaim_f]* [vagina] oouv my mouph! *[exclaim_f]*</li>
+					<li>rape_react_f->*[exclaim_f]* Phvuck *[exclaim_f]* eoouh, [rapist_f]! *[exclaim_f]*</li>
+					<li>rape_react_f->*[exclaim_f]* *[exclaim_f]* *[exclaim_f]*</li>
+						<li>derogadj->nasty</li>
+						<li>derogadj->gross</li>
+						<li>derogadj->disgusting</li>	
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->slurp</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->slorp</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Cunnilingus_RapeF</defName>
+		<label>cunnilingusrapef — react to</label>
+		<symbol>UI/Icons/CunnilingusRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->[exclaim_m]! [fuck] my [vagina] with that tongue, [master_m]!</li>
+						<li>masochist_m->[exclaim_m]! You're too good to me, [master_m]! [exclaim_m]!</li>
+						<li>masochist_m->[exclaim_m]! [master_m], this [vagina] is yours! [exclaim_m]!</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->[exclaim_b]...Wha...? Tongue on my-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...my [vagina]-[exclaim_b]...so wet...</li>
+						<li>broken2_m->[exclaim_b]...your tongue...[exclaim_b]</li>
+						<li>broken2_m->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2_m->[exclaim_b]...No more-[exclaim_b]...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->[exclaim_m], just because I'm wet doesn't mean I like it...[exclaim_m]!</li>
+						<li>broken1_m->How many times...[exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! When will you give me a break, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Don't cover my [vagina] with your nasty slobber again, [rapist_m]! [exclaim_m]!</li>
+						<li>broken1_m->[exclaim_m]! Won't you ever leave me alone, [rapist_m]?</li>
+					<li>rape_react_m->Hey sto- [exclaim_m]!</li>
+					<li>rape_react_m->Wait no! [exclaim_m]!</li>
+					<li>rape_react_m->Please don't! [exclaim_m]!</li>
+					<li>rape_react_m->Get your-[exclaim_m]...[derogadj] tongue out of my-[exclaim_m]...[vagina], [rapist_m]!</li>
+					<li>rape_react_m->Get your-[exclaim_m]...[derogadj] mouth away from my-[exclaim_m]...[vagina], [rapist_m]!</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->*[exclaim_f]* My tongue *[exclaim_f]* ess euoors, [master_f]!</li>
+						<li>masochist_f->*[exclaim_f]* [master_f], I dund desurph *[exclaim_f]* to tasd euoor [vagina] *[exclaim_f]*</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->*[exclaim_f]* Ged oour [derogadj] *[exclaim_f]* [vagina] oouv my mouph! *[exclaim_f]*</li>
+					<li>rape_react_f->*[exclaim_f]* Phvuck *[exclaim_f]* eoouh, [rapist_f]! *[exclaim_f]*</li>
+					<li>rape_react_f->*[exclaim_f]* *[exclaim_f]* *[exclaim_f]*</li>
+						<li>derogadj->nasty</li>
+						<li>derogadj->gross</li>
+						<li>derogadj->disgusting</li>	
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->slurp</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->slorp</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+<!-- ===FellatioRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fellatio_Rape</defName>
+		<label>fellatiorape — react to</label>
+		<symbol>UI/Icons/FellatioRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->*[exclaim_m]* *[exclaim_m]* *[exclaim_m]*</li>
+						<li>masochist_m->*[exclaim_m]* [fuck] my throat *[exclaim_m]* wiv oour [penis]! *[exclaim_m]*</li>
+						<li>masochist_m->*[exclaim_m]* My mouf *[exclaim_m]* is euoors, [master_m]! *[exclaim_m]*</li>
+						<li>masochist_m->*[exclaim_m]* I'll swalloow *[exclaim_m]* euoor [cum], [master_m]! *[exclaim_m]*</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->*[exclaim_m]*...[penis]s...*[exclaim_m]*...[cum]...</li>
+						<li>broken2_m->More [penis]s...*[exclaim_m]*</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...I don't-*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...my mouth...? Like this?...*[exclaim_b]*...</li>
+						<li>broken2_m->*[exclaim_m]*...my...throat-*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...I can't-*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...Please...*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...No more-*[exclaim_m]*...</li>
+						<li>broken2_m->*[exclaim_m]*...It's so-*[exclaim_m]*...</li>
+						<li>broken2_m->*[exclaim_m]*...[cum]...*[exclaim_m]*...for me?...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->How many [penis]s do I have to-*[exclaim_m]*!</li>
+						<li>broken1_m->How many times...*[exclaim_m]*!</li>
+						<li>broken1_m->*[exclaim_m]* *[exclaim_m]* *[exclaim_m]*</li>
+						<li>broken1_m->If I have to swallow any more [cum] I'm going to be sick! *[exclaim_m]*</li>
+					<li>rape_react_m->Hey sto- *[exclaim_m]*!</li>
+					<li>rape_react_m->*[exclaim_m]* *[exclaim_m]* *[exclaim_m]*</li>
+					<li>rape_react_m->*[exclaim_m]* Ged oour [derogadj] *[exclaim_m]* [penis] oouv my mouph! *[exclaim_m]*</li>
+					<li>rape_react_m->*[exclaim_m]* Phvuck *[exclaim_m]* eoouh, [rapist_m]! *[exclaim_m]*</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My [penis] is yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [master_f], you're too good to me! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], I'm gonna shoot my [cum] down your throat! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], Your mouth is too good! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Get your-[exclaim_f]...[derogadj] mouth off my-[exclaim_f]...[penis], [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]...Stop, [rapist_f], I'm [exclaim_f] gonna...[exclaim_f]!</li>
+						<li>derogadj->nasty</li>
+						<li>derogadj->gross</li>
+						<li>derogadj->disgusting</li>	
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->slurp</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->slorp</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>						
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fellatio_RapeF</defName>
+		<label>fellatiorapef — react to</label>
+		<symbol>UI/Icons/FellatioRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+				<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
+				<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
+					<li>rape_react_m(INITIATOR_trait==masochist, priority=1)->[masochist_m]</li>
+						<li>masochist_m->*[exclaim_m]* *[exclaim_m]* *[exclaim_m]*</li>
+						<li>masochist_m->*[exclaim_m]* [fuck] my throat *[exclaim_m]* wiv oour [penis]! *[exclaim_m]*</li>
+						<li>masochist_m->*[exclaim_m]* My mouf *[exclaim_m]* is euoors, [master_m]! *[exclaim_m]*</li>
+						<li>masochist_m->*[exclaim_m]* I'll swalloow *[exclaim_m]* euoor [cum], [master_m]! *[exclaim_m]*</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
+						<li>broken2_m->*[exclaim_m]*...[penis]s...*[exclaim_m]*...[cum]...</li>
+						<li>broken2_m->More [penis]s...*[exclaim_m]*</li>
+						<li>broken2_m->[exclaim_b]...Wha...? [penis]?...*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...I don't-*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...my mouth...? Like this?...*[exclaim_b]*...</li>
+						<li>broken2_m->*[exclaim_m]*...my...throat-*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...I can't-*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...Please...*[exclaim_m]*...</li>
+						<li>broken2_m->[exclaim_b]...No more-*[exclaim_m]*...</li>
+						<li>broken2_m->*[exclaim_m]*...It's so-*[exclaim_m]*...</li>
+						<li>broken2_m->*[exclaim_m]*...[cum]...*[exclaim_m]*...for me?...</li>
+					<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>
+						<li>broken1_m->How many [penis]s do I have to-*[exclaim_m]*!</li>
+						<li>broken1_m->How many times...*[exclaim_m]*!</li>
+						<li>broken1_m->*[exclaim_m]* *[exclaim_m]* *[exclaim_m]*</li>
+						<li>broken1_m->If I have to swallow any more [cum] I'm going to be sick! *[exclaim_m]*</li>
+					<li>rape_react_m->Hey sto- *[exclaim_m]*!</li>
+					<li>rape_react_m->*[exclaim_m]* *[exclaim_m]* *[exclaim_m]*</li>
+					<li>rape_react_m->*[exclaim_m]* Ged oour [derogadj] *[exclaim_m]* [penis] oouv my mouph! *[exclaim_m]*</li>
+					<li>rape_react_m->*[exclaim_m]* Phvuck *[exclaim_m]* eoouh, [rapist_m]! *[exclaim_m]*</li>
+					<li>rape_react_f(INITIATOR_trait==masochist, priority=1)->[masochist_f]</li>
+						<li>masochist_f->[exclaim_f]! My [penis] is yours, [master_f]!</li>
+						<li>masochist_f->[exclaim_f]! Please, [master_f], you're too good to me! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], I'm gonna shoot my [cum] down your throat! [exclaim_f]!</li>
+						<li>masochist_f->[exclaim_f]! [master_f], Your mouth is too good! [exclaim_f]!</li>
+					<li>rape_react_f->Hey sto- [exclaim_f]!</li>
+					<li>rape_react_f->Get your-[exclaim_f]...[derogadj] mouth off my-[exclaim_f]...[penis], [rapist_f]!</li>
+					<li>rape_react_f->[exclaim_f]...Stop, [rapist_f], I'm [exclaim_f] gonna...[exclaim_f]!</li>
+						<li>derogadj->nasty</li>
+						<li>derogadj->gross</li>
+						<li>derogadj->disgusting</li>	
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>rapist_m->[RECIPIENT_nameDef]</li>
+						<li>rapist_m->you fuck</li>
+						<li>rapist_m->fucker</li>
+						<li>rapist_m->you piece of shit</li>
+						<li>rapist_m->freak</li>
+						<li>rapist_m->creep</li>
+						<li>master_m->[RECIPIENT_nameDef]</li>
+						<li>master_m->master</li>
+						<li>master_m->daddy</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->slurp</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->slorp</li>
+						<li>rapist_f->[RECIPIENT_nameDef]</li>
+						<li>rapist_f->you fuck</li>
+						<li>rapist_f->fucker</li>
+						<li>rapist_f->bitch</li>
+						<li>rapist_f->freak</li>
+						<li>rapist_f->creep</li>
+						<li>master_f->[RECIPIENT_nameDef]</li>
+						<li>master_f->master</li>
+						<li>exclaim_b->ngh</li>
+						<li>exclaim_b->mph</li>
+						<li>exclaim_b->ah</li>
+						<li>exclaim_b->aah</li>
+						<li>exclaim_b->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass->pooper</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->slit</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>	
+						<li>fuck->punish</li>
+						<li>fuck->use</li>	
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>							
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+<!-- ===SixtynineRape=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Sixtynine_Rape</defName>
+		<label>sixtyninerape — react to</label>
+		<symbol>UI/Icons/SixtynineRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+					<li>rape_react(INITIATOR_trait==masochist, priority=1)->[masochist]!</li>
+						<li>masochist->[exclaim]! I'm yours, [master]! </li>
+						<li>masochist->[exclaim], [master]! [fuck] my face! [exclaim]!</li>
+					<li>rape_react(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2]</li>
+						<li>broken2->[exclaim_b]...Wha...?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...My hips...moving on their own...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2->Just lie down here?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1]</li>
+						<li>broken1->[exclaim], just get this over with...[exclaim]!</li>
+						<li>broken1->How many times...[exclaim]!</li>
+						<li>broken1->[exclaim]! When will you give me a break, [rapist]! [exclaim]!</li>
+						<li>broken1->[exclaim]! Won't you ever leave me alone, [rapist]?</li>
+					<li>rape_react->Hey sto- [exclaim]!</li>
+					<li>rape_react->[exclaim] get off of me, [rapist]!</li>
+						<li>exclaim->ngh</li>
+						<li>exclaim->mph</li>
+						<li>exclaim->ugh</li>
+						<li>exclaim->ung</li>
+						<li>exclaim->ooh</li>
+						<li>exclaim->uhn</li>
+						<li>rapist->[RECIPIENT_nameDef]</li>
+						<li>rapist->you fuck</li>
+						<li>rapist->fucker</li>
+						<li>rapist->you piece of shit</li>
+						<li>rapist->freak</li>
+						<li>rapist->creep</li>
+						<li>derogadj->nasty</li>
+						<li>master->[RECIPIENT_nameDef]</li>
+						<li>master->master</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->punish</li>
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===2 Initiator=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Sixtynine_RapeF</defName>
+		<label>sixtyninerapef — react to</label>
+		<symbol>UI/Icons/SixtynineRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[rape_react]</li>
+					<li>rape_react(INITIATOR_trait==masochist, priority=1)->[masochist]!</li>
+						<li>masochist->[exclaim]! I'm yours, [master]! </li>
+						<li>masochist->[exclaim], [master]! [fuck] my face! [exclaim]!</li>
+					<li>rape_react(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2]</li>
+						<li>broken2->[exclaim_b]...Wha...?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...My hips...moving on their own...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...I don't-[exclaim_b]...</li>
+						<li>broken2->Just lie down here?...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...I can't-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...Please...[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...No more-[exclaim_b]...</li>
+						<li>broken2->[exclaim_b]...It feels-[exclaim_b]...</li>
+					<li>rape_react(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1]</li>
+						<li>broken1->[exclaim], just get this over with...[exclaim]!</li>
+						<li>broken1->How many times...[exclaim]!</li>
+						<li>broken1->[exclaim]! When will you give me a break, [rapist]! [exclaim]!</li>
+						<li>broken1->[exclaim]! Won't you ever leave me alone, [rapist]?</li>
+					<li>rape_react->Hey sto- [exclaim]!</li>
+					<li>rape_react->[exclaim] get off of me, [rapist]!</li>
+						<li>exclaim->ngh</li>
+						<li>exclaim->mph</li>
+						<li>exclaim->ugh</li>
+						<li>exclaim->ung</li>
+						<li>exclaim->ooh</li>
+						<li>exclaim->uhn</li>
+						<li>rapist->[RECIPIENT_nameDef]</li>
+						<li>rapist->you fuck</li>
+						<li>rapist->fucker</li>
+						<li>rapist->you piece of shit</li>
+						<li>rapist->freak</li>
+						<li>rapist->creep</li>
+						<li>derogadj->nasty</li>
+						<li>master->[RECIPIENT_nameDef]</li>
+						<li>master->master</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->punish</li>
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+</Defs>
+
