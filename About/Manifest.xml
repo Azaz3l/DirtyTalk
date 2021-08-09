@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-	<identifier>DirtyTalk</identifier>
-	<version>1.0.4</version>
+	<identifier>RimJobWorld</identifier>
+	<version>4.7.1.1</version>
 	<dependencies>
-		<li>SpeakUp</li>
-		<li>RimJobWorld</li>
+		<li>HugsLib</li>
 	</dependencies>
 	<incompatibleWith />
 	<loadAfter>
-		<li>SpeakUp</li>
-		<li>RimJobWorld</li>
+		<li>HugsLib</li>
 	</loadAfter>
 	<suggests>
 	</suggests>
-	<manifestUri></manifestUri>
-	<downloadUri></downloadUri>
+	<manifestUri>https://gitgud.io/Ed86/rjw/raw/master/About/Manifest.xml</manifestUri>
+	<downloadUri>https://gitgud.io/Ed86/rjw</downloadUri>
 </Manifest>
