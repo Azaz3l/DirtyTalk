@@ -19,7 +19,10 @@
     </li>
   </modDependencies>
   <description>
-	Adds speakup funtionality to RJW sexual interactions
+	Adds speakup functionality to RJW sexual interactions
+	
+	It is safe to ignore if Mod Manager gives you this error:
+	"Depends on SpeakUp version >=0.0.0..."
 	
 	Interaction icons are drawn by OTYOTY, and come from this mod:
 	https://www.loverslab.com/topic/145286-mod-oty-rjw-symbols/

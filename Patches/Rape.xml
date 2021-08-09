@@ -115,7 +115,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>
+						<li>vagina->coochie</li>
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -159,7 +159,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>								
+						<li>vagina->coochie</li>								
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -205,7 +205,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -250,7 +250,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -297,7 +297,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>				
+						<li>vagina->coochie</li>				
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -343,7 +343,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -388,7 +388,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 					
 			</rulesStrings>
 		</value>
@@ -433,7 +433,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -475,7 +475,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>				
+						<li>vagina->coochie</li>				
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -516,7 +516,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -562,7 +562,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>
+						<li>vagina->coochie</li>
 						<li>boobs->tits</li>
 						<li>boobs->jugs</li>
 						<li>boobs->milkers</li>
@@ -612,7 +612,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>
+						<li>vagina->coochie</li>
 						<li>boobs->tits</li>
 						<li>boobs->jugs</li>
 						<li>boobs->milkers</li>
@@ -647,7 +647,7 @@
 					<li>victim->slut</li>
 					<li>vag->pussy</li>
 					<li>vag->cunt</li>
-					<li>vag->slit</li>
+					<li>vag->coochie</li>
 					<li>vag->clit</li>
 			</rulesStrings>
 		</value>
@@ -677,7 +677,7 @@
 					<li>victim->slut</li>
 					<li>vag->pussy</li>
 					<li>vag->cunt</li>
-					<li>vag->slit</li>
+					<li>vag->coochie</li>
 					<li>vag->clit</li>
 			</rulesStrings>
 		</value>
@@ -722,11 +722,11 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 						<li>ass->ass</li>
 						<li>ass->asshole</li>
 						<li>ass->cornhole</li>
-						<li>ass->pooper</li>
+						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>
 					
 			</rulesStrings>
 		</value>
@@ -770,11 +770,11 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 						<li>ass->ass</li>
 						<li>ass->asshole</li>
 						<li>ass->cornhole</li>
-						<li>ass->pooper</li>				
+						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>				
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -818,7 +818,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 					
 			</rulesStrings>
 		</value>
@@ -862,7 +862,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -908,7 +908,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 					
 			</rulesStrings>
 		</value>
@@ -954,7 +954,7 @@
 						<li>penis->pecker</li>
 						<li>vagina->pussy</li>
 						<li>vagina->cunt</li>
-						<li>vagina->slit</li>	
+						<li>vagina->coochie</li>	
 			</rulesStrings>
 		</value>
 	</Operation>	

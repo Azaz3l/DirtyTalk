@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+	<identifier>DirtyTalk</identifier>
+	<version>1.0.4</version>
+	<dependencies>
+		<li>SpeakUp</li>
+		<li>RimJobWorld</li>
+	</dependencies>
+	<incompatibleWith />
+	<loadAfter>
+		<li>SpeakUp</li>
+		<li>RimJobWorld</li>
+	</loadAfter>
+	<suggests>
+	</suggests>
+	<manifestUri></manifestUri>
+	<downloadUri></downloadUri>
+</Manifest>
