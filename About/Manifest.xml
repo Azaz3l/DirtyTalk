@@ -6,13 +6,10 @@
 		<li>SpeakUp</li>
 		<li>RimJobWorld</li>
 	</dependencies>
-	<incompatibleWith />
 	<loadAfter>
 		<li>SpeakUp</li>
 		<li>RimJobWorld</li>
-	</loadAfter>
-	<suggests>
-	</suggests>
+	</loadAfter>	
 	<manifestUri>https://github.com/Azaz3l/DirtyTalk/blob/main/About/Manifest.xml</manifestUri>
 	<downloadUri>https://github.com/Azaz3l/DirtyTalk</downloadUri>
 </Manifest>
