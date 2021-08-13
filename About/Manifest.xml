@@ -6,6 +6,15 @@
 		<li>SpeakUp</li>
 		<li>RimJobWorld</li>
 	</dependencies>
+	<incompatibleWith>
+	</incompatibleWith>
+	<loadBefore>
+	</loadBefore>
+	<loadAfter>
+	</loadAfter>
+	<suggests>
+	</suggests>
+	<showCrossPromotions>false</showCrossPromotions>
 	<manifestUri>https://github.com/Azaz3l/DirtyTalk/blob/main/About/Manifest.xml</manifestUri>
 	<downloadUri>https://github.com/Azaz3l/DirtyTalk</downloadUri>
 </Manifest>
