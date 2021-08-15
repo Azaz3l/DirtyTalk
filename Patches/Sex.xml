@@ -1851,4 +1851,151 @@
 			</rulesStrings>
 		</value>
 	</Operation>	
+	
+<!-- ===VaginalSex=== -->
+	<!-- ===1 Initiator=== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/InteractionDef[defName = "DoublePenetration"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<rulesStrings>
+				<li>r_logentry(p=0.5,tag=DoublePenetration_Sex)->[sex]</li>
+				<li>sex(INITIATOR_gender==Male, priority=1)->[sex_m]</li>
+				<li>sex(INITIATOR_gender==Female, priority=1)->[sex_f]</li>
+					<li>sex_m->Hey, [lover], want these [penis]s?</li>
+					<li>sex_m->I need your [vagina] and [ass], [lover]!</li>
+					<li>sex_m->How about I [fuck] your [vagina] and [ass], [lover]?</li>
+					<li>sex_m->How do these [penis]s feel, [lover]? [exclaim_m]!</li>	
+					<li>sex_f->I want those [penis]s, [lover]!</li>
+					<li>sex_f->[lover], come here and [fuck] my [vagina] and [ass].</li>
+					<li>sex_f->Wanna [fuck] me with those [penis]s, [lover]?</li>
+						<li>lover(INITIATOR_opinion>=85)->[best]</li>
+							<li>best->babe</li>
+							<li>best->sweetheart</li>
+							<li>best->love</li>
+							<li>best->sweetie</li>
+						<li>lover(INITIATOR_opinion>=25)->[friend]</li>
+							<li>friend->cutie</li>
+							<li>friend->sweetcheeks</li>
+							<li>friend->hun</li>
+							<li>friend(RECIPIENT_gender==Female)->beautiful</li>
+							<li>friend(RECIPIENT_gender==Male)->handsome</li>
+						<li>lover->[neutral]</li>
+							<li>neutral->[RECIPIENT_nameDef]</li>							
+						<li>lover(INITIATOR_opinion&lt;=-25)->[rival]</li>
+							<li>rival(RECIPIENT_gender==Female)->skank</li>
+							<li>rival(RECIPIENT_gender==Female)->slut</li>
+							<li>rival(RECIPIENT_gender==Male)->fuckboy</li>
+							<li>rival(RECIPIENT_gender==Male)->sleaze</li>
+						<li>lover(INITIATOR_opinion&lt;=-85)->[worst]</li>
+							<li>worst(RECIPIENT_gender==Female)->whore</li>
+							<li>worst(RECIPIENT_gender==Female)->bitch</li>
+							<li>worst(RECIPIENT_gender==Male)->scumbag</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->coochie</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+			</rulesStrings>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "DoublePenetrationRP"]/rulePack/rulesStrings</xpath>
+		<value>
+			<rulesStrings>
+				<li>sent(p=0.5,tag=DoublePenetrationRP)->[sexrp]</li>
+				<li>sexrp-></li>
+			</rulesStrings>
+		</value>
+	</Operation>
+	
+	<!-- ===2 Initiator=== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/InteractionDef[defName = "DoublePenetrationF"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<rulesStrings>
+				<li>r_logentry(p=0.5,tag=DoublePenetration_Sex)->[sex]</li>
+				<li>sex(INITIATOR_gender==Male, priority=1)->[sex_m]</li>
+				<li>sex(INITIATOR_gender==Female, priority=1)->[sex_f]</li>
+					<li>sex_m->Hey, [lover], want these [penis]s?</li>
+					<li>sex_m->I need your [vagina] and [ass], [lover]!</li>
+					<li>sex_m->How about I [fuck] your [vagina] and [ass], [lover]?</li>
+					<li>sex_m->How do these [penis]s feel, [lover]? [exclaim_m]!</li>	
+					<li>sex_f->I want those [penis]s, [lover]!</li>
+					<li>sex_f->[lover], come here and [fuck] my [vagina] and [ass].</li>
+					<li>sex_f->Wanna [fuck] me with those [penis]s, [lover]?</li>
+						<li>lover(INITIATOR_opinion>=85)->[best]</li>
+							<li>best->babe</li>
+							<li>best->sweetheart</li>
+							<li>best->love</li>
+							<li>best->sweetie</li>
+						<li>lover(INITIATOR_opinion>=25)->[friend]</li>
+							<li>friend->cutie</li>
+							<li>friend->sweetcheeks</li>
+							<li>friend->hun</li>
+							<li>friend(RECIPIENT_gender==Female)->beautiful</li>
+							<li>friend(RECIPIENT_gender==Male)->handsome</li>
+						<li>lover->[neutral]</li>
+							<li>neutral->[RECIPIENT_nameDef]</li>							
+						<li>lover(INITIATOR_opinion&lt;=-25)->[rival]</li>
+							<li>rival(RECIPIENT_gender==Female)->skank</li>
+							<li>rival(RECIPIENT_gender==Female)->slut</li>
+							<li>rival(RECIPIENT_gender==Male)->fuckboy</li>
+							<li>rival(RECIPIENT_gender==Male)->sleaze</li>
+						<li>lover(INITIATOR_opinion&lt;=-85)->[worst]</li>
+							<li>worst(RECIPIENT_gender==Female)->whore</li>
+							<li>worst(RECIPIENT_gender==Female)->bitch</li>
+							<li>worst(RECIPIENT_gender==Male)->scumbag</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->coochie</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+			</rulesStrings>
+		</value>
+	</Operation>	
 </Patch>

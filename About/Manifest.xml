@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
 	<identifier>DirtyTalk</identifier>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<dependencies>
 		<li>SpeakUp</li>
 		<li>RimJobWorld</li>
@@ -11,6 +11,12 @@
 	<loadBefore>
 	</loadBefore>
 	<loadAfter>
+		<li>SpeakUp</li>
+		<li>RimJobWorld</li>
+		<li>C0ffeeRIA</li>
+		<li>RJW-Events</li>
+		<li>RimJobWorld Milkable Colonists</li>
+		<li>RJW Sexperience</li>
 	</loadAfter>
 	<suggests>
 	</suggests>

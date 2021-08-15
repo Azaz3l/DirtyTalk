@@ -17,11 +17,11 @@
 					<li>anally_rape_f->Get over here, [victim_f]!</li>
 				    <li>anally_rape_f->Stick that [penis] in my asshole, [victim_f], now!</li>
 					<li>anally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -58,11 +58,11 @@
 					<li>anally_rape_f->Get over here, [victim_f]!</li>
 				    <li>anally_rape_f->Stick that [penis] in my asshole, [victim_f], now!</li>
 					<li>anally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -101,11 +101,11 @@
 					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
 				    <li>vaginally_rape_f->Stick that [penis] in my [vagina], [victim_f], now!</li>
 					<li>vaginally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -145,11 +145,11 @@
 					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
 				    <li>vaginally_rape_f->Stick that [penis] in my [vagina], [victim_f], now!</li>
 					<li>vaginally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -190,11 +190,11 @@
 					<li>rape_f->Look at you, [victim_f], pathetic!</li>
 					<li>rape_f->What are you hard for, [victim_f]?</li>
 					<li>rape_f->Lay down, [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -235,11 +235,11 @@
 					<li>rape_f->Look at you, [victim_f], pathetic!</li>
 					<li>rape_f->What are you hard for, [victim_f]?</li>
 					<li>rape_f->Lay down, [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -283,11 +283,11 @@
 					<li>rape_f->Look at you, [victim_f], pathetic!</li>
 					<li>rape_f->Pathetic!</li>
 					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -329,11 +329,11 @@
 					<li>rape_f->Look at you, [victim_f], pathetic!</li>
 					<li>rape_f->Pathetic!</li>
 					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -374,11 +374,11 @@
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Put those fingers to good use, [victim_f]!</li>
 					<li>rape_f->Finger my [vagina], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -419,11 +419,11 @@
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Put those fingers to good use, [victim_f]!</li>
 					<li>rape_f->Finger my [vagina], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -461,11 +461,11 @@
 					<li>rape_m->Get ready, [victim_m]!</li>
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Get ready, [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -502,11 +502,11 @@
 					<li>rape_m->Get ready, [victim_m]!</li>
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Get ready, [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -548,11 +548,11 @@
 				    <li>rape_f->Gimme that [penis]!</li>
 					<li>rape_f->Don't pretend you don't love these [boobs] around your [penis], [victim_f]!</li>
 					<li>rape_f->How do my [boobs] feel around your little [penis], [victim_f]?</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -598,11 +598,11 @@
 				    <li>rape_f->Gimme that [penis]!</li>
 					<li>rape_f->Don't pretend you don't love these [boobs] around your [penis], [victim_f]!</li>
 					<li>rape_f->How do my [boobs] feel around your little [penis], [victim_f]?</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -708,11 +708,11 @@
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Gimme a taste of that [ass], [victim_f]!</li>
 					<li>rape_f->Spread those cheeks, [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -756,11 +756,11 @@
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Tongue my [ass], [victim_f]!</li>
 					<li>rape_f->Taste this [ass], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -804,11 +804,11 @@
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Tongue my [vagina], [victim_f]!</li>
 					<li>rape_f->Munch on this [vagina], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -848,11 +848,11 @@
 					<li>rape_f->Get over here, [victim_f]!</li>
 				    <li>rape_f->Tongue my [vagina], [victim_f]!</li>
 					<li>rape_f->Munch on this [vagina], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -894,11 +894,11 @@
 				    <li>rape_f->Gimme that [penis], [victim_f]!</li>
 					<li>rape_f->I want that [penis] in my mouth now!</li>
 					<li>rape_f->Fill my mouth with that [penis], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -940,11 +940,11 @@
 				    <li>rape_f->Gimme that [penis], [victim_f]!</li>
 					<li>rape_f->I want that [penis] in my mouth now!</li>
 					<li>rape_f->Fill my mouth with that [penis], [victim_f]!</li>
-						<li>victim_m->[RECIPIENT_nameDef]</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_m->bitch</li>
 						<li>victim_m->slut</li>
 						<li>victim_m->whore</li>
-						<li>victim_f->[RECIPIENT_nameDef]</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
 						<li>victim_f->bitch</li>
 						<li>victim_f->pussy</li>
 						<li>victim_f->weakling</li>
@@ -1018,6 +1018,95 @@
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Sixtynine_RapeRP)->[sixtynine_raperp]</li>
 				<li>sixtynine_raperp-></li>
+			</rulesStrings>
+		</value>
+	</Operation>
+	
+<!-- ===Double Penetration Rape=== -->	
+	<!-- ===1 Initiator=== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/InteractionDef[defName = "DoublePenetrationRape"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<rulesStrings>					
+				<li>r_logentry(p=0.5,tag=DoublePenetration_Rape)->[vaginally_rape]</li>
+				<li>vaginally_rape(INITIATOR_gender==Male, priority=1)->[vaginally_rape_m]</li>
+				<li>vaginally_rape(INITIATOR_gender==Female, priority=1)->[vaginally_rape_f]</li>
+					<li>vaginally_rape_m->Get over here, [victim_m]!</li>
+					<li>vaginally_rape_m->Bend over, [victim_m]!</li>
+					<li>vaginally_rape_m->Spread those legs, [victim_m]!</li>
+					<li>vaginally_rape_m->Gimme that [ass] and [vagina]!</li>					
+					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
+				    <li>vaginally_rape_f->Stick those [penis]s in my [ass] and [vagina], [victim_f], now!</li>
+					<li>vaginally_rape_f->Gimme those [penis]s!</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
+						<li>victim_m->bitch</li>
+						<li>victim_m->slut</li>
+						<li>victim_m->whore</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
+						<li>victim_f->bitch</li>
+						<li>victim_f->pussy</li>
+						<li>victim_f->weakling</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->coochie</li>
+			</rulesStrings>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "DoubleRapeRP"]/rulePack/rulesStrings</xpath>
+		<value>
+			<rulesStrings>
+				<li>sent(p=0.5,tag=Double_RapedRP)->[double_rapedrp]</li>
+				<li>double_rapedrp-></li>
+			</rulesStrings>
+		</value>
+	</Operation>
+	
+	<!-- ===2 Initiator=== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/InteractionDef[defName = "DoublePenetrationRapeF"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<rulesStrings>					
+				<li>r_logentry(p=0.5,tag=DoublePenetration_Rape)->[vaginally_rape]</li>
+				<li>vaginally_rape(INITIATOR_gender==Male, priority=1)->[vaginally_rape_m]</li>
+				<li>vaginally_rape(INITIATOR_gender==Female, priority=1)->[vaginally_rape_f]</li>
+					<li>vaginally_rape_m->Get over here, [victim_m]!</li>
+					<li>vaginally_rape_m->Bend over, [victim_m]!</li>
+					<li>vaginally_rape_m->Spread those legs, [victim_m]!</li>
+					<li>vaginally_rape_m->Gimme that [ass] and [vagina]!</li>					
+					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
+				    <li>vaginally_rape_f->Stick those [penis]s in my [ass] and [vagina], [victim_f], now!</li>
+					<li>vaginally_rape_f->Gimme those [penis]s!</li>
+						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
+						<li>victim_m->bitch</li>
+						<li>victim_m->slut</li>
+						<li>victim_m->whore</li>
+						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
+						<li>victim_f->bitch</li>
+						<li>victim_f->pussy</li>
+						<li>victim_f->weakling</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->coochie</li>
+			</rulesStrings>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "DoubleRapeRP"]/rulePack/rulesStrings</xpath>
+		<value>
+			<rulesStrings>
+				<li>sent(p=0.5,tag=Double_RapedRP)->[double_rapedrp]</li>
+				<li>double_rapedrp-></li>
 			</rulesStrings>
 		</value>
 	</Operation>

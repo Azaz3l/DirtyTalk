@@ -1794,5 +1794,83 @@
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
+	
+<!-- ===Double Penetration=== -->
+	<!-- ===1 Initiator=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>DoublePenetration_Sex</defName>
+		<label>doublepenetration — react to</label>
+		<symbol>UI/Icons/DoublePenetrationMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[sex_react]</li>
+				<li>sex_react(RECIPIENT_gender==Female, priority=1)->[sex_react_f]</li>
+				<li>sex_react(RECIPIENT_gender==Male, priority=1)->[sex_react_m]</li>
+					<li>sex_react_m->[exclaim_m]! [fuck] my [ass] and [fuck] my [vagina]!</li>
+					<li>sex_react_m->[exclaim_m]! [exclaim_m]! [exclaim_m]!</li>
+					<li>sex_react_m->[exclaim_m]! Your [penis]s are so good, [lover]! [exclaim_m]!</li>						
+					<li>sex_react_f->[exclaim_f]! Your [vagina] is [wet]!</li>
+					<li>sex_react_f->[exclaim_f]! Your [ass] and [vagina] feel so good! [exclaim_f]!</li>
+					<li>sex_react_f->[exclaim_f]! [lover], I'm gonna fill your holes with [cum] [exclaim_f]!</li>
+					<li>sex_react_f->[exclaim_f]! [lover], both of your holes...[exclaim_f]!</li>
+						<li>exclaim_m->ngh</li>
+						<li>exclaim_m->mph</li>
+						<li>exclaim_m->ugh</li>
+						<li>exclaim_m->ung</li>
+						<li>exclaim_m->ooh</li>
+						<li>lover(INITIATOR_opinion>=85)->[best]</li>
+							<li>best->babe</li>
+							<li>best->sweetheart</li>
+							<li>best->love</li>
+							<li>best->sweetie</li>
+						<li>lover(INITIATOR_opinion>=25)->[friend]</li>
+							<li>friend->cutie</li>
+							<li>friend->sweetcheeks</li>
+							<li>friend->hun</li>
+							<li>friend(RECIPIENT_gender==Female)->beautiful</li>
+							<li>friend(RECIPIENT_gender==Male)->handsome</li>
+						<li>lover->[neutral]</li>
+							<li>neutral->[RECIPIENT_nameDef]</li>							
+						<li>lover(INITIATOR_opinion&lt;=-25)->[rival]</li>
+							<li>rival(RECIPIENT_gender==Female)->skank</li>
+							<li>rival(RECIPIENT_gender==Female)->slut</li>
+							<li>rival(RECIPIENT_gender==Male)->fuckboy</li>
+							<li>rival(RECIPIENT_gender==Male)->sleaze</li>
+						<li>lover(INITIATOR_opinion&lt;=-85)->[worst]</li>
+							<li>worst(RECIPIENT_gender==Female)->whore</li>
+							<li>worst(RECIPIENT_gender==Female)->bitch</li>
+							<li>worst(RECIPIENT_gender==Male)->scumbag</li>
+						<li>exclaim_f->ngh</li>
+						<li>exclaim_f->mph</li>
+						<li>exclaim_f->ugh</li>
+						<li>exclaim_f->ung</li>
+						<li>exclaim_f->ooh</li>
+						<li>penis->dick</li>
+						<li>penis->cock</li>
+						<li>penis->prick</li>
+						<li>penis->pecker</li>
+						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>
+						<li>ass->ass</li>
+						<li>ass->asshole</li>
+						<li>vagina->pussy</li>
+						<li>vagina->cunt</li>
+						<li>vagina->coochie</li>
+						<li>boobs->tits</li>
+						<li>boobs->jugs</li>
+						<li>boobs->milkers</li>
+						<li>boobs->boobs</li>
+						<li>fuck->fuck</li>	
+						<li>fuck->pound</li>	
+						<li>fuck->slam</li>
+						<li>cum->cum</li>	
+						<li>cum->seed</li>
+						<li>cum->sperm</li>
+						<li>cum->splooge</li>
+						<li>wet->sopping</li>
+						<li>wet->dripping</li>
+						<li>wet->drenched</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>			
 </Defs>
 
