@@ -7,8 +7,8 @@
 		<xpath>/Defs/InteractionDef[defName = "AnalBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Anally_Breed, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Anally_Breed, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 					
@@ -140,8 +140,8 @@
 		<xpath>/Defs/InteractionDef[defName = "RequestAnalBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Anally_Breed_2, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Anally_Breed_2, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 					
@@ -275,8 +275,8 @@
 		<xpath>/Defs/InteractionDef[defName = "VaginalBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Vaginally_Breed, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Vaginally_Breed, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 					
@@ -409,8 +409,8 @@
 		<xpath>/Defs/InteractionDef[defName = "RequestVaginalBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Vaginally_Breed_2, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Vaginally_Breed_2, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 						<li>human_breed_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
@@ -543,8 +543,8 @@
 		<xpath>/Defs/InteractionDef[defName = "RequestBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Vaginally_Breed_2, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Vaginally_Breed_2, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 						<li>human_breed_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
@@ -679,8 +679,8 @@
 		<xpath>/Defs/InteractionDef[defName = "OralBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Orally_Breed, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Orally_Breed, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 						<li>human_breed_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
@@ -810,8 +810,8 @@
 		<xpath>/Defs/InteractionDef[defName = "ForcedOralBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Orally_Breed_2, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Orally_Breed_2, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 						<li>human_breed_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
@@ -840,19 +840,15 @@
 					<li>human_breed_f->...this is so wrong...</li>	
 					
 				<li>r_logentry(INITIATOR_kind!=colonist, INITIATOR_kind!=member)->[animal_breed]</li>
-				<li>r_logentry(tag=Orally_Breed_2, INITIATOR_kind!=colonist, RECIPIENT_kind==colonist, priority=1)->[animal_breed]</li>
-				<li>r_logentry(tag=Orally_Breed_2, INITIATOR_kind!=member, RECIPIENT_kind==member, priority=1)->[animal_breed]</li>
+				<li>r_logentry(tag=Orally_Breed_3, INITIATOR_kind!=colonist, RECIPIENT_kind==colonist, priority=1)->[animal_breed]</li>
+				<li>r_logentry(tag=Orally_Breed_3, INITIATOR_kind!=member, RECIPIENT_kind==member, priority=1)->[animal_breed]</li>
 					<li>animal_breed(INITIATOR_gender==Male)->[animal_breed_m]</li>
-					<li>animal_breed(INITIATOR_gender==Female)->[animal_breed_f]</li>						
-						<li>animal_breed_m(RECIPIENT_gender==Male, RECIPIENT_kind==colonist, priority=1)->*[forces] [animal_genitals_initiator] into [RECIPIENT_nameDef]'s mouth*</li>
-						<li>animal_breed_m(RECIPIENT_gender==Male, RECIPIENT_kind==colonist, priority=1)->*forces [RECIPIENT_nameDef] to suck on [animal_genitals_initiator]*</li>	
-						<li>animal_breed_m(RECIPIENT_gender==Female, RECIPIENT_kind==colonist, priority=1)->*[licks] [RECIPIENT_nameDef]'s [vagina]*</li>
-						<li>animal_breed_m(RECIPIENT_kind==colonist, priority=1)->*[licks] [RECIPIENT_nameDef]'s [ass]*</li>	
+					<li>animal_breed(INITIATOR_gender==Female)->[animal_breed_f]</li>							
 						<li>animal_breed_m->*[forces] [animal_genitals_initiator] into [RECIPIENT_nameDef]'s mouth*</li>
-						<li>animal_breed_m->*forces [RECIPIENT_nameDef] to suck on [animal_genitals_initiator]*</li>						
-						<li>animal_breed_f->*[licks] [RECIPIENT_nameDef]'s [animal_genitals_recipient]*</li>		
+						<li>animal_breed_m->*forces [RECIPIENT_nameDef] to suck on [animal_genitals_initiator]*</li>							
 						<li>animal_breed_m->*facefucks [RECIPIENT_nameDef]*</li>
-						<li>animal_breed_f(RECIPIENT_gender==Male, RECIPIENT_kind==colonist, priority=1)->*[licks] [RECIPIENT_nameDef]'s [penis]*</li>
+						<li>animal_breed_f->*forces [RECIPIENT_nameDef] to lick [animal_genitals_initiator]*</li>
+						<li>animal_breed_f->*[forces] [animal_genitals_initiator] into [RECIPIENT_nameDef]'s mouth*</li>
 				<!-- ===Nouns=== -->
 				<li>animal_noun->[RECIPIENT_nameDef]</li>
 				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
@@ -927,6 +923,13 @@
 				<li>forces->slides</li>
 				<li>forces->inserts</li>
 				<li>forces->pushes</li>
+				<li>licks->licks</li>
+				<li>licks->tongues</li>
+				<li>licks->licks</li>
+				<li>forces->forces</li>	
+				<li>forces->slides</li>
+				<li>forces->inserts</li>
+				<li>forces->pushes</li>
 			</rulesStrings>
 		</value>
 	</Operation>	
@@ -944,8 +947,8 @@
 		<xpath>/Defs/InteractionDef[defName = "FingeringBreeding"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(tag=Orally_Breed_2, INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
-				<li>r_logentry(tag=Orally_Breed_2, INITIATOR_kind==member, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==colonist, priority=1)->[human_breed]</li>
+				<li>r_logentry(INITIATOR_kind==member, priority=1)->[human_breed]</li>
 					<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 					<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 						<li>human_breed_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
