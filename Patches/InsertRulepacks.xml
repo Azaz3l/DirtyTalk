@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>
+	<!-- ===Constants across all social interactions "SexualChitchat.xml" and "ChitchatReply.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Chitchat" or defName="DeepTalk" or defName="Insult" or defName="Slight" or defName="Sexlife_Generic_Good" or defName="Sexlife_Generic_Good_Raped" or defName="Sexlife_Generic_Good_Raped_Masochist" or defName="Sexlife_Generic_Good_Rapist" or defName="Sexlife_Generic_Good_Zoophile" or defName="Sexlife_Generic_Good_Zoophileb" or defName="Sexlife_Generic_Good_Rapistb" or defName="Getting_Raped_React" or defName="New_Colony_Masochist" or defName="New_Colony_Masochistb" or defName="New_Colony_Zoophile" or defName="Colonist_Horny" or defName="OrgyChat" or defName="Milking_Question" or defName="Milking_Questiona" or defName="Milking_Questionb"]/logRulesInitiator</xpath>
+		<value>
+		<include>
+		<li>SexualInteractionConstants</li>
+		<li>SexualChitchatConstants</li>
+		</include>
+		</value>
+	</li>
+	
+	<!-- ===Constants across all sex initiator interactions "Sex.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Sex_Anal" or defName="Sex_Reverse_Anal" or defName="Sex_Vaginal" or defName="Sex_Reverse_Vaginal" or defName="Sex_Footjob" or defName="Sex_Reverse_Footjob" or defName="Sex_MutualMasturbation" or defName="Sex_Reverse_MutualMasturbation" or defName="Sex_Handjob" or defName="Sex_Reverse_Handjob" or defName="Sex_Fingering" or defName="Sex_Reverse_Fingering" or defName="Sex_Fisting" or defName="Sex_Reverse_Fisting" or defName="Sex_Breastjob" or defName="Sex_Reverse_Breastjob" or defName="Sex_Scissoring" or defName="Sex_Reverse_Scissoring" or defName="Sex_Rimming" or defName="Sex_Reverse_Rimming" or defName="Sex_Cunnilingus" or defName="Sex_Reverse_Cunnilingus" or defName="Sex_Fellatio" or defName="Sex_Reverse_Fellatio" or defName="Sex_Sixtynine" or defName="Sex_Reverse_Sixtynine" or defName="Sex_DoublePenetration" or defName="Sex_Reverse_DoublePenetration"]/logRulesInitiator</xpath>
+	<value>
+		<include>
+		<li>SexualInteractionConstants</li>
+		<li>SexConstants</li>
+		</include>
+	</value>
+	</li>
+
+	<!-- ===Constants across all sex recipient interactions "SexReply.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Anal_Sex_Reply" or defName="Vaginal_Sex_Reply" or defName="Foot_Job_Reply" or defName="Hand_Job_Reply" or defName="Fingering_Sex_Reply" or defName="Fisting_Sex_Reply" or defName="Breast_Job_Reply" or defName="Scissoring_Sex_Reply" or defName="Rimming_Sex_Reply" or defName="Cunnilingus_Sex_Reply" or defName="Fellatio_Sex_Reply" or defName="Sixtynine_Sex_Reply" or defName="Mutual_Masturbation_Reply" or defName="DoublePenetration_Sex_Reply"]/logRulesInitiator</xpath>
+	<value>
+		<include>
+		<li>SexualInteractionConstants</li>	
+		<li>SexReplyConstants</li>
+		</include>
+	</value>
+	</li>
+
+	<!-- ===Constants across all rapist interactions "Rape.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Rape_Anal" or defName="Rape_Reverse_Anal" or defName="Rape_Vaginal" or defName="Rape_Reverse_Vaginal" or defName="Rape_Footjob" or defName="Rape_Reverse_Footjob" or defName="Rape_Handjob" or defName="Rape_Reverse_Handjob" or defName="Rape_Fingering" or defName="Rape_Reverse_Fingering" or defName="Rape_Fisting" or defName="Rape_Reverse_Fisting" or defName="Rape_Breastjob" or defName="Rape_Reverse_Breastjob" or defName="Rape_Scissoring" or defName="Rape_Reverse_Scissoring" or defName="Rape_Rimming" or defName="Rape_Reverse_Rimming" or defName="Rape_Cunnilingus" or defName="Rape_Reverse_Cunnilingus" or defName="Rape_Fellatio" or defName="Rape_Reverse_Fellatio" or defName="Rape_DoublePenetration" or defName="Rape_Reverse_DoublePenetration"]/logRulesInitiator</xpath>
+	<value>
+		<include>
+		<li>SexualInteractionConstants</li>
+		<li>RapeConstants</li>
+		</include>
+	</value>
+	</li>
+
+	<!-- ===Constants across all victim interactions "RapeReply.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Anal_Rape_Reply" or defName="Vaginal_Rape_Reply" or defName="Handjob_Rape_Reply" or defName="Footjob_Rape_Reply" or defName="Fingering_Rape_Reply" or defName="Fisting_Rape_Reply" or defName="Breastjob_Rape_Reply" or defName="Scissoring_Rape_Reply" or defName="Rimming_Rape_Reply" or defName="Rimming_RapeF" or defName="Cunnilingus_Rape_Reply" or defName="Fellatio_Rape_Reply" or defName="Sixtynine_Rape_Reply" or defName="DoublePenetration_Rape_Reply"]/logRulesInitiator</xpath>
+	<value>
+		<include>
+		<li>SexualInteractionConstants</li>
+		<li>RapeReplyConstants</li>
+		</include>
+	</value>
+	</li>
+
+	<!-- ===Constants across all breeder interactions "Bestiality.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Bestiality_Anal" or defName="Bestiality_Reverse_Anal" or defName="Bestiality_Vaginal" or defName="Bestiality_Reverse_Vaginal" or defName="Bestiality_Oral" or defName="Bestiality_Reverse_Oral" or defName="Bestiality_Reverse_Oral_Service" or defName="Bestiality_Reverse_Handjob" ]/logRulesInitiator</xpath>
+		<value>
+		<include>
+		<li>SexualInteractionConstants</li>
+		<li>BestialityConstants</li>
+		</include>
+		</value>
+	</li>
+
+	<!-- ===Constants across all breedee interactions "BestialityReply.xml"=== -->
+	<li Class="PatchOperationAdd">
+	<xpath>/Defs/InteractionDef[defName="Anal_Breed_Reply" or defName="Vaginal_Breed_Reply" or defName="Orally_Breed_Reply" or defName="Orally_Breed_2_Reply"]/logRulesInitiator</xpath>
+	<value>
+		<include>
+		<li>SexualInteractionConstants</li>
+		<li>BestialityReplyConstants</li>
+		</include>
+	</value>
+	</li>	
+</operations>
+</Operation>
+</Patch>

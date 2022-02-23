@@ -1,126 +1,260 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
+<Operation Class="PatchOperationSequence">
+<operations>
 <!-- ===AnalRape=== -->
-	<!-- ===1 Initiator=== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "AnalRape"]/logRulesInitiator/rulesStrings</xpath>
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Anal" or defName="Rape_Reverse_Anal"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Anally_Rape)->[anally_rape]</li>
-				<li>anally_rape(INITIATOR_gender==Male, priority=1)->[anally_rape_m]</li>
-				<li>anally_rape(INITIATOR_gender==Female, priority=1)->[anally_rape_f]</li>
-					<li>anally_rape_m->Get over here, [victim_m]!</li>
-					<li>anally_rape_m->Bend over!</li>
-					<li>anally_rape_m->Spread those cheeks, [victim_m]!</li>
-					<li>anally_rape_m->Gimme that asshole!</li>						
-					<li>anally_rape_f->Get over here, [victim_f]!</li>
-				    <li>anally_rape_f->Stick that [penis] in my asshole, [victim_f], now!</li>
-					<li>anally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "AnalRapeRP"]/rulePack/rulesStrings</xpath>
+				<li>r_logentry(priority=5,tag=Anal_Rape_Reply)->[rape]</li>				
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Bend over!</li>
+					<li>rape_m->Spread those cheeks, [victim]!</li>
+					<li>rape_m->Gimme that asshole!</li>	
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Stick that [penis] in my asshole, [victim], now!</li>
+					<li>rape_f->Gimme that [penis]!</li>					
+
+		</value>
+	</li>	
+
+<!-- ===VaginalRape=== -->	
+	<!-- ===1 Initiator=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Vaginal" or defName="Rape_Reverse_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+					
+				<li>r_logentry(priority=5,tag=Vaginal_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Bend over!</li>
+					<li>rape_m->Spread those legs, [victim]!</li>
+					<li>rape_m->Gimme that [vagina]!</li>		
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Stick that [penis] in my [vagina], [victim], now!</li>
+					<li>rape_f->Gimme that [penis]!</li>												
+
+		</value>
+	</li>	
+	
+<!-- ===FootjobRape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Footjob" or defName="Rape_Reverse_Footjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Footjob_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Put those feet to use, [victim]!</li>		
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Don't even think about getting your cum on me, [victim].</li>
+				    <li>rape_f->Pathetic!</li>
+					<li>rape_f->Look at you, [victim], pathetic!</li>
+					<li>rape_f->What are you hard for, [victim]?</li>
+					<li>rape_f->Lay down, [victim]!</li>									
+
+		</value>
+	</li>	
+	
+<!-- ===HandjobRape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Handjob" or defName="Rape_Reverse_Handjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+	
+				<li>r_logentry(priority=5,tag=Handjob_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Get on your knees, [victim]!</li>
+					<li>rape_m->Put those soft hands to use, [victim]!!</li>
+					<li>rape_m->Handle this [penis], [victim]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->What are you hard for, [victim]?</li>
+					<li>rape_f->Look at you, [victim], pathetic!</li>
+					<li>rape_f->Pathetic!</li>
+					<li>rape_f->Look at you, [victim], pathetic!</li>						
+
+		</value>
+	</li>	
+	
+<!-- ===FingeringRape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Fingering" or defName="Rape_Reverse_Fingering"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Fingering_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->What are you so wet for, [victim]?</li>
+					<li>rape_m->Look at you, [victim], sopping!</li>
+					<li>rape_m->Gimme that [vagina]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Put those fingers to good use, [victim]!</li>
+					<li>rape_f->Finger my [vagina], [victim]!</li>										
+
+		</value>
+	</li>	
+	
+<!-- ===FistingRape=== -->	
+	<!-- ===1 Initiator=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Fisting" or defName="Rape_Reverse_Fisting"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Fisting_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Get ready, [victim]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Get ready, [victim]!</li>												
+
+		</value>
+	</li>	
+	
+<!-- ===BreastjobRape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Breastjob" or defName="Rape_Reverse_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Breastjob_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Gimme those [boobs]!</li>
+					<li>rape_m->I love these [boobs] around my [penis], [victim]</li>
+					<li>rape_m->My [penis] feels amazing between your [boobs], [victim]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Gimme that [penis]!</li>
+					<li>rape_f->Don't pretend you don't love these [boobs] around your [penis], [victim]!</li>
+					<li>rape_f->How do my [boobs] feel around your little [penis], [victim]?</li>			
+
+		</value>
+	</li>	
+	
+<!-- ===ScissoringRape=== -->	
+	<!-- ===1 Initiator=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Scissoring" or defName="Rape_Reverse_Scissoring"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Scissoring_Rape_Reply)->[rape]</li>
+				<!-- ===Male Rapist=== -->	
+				<li>rape_m->Get over here, [victim]!</li>
+				<li>rape_m->Lay down, [victim]!</li>
+				<li>rape_m->Spread those legs, [victim]!</li>
+				<li>rape_m->How do these lips feel against your [vagina], [victim]?</li>
+				<!-- ===Female Rapist=== -->	
+				<li>rape_f->Get over here, [victim]!</li>
+				<li>rape_f->Lay down, [victim]!</li>
+				<li>rape_f->Spread those legs, [victim]!</li>
+				<li>rape_f->How do these lips feel against your [vagina], [victim]?</li>
+
+		</value>
+	</li>	
+	
+<!-- ===RimmingRape=== -->	
+	<!-- ===1 Initiator=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Rimming" or defName="Rape_Reverse_Rimming"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Rimming_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Gimme a taste of that [ass], [victim]!</li>
+					<li>rape_m->Spread those cheeks, [victim]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Gimme a taste of that [ass], [victim]!</li>
+					<li>rape_f->Spread those cheeks, [victim]!</li>																							
+
+		</value>
+	</li>	
+	
+<!-- ===CunnilingusRape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Cunnilingus" or defName="Rape_Reverse_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Cunnilingus_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Gimme a taste of that [vagina], [victim]!</li>
+					<li>rape_m->Show me that [vagina], [victim]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Tongue my [vagina], [victim]!</li>
+					<li>rape_f->Munch on this [vagina], [victim]!</li>
+
+		</value>
+	</li>		
+	
+<!-- ===FellatioRape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Fellatio" or defName="Rape_Reverse_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Fellatio_Rape_Reply)->[rape]</li>
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->[victim], get down and suck this [penis]!</li>
+					<li>rape_m->This [penis] is going down your throat, [victim]!</li>
+					<li>rape_m->Swallow my cum, [victim]!</li>
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Gimme that [penis], [victim]!</li>
+					<li>rape_f->I want that [penis] in my mouth now!</li>
+					<li>rape_f->Fill my mouth with that [penis], [victim]!</li>			
+
+		</value>
+	</li>	
+	
+<!-- ===Double Penetration Rape=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_DoublePenetration" or defName="Rape_DoublePenetration"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+					
+				<li>r_logentry(priority=5,tag=DoublePenetration_Rape_Reply)->[rape]</li>		
+					<!-- ===Male Rapist=== -->	
+					<li>rape_m->Get over here, [victim]!</li>
+					<li>rape_m->Bend over, [victim]!</li>
+					<li>rape_m->Spread those legs, [victim]!</li>
+					<li>rape_m->Gimme that [ass] and [vagina]!</li>		
+					<!-- ===Female Rapist=== -->	
+					<li>rape_f->Get over here, [victim]!</li>
+				    <li>rape_f->Stick those [penis]s in my [ass] and [vagina], [victim], now!</li>
+					<li>rape_f->Gimme those [penis]s!</li>		
+
+		</value>
+	</li>	
+
+	<!-- ===RulePacks - these just remove the "x raped y" lines they don't need any further patching=== -->
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "AnalReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Anally_RapedRP)->[anally_rapedrp]</li>
 				<li>anally_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "AnalRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Anally_RapeF)->[anally_rapeF]</li>
-				<li>anally_rapeF(INITIATOR_gender==Male, priority=1)->[anally_rape_m]</li>
-				<li>anally_rapeF(INITIATOR_gender==Female, priority=1)->[anally_rape_f]</li>
-					<li>anally_rape_m->Get over here, [victim_m]!</li>
-					<li>anally_rape_m->Bend over!</li>
-					<li>anally_rape_m->Spread those cheeks, [victim_m]!</li>
-					<li>anally_rape_m->Gimme that asshole!</li>						
-					<li>anally_rape_f->Get over here, [victim_f]!</li>
-				    <li>anally_rape_f->Stick that [penis] in my asshole, [victim_f], now!</li>
-					<li>anally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "AnalDomRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "AnalRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Anally_RapeFRP)->[anally_rapedfrp]</li>
 				<li>anally_rapedfrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-
-<!-- ===VaginalRape=== -->	
-
-	<!-- ===1 Initiator=== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "VaginalRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>					
-				<li>r_logentry(p=0.5,tag=Vaginally_Rape)->[vaginally_rape]</li>
-				<li>vaginally_rape(INITIATOR_gender==Male, priority=1)->[vaginally_rape_m]</li>
-				<li>vaginally_rape(INITIATOR_gender==Female, priority=1)->[vaginally_rape_f]</li>
-					<li>vaginally_rape_m->Get over here, [victim_m]!</li>
-					<li>vaginally_rape_m->Bend over!</li>
-					<li>vaginally_rape_m->Spread those legs, [victim_m]!</li>
-					<li>vaginally_rape_m->Gimme that [vagina]!</li>					
-					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
-				    <li>vaginally_rape_f->Stick that [penis] in my [vagina], [victim_f], now!</li>
-					<li>vaginally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+		<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "VaginalRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -128,89 +262,17 @@
 				<li>vaginally_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "VaginalRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>					
-				<li>r_logentry(p=0.5,tag=Vaginally_RapeF)->[vaginally_rapef]</li>
-				<li>vaginally_rapef(INITIATOR_gender==Male, priority=1)->[vaginally_rape_m]</li>
-				<li>vaginally_rapef(INITIATOR_gender==Female, priority=1)->[vaginally_rape_f]</li>
-					<li>vaginally_rape_m->Get over here, [victim_m]!</li>
-					<li>vaginally_rape_m->Bend over!</li>
-					<li>vaginally_rape_m->Spread those legs, [victim_m]!</li>
-					<li>vaginally_rape_m->Gimme that [vagina]!</li>						
-					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
-				    <li>vaginally_rape_f->Stick that [penis] in my [vagina], [victim_f], now!</li>
-					<li>vaginally_rape_f->Gimme that [penis]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>								
-			</rulesStrings>
-		</value>
-	</Operation>	
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "VaginalDomRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "VaginalReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Vaginally_RapedFRP)->[vaginally_rapedfrp]</li>
 				<li>vaginally_rapedfrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===FootjobRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FootjobRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Footjob_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Put those feet to use, [victim_m]!</li>					
-					<li>rape_f->Don't even think about getting your cum on me, [victim].</li>
-				    <li>rape_f->Pathetic!</li>
-					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-					<li>rape_f->What are you hard for, [victim_f]?</li>
-					<li>rape_f->Lay down, [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>victim_f->freak</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "FootjobRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -218,269 +280,53 @@
 				<li>footjob_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FootjobRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Footjob_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Put those feet to use, [victim_m]!</li>					
-					<li>rape_f->Don't even think about getting your cum on me, [victim].</li>
-				    <li>rape_f->Pathetic!</li>
-					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-					<li>rape_f->What are you hard for, [victim_f]?</li>
-					<li>rape_f->Lay down, [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>victim_f->freak</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedFootjobRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "FootjobReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Footjob_ForcedRP)->[footjob_forcedrp]</li>
 				<li>footjob_forcedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===HandjobRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "HandjobRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>	
-				<li>r_logentry(p=0.5,tag=Handjob_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Get on your knees, [victim_m]!</li>
-					<li>rape_m->Put those soft hands to use, [victim_m]!!</li>
-					<li>rape_m->Handle this [penis], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->What are you hard for, [victim_f]?</li>
-					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-					<li>rape_f->Pathetic!</li>
-					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>				
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "HandjobRapeRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "ForcedHandjobRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Handjob_RapedRP)->[handjob_rapedrp]</li>
 				<li>handjob_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "HandjobRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Handjob_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Get on your knees, [victim_m]!</li>
-					<li>rape_m->Put those soft hands to use, [victim_m]!!</li>
-					<li>rape_m->Handle this [penis], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->What are you hard for, [victim_f]?</li>
-					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-					<li>rape_f->Pathetic!</li>
-					<li>rape_f->Look at you, [victim_f], pathetic!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedHandjobRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "HandjobReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Handjob_ForcedRP)->[handjob_forcedrp]</li>
 				<li>handjob_forcedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===FingeringRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FingeringRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Fingering_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->What are you wet for, [victim_m]?</li>
-					<li>rape_m->Look at you, [victim_m], sopping!</li>
-					<li>rape_m->Gimme that [vagina]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Put those fingers to good use, [victim_f]!</li>
-					<li>rape_f->Finger my [vagina], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-					
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "FingeringRapeRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "ForcedFingeringRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Fingering_RapedRP)->[fingering_rapedrp]</li>
 				<li>fingering_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FingeringRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Fingering_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->What are you wet for, [victim_m]?</li>
-					<li>rape_m->Look at you, [victim_m], sopping!</li>
-					<li>rape_m->Gimme that [vagina]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Put those fingers to good use, [victim_f]!</li>
-					<li>rape_f->Finger my [vagina], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedFingeringRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "FingeringReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Fingering_ForcedRP)->[fingering_forcedrp]</li>
 				<li>fingering_forcedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===FistingRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FistingRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Fisting_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Get ready, [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Get ready, [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>				
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "FistingRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -488,91 +334,17 @@
 				<li>fisting_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FistingRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Fisting_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Get ready, [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Get ready, [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "FistingRapeRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "FistingReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Fisting_RapedFRP)->[fisting_rapedfrp]</li>
 				<li>fisting_rapedfrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===BreastjobRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "BreastjobRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Breastjob_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Gimme those [boobs]!</li>
-					<li>rape_m->I love these [boobs] around my [penis], [victim_m]</li>
-					<li>rape_m->My [penis] feels amazing between your [boobs], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Gimme that [penis]!</li>
-					<li>rape_f->Don't pretend you don't love these [boobs] around your [penis], [victim_f]!</li>
-					<li>rape_f->How do my [boobs] feel around your little [penis], [victim_f]?</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
-						<li>boobs->tits</li>
-						<li>boobs->jugs</li>
-						<li>boobs->milkers</li>
-						<li>boobs->boobs</li>
-					
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "OtherRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -580,80 +352,17 @@
 				<li>breastjob_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "BreastjobRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Breastjob_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Gimme those [boobs]!</li>
-					<li>rape_m->I love these [boobs] around my [penis], [victim_m]</li>
-					<li>rape_m->My [penis] feels amazing between your [boobs], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Gimme that [penis]!</li>
-					<li>rape_f->Don't pretend you don't love these [boobs] around your [penis], [victim_f]!</li>
-					<li>rape_f->How do my [boobs] feel around your little [penis], [victim_f]?</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
-						<li>boobs->tits</li>
-						<li>boobs->jugs</li>
-						<li>boobs->milkers</li>
-						<li>boobs->boobs</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedBreastjobRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "BreastjobReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Breastjob_ForcedRP)->[breastjob_forcedrp]</li>
 				<li>breastjob_forcedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===ScissoringRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "ScissoringRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Scissoring_Rape)->[scissoring_rape]</li>
-				<li>scissoring_rape->Get over here, [victim]!</li>
-				<li>scissoring_rape->Lay down, [victim]!</li>
-				<li>scissoring_rape->Spread those legs, [victim]!</li>
-				<li>scissoring_rape->How do these lips feel against your [vag], [victim]?</li>
-					<li>victim->[RECIPIENT_nameDef]</li>
-					<li>victim->bitch</li>
-					<li>victim->slut</li>
-					<li>vag->pussy</li>
-					<li>vag->cunt</li>
-					<li>vag->coochie</li>
-					<li>vag->clit</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "ScissoringRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -661,125 +370,17 @@
 				<li>scissoring_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "ScissoringRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Scissoring_RapeF)->[scissoring_rapef]</li>
-				<li>scissoring_rapef->Get over here, [victim]!</li>
-				<li>scissoring_rapef->Lay down, [victim]!</li>
-				<li>scissoring_rapef->Spread those legs, [victim]!</li>
-				<li>scissoring_rapef->How do these lips feel against your [vag], [victim]?</li>
-					<li>victim->[RECIPIENT_nameDef]</li>
-					<li>victim->bitch</li>
-					<li>victim->slut</li>
-					<li>vag->pussy</li>
-					<li>vag->cunt</li>
-					<li>vag->coochie</li>
-					<li>vag->clit</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedScissoringRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "ScissoringReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Scissoring_RapedFRP)->[scissoring_rapedfrp]</li>
 				<li>scissoring_rapedfrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===RimmingRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "RimmingRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Rimming_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Gimme a taste of that [ass], [victim_m]!</li>
-					<li>rape_m->Spread those cheeks, [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Gimme a taste of that [ass], [victim_f]!</li>
-					<li>rape_f->Spread those cheeks, [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-						<li>ass->ass</li>
-						<li>ass->asshole</li>
-						<li>ass->cornhole</li>
-						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>
-					
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "OtherRapeRP"]/rulePack/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>sent(p=0.5,tag=Rimming_RapedRP)->[rimming_rapedrp]</li>
-				<li>rimming_rapedrp-></li>
-			</rulesStrings>
-		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "RimmingRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Rimming_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Tongue my [ass], [victim_m]!</li>
-					<li>rape_m->Taste this [ass], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Tongue my [ass], [victim_f]!</li>
-					<li>rape_f->Taste this [ass], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-						<li>ass->ass</li>
-						<li>ass->asshole</li>
-						<li>ass->cornhole</li>
-						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>				
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "ForcedRimmingRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -787,87 +388,17 @@
 				<li>rimming_raperp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===CunnilingusRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "CunnilingusRape"]/logRulesInitiator/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "RimmingReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Cunnilingus_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Gimme a taste of that [vagina], [victim_m]!</li>
-					<li>rape_m->Show me that [vagina], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Tongue my [vagina], [victim_f]!</li>
-					<li>rape_f->Munch on this [vagina], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-					
+				<li>sent(p=0.5,tag=Rimming_RapeRP)->[rimming_raperp]</li>
+				<li>rimming_raperp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>		
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "OtherRapeRP"]/rulePack/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>sent(p=0.5,tag=Cunnilingus_RapedRP)->[cunnilingus_rapedrp]</li>
-				<li>cunnilingus_rapedrp-></li>
-			</rulesStrings>
-		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "CunnilingusRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Cunnilingus_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->Gimme a taste of that [vagina], [victim_m]!</li>
-					<li>rape_m->Show me that [vagina], [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Tongue my [vagina], [victim_f]!</li>
-					<li>rape_f->Munch on this [vagina], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "ForcedCunnilingusRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -875,118 +406,35 @@
 				<li>cunnilingus_raperp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===FellatioRape=== -->	
-	<!-- ===Mouth Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FellatioRape"]/logRulesInitiator/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "CunnilingusReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Fellatio_Rape)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->[victim_m], get down and suck this [penis]!</li>
-					<li>rape_m->This [penis] is going down your throat, [victim_m]!</li>
-					<li>rape_m->Swallow my cum, [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Gimme that [penis], [victim_f]!</li>
-					<li>rape_f->I want that [penis] in my mouth now!</li>
-					<li>rape_f->Fill my mouth with that [penis], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-					
+				<li>sent(p=0.5,tag=Cunnilingus_RapeRP)->[cunnilingus_raperp]</li>
+				<li>cunnilingus_raperp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "FellatioRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "ForcedFellatioRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Fellatio_RapedRP)->[fellatio_rapedrp]</li>
 				<li>fellatio_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===Cock Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "FellatioRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Fellatio_RapeF)->[rape]</li>
-				<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
-				<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
-					<li>rape_m->Get over here, [victim_m]!</li>
-					<li>rape_m->[victim_m], get down and suck this [penis]!</li>
-					<li>rape_m->This [penis] is going down your throat, [victim_m]!</li>
-					<li>rape_m->Swallow my cum, [victim_m]!</li>
-					<li>rape_f->Get over here, [victim_f]!</li>
-				    <li>rape_f->Gimme that [penis], [victim_f]!</li>
-					<li>rape_f->I want that [penis] in my mouth now!</li>
-					<li>rape_f->Fill my mouth with that [penis], [victim_f]!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>	
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedFellatioRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "FellatioReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Fellatio_RapeRP)->[fellatio_raperp]</li>
 				<li>fellatio_raperp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-<!-- ===SixtynineRape=== -->	
-	<!-- ===1 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "SixtynineRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Sixtynine_Rape)->[sixtynine_rape]</li>
-				<li>sixtynine_rape->Get over here, [victim]!</li>
-				<li>sixtynine_rape->Lay down and lick me, [victim]!</li>
-				<li>sixtynine_rape->Sit on my face, [victim]!</li>
-					<li>victim->[RECIPIENT_nameDef]</li>
-					<li>victim->bitch</li>
-					<li>victim->slut</li>
-			</rulesStrings>
-		</value>
-	</Operation>		
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "OtherRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -994,70 +442,8 @@
 				<li>sixtynine_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "SixtynineRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>r_logentry(p=0.5,tag=Sixtynine_RapeF)->[sixtynine_rapeF]</li>
-				<li>sixtynine_rapeF->Get over here, [victim]!</li>
-				<li>sixtynine_rapeF->Lay down and lick me, [victim]!</li>
-				<li>sixtynine_rapeF->Sit on my face, [victim]!</li>
-					<li>victim->[RECIPIENT_nameDef]</li>
-					<li>victim->bitch</li>
-					<li>victim->slut</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "ForcedSixtynineRP"]/rulePack/rulesStrings</xpath>
-		<value>
-			<rulesStrings>
-				<li>sent(p=0.5,tag=Sixtynine_RapeRP)->[sixtynine_raperp]</li>
-				<li>sixtynine_raperp-></li>
-			</rulesStrings>
-		</value>
-	</Operation>
-	
-<!-- ===Double Penetration Rape=== -->	
-	<!-- ===1 Initiator=== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "DoublePenetrationRape"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>					
-				<li>r_logentry(p=0.5,tag=DoublePenetration_Rape)->[vaginally_rape]</li>
-				<li>vaginally_rape(INITIATOR_gender==Male, priority=1)->[vaginally_rape_m]</li>
-				<li>vaginally_rape(INITIATOR_gender==Female, priority=1)->[vaginally_rape_f]</li>
-					<li>vaginally_rape_m->Get over here, [victim_m]!</li>
-					<li>vaginally_rape_m->Bend over, [victim_m]!</li>
-					<li>vaginally_rape_m->Spread those legs, [victim_m]!</li>
-					<li>vaginally_rape_m->Gimme that [ass] and [vagina]!</li>					
-					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
-				    <li>vaginally_rape_f->Stick those [penis]s in my [ass] and [vagina], [victim_f], now!</li>
-					<li>vaginally_rape_f->Gimme those [penis]s!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
+	</li>
+	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "DoubleRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
@@ -1065,49 +451,16 @@
 				<li>double_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
-	
-	<!-- ===2 Initiator=== -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/InteractionDef[defName = "DoublePenetrationRapeF"]/logRulesInitiator/rulesStrings</xpath>
-		<value>
-			<rulesStrings>					
-				<li>r_logentry(p=0.5,tag=DoublePenetration_Rape)->[vaginally_rape]</li>
-				<li>vaginally_rape(INITIATOR_gender==Male, priority=1)->[vaginally_rape_m]</li>
-				<li>vaginally_rape(INITIATOR_gender==Female, priority=1)->[vaginally_rape_f]</li>
-					<li>vaginally_rape_m->Get over here, [victim_m]!</li>
-					<li>vaginally_rape_m->Bend over, [victim_m]!</li>
-					<li>vaginally_rape_m->Spread those legs, [victim_m]!</li>
-					<li>vaginally_rape_m->Gimme that [ass] and [vagina]!</li>					
-					<li>vaginally_rape_f->Get over here, [victim_f]!</li>
-				    <li>vaginally_rape_f->Stick those [penis]s in my [ass] and [vagina], [victim_f], now!</li>
-					<li>vaginally_rape_f->Gimme those [penis]s!</li>
-						<li>victim_m(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_m->bitch</li>
-						<li>victim_m->slut</li>
-						<li>victim_m->whore</li>
-						<li>victim_f(INITIATOR_opinion>=25,  priority=1)->[RECIPIENT_nameDef]</li>
-						<li>victim_f->bitch</li>
-						<li>victim_f->pussy</li>
-						<li>victim_f->weakling</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
-			</rulesStrings>
-		</value>
-	</Operation>	
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/RulePackDef[defName = "DoubleRapeRP"]/rulePack/rulesStrings</xpath>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>/Defs/RulePackDef[defName = "DoubleReverseRapeRP"]/rulePack/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
 				<li>sent(p=0.5,tag=Double_RapedRP)->[double_rapedrp]</li>
 				<li>double_rapedrp-></li>
 			</rulesStrings>
 		</value>
-	</Operation>
+	</li>
+</operations>
+</Operation>
 </Patch>

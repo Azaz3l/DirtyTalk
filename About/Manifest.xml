@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
 	<identifier>DirtyTalk</identifier>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<dependencies>
 		<li>SpeakUp</li>
 		<li>RimJobWorld</li>
+		<li>HumanoidAlienRaces</li>
 	</dependencies>
-	<incompatibleWith>
-	</incompatibleWith>
-	<loadBefore>
-	</loadBefore>
 	<loadAfter>
+		<li>HumanoidAlienRaces</li>
 		<li>SpeakUp</li>
 		<li>RimJobWorld</li>
 		<li>C0ffeeRIA</li>
@@ -18,9 +16,7 @@
 		<li>RimJobWorld Milkable Colonists</li>
 		<li>RJW Sexperience</li>
 	</loadAfter>
-	<suggests>
-	</suggests>
 	<showCrossPromotions>false</showCrossPromotions>
-	<manifestUri>https://github.com/Azaz3l/DirtyTalk/blob/main/About/Manifest.xml</manifestUri>
+	<manifestUri>https://raw.githubusercontent.com/Azaz3l/DirtyTalk/main/About/Manifest.xml</manifestUri>
 	<downloadUri>https://github.com/Azaz3l/DirtyTalk</downloadUri>
 </Manifest>

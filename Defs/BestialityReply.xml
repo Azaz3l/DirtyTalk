@@ -5,401 +5,55 @@
 	</InteractionDef>
 	
 <!-- ===AnalBreeding=== -->
-	<!-- ===1 Initiator=== -->
 	<InteractionDef ParentName="BreedReply">
-		<defName>Anally_Breed</defName>
-		<label>analbreed — react to</label>
-		
+		<defName>Anal_Breed_Reply</defName>
+		<label>analbreed — react to</label>		
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->[fuck] my [ass] with that [animal_genitals_recipient]!</li>
+					<!-- ===Zoophile react to male breeder=== -->
+					<li>zoophile_m->[fuck] my [ass] with that [animal_genitals_recipient]!</li>
+					
+					<!-- ===React to male breeder=== -->
 					<li>human_react_m->What the fuck! Get off!</li>
-					<li>human_react_m->AH! Get your [animal_genitals_recipient] out of my [ass]!</li>	
+					<li>human_react_m->[exclaim_high]! Get your [animal_genitals_recipient] out of my [ass]!</li>	
+					
+					<!-- ===Zoophile react to female breeder=== -->
+					<li>zoophile_f->If you insist, [animal_noun]!</li>
+					<li>zoophile_f->I'll never turn down a [RECIPIENT_kind] [ass]!</li>	
+					
+					<!-- ===React to female breeder=== -->
 					<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
 					<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-						<li>zoophile_f->If you insist, [animal_noun]!</li>
-						<li>zoophile_f->I'll never turn down a [RECIPIENT_kind] [ass]!</li>	
 					<li>human_react_f->Oh...I shouldn't do this!</li>
 					<li>human_react_f->Oh...I shouldn't, but your [ass]!</li>
 					<li>human_react_f->This is so wrong, [animal_noun], but your [ass] is irresistable!</li>
 					<li>human_react_f->Your [ass] shouldn't feel this good, [animal_noun]!</li>										
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>		
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>		
-	<!-- ===2 Initiator=== -->
-	<InteractionDef ParentName="BreedReply">
-		<defName>Anally_Breed_2</defName>
-		<label>analbreed2 — react to</label>
-		
-		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->[fuck] my [ass] with that [animal_genitals_recipient]!</li>
-					<li>human_react_m->What the fuck! Get off!</li>
-					<li>human_react_m->AH! Get your [animal_genitals_recipient] out of my [ass]!</li>	
-					<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-					<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable)->[zoophile_f]</li>
-						<li>zoophile_f->If you insist, [animal_noun]!</li>
-						<li>zoophile_f->I'll never turn down a [RECIPIENT_kind] [ass]!</li>	
-					<li>human_react_f->Oh...I shouldn't do this!</li>
-					<li>human_react_f->Oh...I shouldn't, but your [ass]!</li>
-					<li>human_react_f->This is so wrong, [animal_noun], but your [ass] is irresistable!</li>
-					<li>human_react_f->Your [ass] shouldn't feel this good, [animal_noun]!</li>									
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>						
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
 <!-- ===VaginalBreeding=== -->
-	<!-- ===1 Initiator=== -->
 	<InteractionDef ParentName="BreedReply">
-		<defName>Vaginally_Breed</defName>
-		<label>vaginalbreed — react to</label>
-		
+		<defName>Vaginal_Breed_Reply</defName>
+		<label>vaginalbreed — react to</label>	
 		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_m]</li>
-						<li>not_zoophile_m->What the fuck! Get off!</li>
-						<li>not_zoophile_m->AH! Get your [animal_genitals_recipient] out of my [vagina]!</li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->[fuck] my [vagina] with that [animal_genitals_recipient]!</li>
-				<li>human_react_f(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_f]</li>
-						<li>not_zoophile_f->Oh...I shouldn't do this!</li>
-						<li>not_zoophile_f->Oh...I shouldn't, but your [animal_genitals_recipient]...</li>
-						<li>not_zoophile_f->This is so wrong, [animal_noun], but your [animal_genitals_recipient] is irresistable!</li>
-						<li>not_zoophile_f->Your [animal_genitals_recipient] shouldn't feel this good, [animal_noun]!</li>
-				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-				<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-						<li>zoophile_f->If you insist, [animal_noun]!</li>
-						<li>zoophile_f->I'll never turn down a [animal_genitals_recipient]!</li>									
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
+			<rulesStrings>				
+				<!-- ===Zoophile react to male breeder=== -->
+				<li>zoophile_m->[fuck] my [vagina] with that [animal_genitals_recipient]!</li>
 				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>		
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>		
-	<!-- ===2 Initiator=== -->
-	<InteractionDef ParentName="BreedReply">
-		<defName>Vaginally_Breed_2</defName>
-		<label>vaginalbreed2 — react to</label>
-		
-		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_m]</li>
-						<li>not_zoophile_m->What the fuck! Get off!</li>
-						<li>not_zoophile_m->AH! Get your [animal_genitals_recipient] out of my [vagina]!</li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->[fuck] my [vagina] with that [animal_genitals_recipient]!</li>
-				<li>human_react_f(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_f]</li>
-						<li>not_zoophile_f->Oh...I shouldn't do this!</li>
-						<li>not_zoophile_f->Oh...I shouldn't, but your [animal_genitals_recipient]...</li>
-						<li>not_zoophile_f->This is so wrong, [animal_noun], but your [animal_genitals_recipient] is irresistable!</li>
-						<li>not_zoophile_f->Your [animal_genitals_recipient] shouldn't feel this good, [animal_noun]!</li>
-				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-				<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-						<li>zoophile_f->If you insist, [animal_noun]!</li>
-						<li>zoophile_f->I'll never turn down a [animal_genitals_recipient]!</li>									
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
+				<!-- ===React to male breeder=== -->
+				<li>human_react_m->What the fuck! Get off!</li>
+				<li>human_react_m->[exclaim_high]! Get your [animal_genitals_recipient] out of my [vagina]!</li>
 				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>						
+				<!-- ===Zoophile react to female breeder=== -->
+				<li>zoophile_f->If you insist, [animal_noun]!</li>
+				<li>zoophile_f->I'll never turn down a [animal_genitals_recipient]!</li>
+				
+				<!-- ===React to female breeder=== -->
+				<li>human_react_f->Oh...I shouldn't do this!</li>
+				<li>human_react_f->Oh...I shouldn't, but your [animal_genitals_recipient]...</li>
+				<li>human_react_f->This is so wrong, [animal_noun], but your [animal_genitals_recipient] is irresistable!</li>
+				<li>human_react_f->Your [animal_genitals_recipient] shouldn't feel this good, [animal_noun]!</li>												
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
@@ -407,337 +61,64 @@
 <!-- ===OralBreeding=== -->
 	<!-- ===1 Initiator=== -->
 	<InteractionDef ParentName="BreedReply">
-		<defName>Orally_Breed</defName>
-		<label>oralbreed — react to</label>
-		
+		<defName>Orally_Breed_Reply</defName>
+		<label>oralbreed — react to</label>		
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_m]</li>
-						<li>not_zoophile_m(INITIATOR_gender==Male)->Ugh! Get your tongue off my [penis]!</li>
-						<li>not_zoophile_m(INITIATOR_gender==Male)->Ugh! Get your tongue off my balls!</li>
-						<li>not_zoophile_m(INITIATOR_gender==Female)->Ugh! Get your tongue out of my [vagina], [animal_noun]!</li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->Ooh! Hey there [animal_noun]!</li>
-						<li>zoophile_m->Ooh! Good [animal_noun], just like that!</li>
-						<li>zoophile_m->You're good with your tongue, [animal_noun]!</li>
-						<li>zoophile_m(INITIATOR_gender==Female)->Ngh, tongue my [vagina], [animal_noun]!</li>
-						<li>zoophile_m(INITIATOR_gender==Male)->Ngh, lick this [penis], [animal_noun]!</li>
-				<li>human_react_f(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_f]</li>
-						<li>not_zoophile_f(INITIATOR_gender==Male)->Ugh! Get your tongue off my [penis]!</li>
-						<li>not_zoophile_f(INITIATOR_gender==Male)->Ugh! Get your tongue off my balls!</li>
-						<li>not_zoophile_f(INITIATOR_gender==Female)->Ugh! Get your tongue out of my [vagina], [animal_noun]!</li>
-						<li>not_zoophile_f->Ugh! Get your tongue out of my [vagina], [animal_noun]!</li>
-				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-				<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-						<li>zoophile_f->Ooh! Hey there [animal_noun]!</li>
-						<li>zoophile_f->Ooh! Good [animal_noun], just like that!</li>
-						<li>zoophile_f->You're good with your tongue, [animal_noun]!</li>
-						<li>zoophile_f(INITIATOR_gender==Female)->Ngh, tongue my [vagina], [animal_noun]!</li>
-						<li>zoophile_f(INITIATOR_gender==Male)->Ngh, lick this [penis], [animal_noun]!</li>									
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
+				<!-- ===Zoophile react to male breeder=== -->
+				<li>zoophile_m->Ooh! Hey there [animal_noun]!</li>
+				<li>zoophile_m->Ooh! Good [animal_noun], just like that!</li>
+				<li>zoophile_m->You're good with your tongue, [animal_noun]!</li>
+				<li>zoophile_m(INITIATOR_gender==Female)->[exclaim_low], tongue my [vagina], [animal_noun]!</li>
+				<li>zoophile_m(INITIATOR_gender==Male)->[exclaim_low], lick this [penis], [animal_noun]!</li>
 				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>		
-				<li>exclaim->ngh</li>
-				<li>exclaim->mph</li>
-				<li>exclaim->slurp</li>
-				<li>exclaim->ung</li>
-				<li>exclaim->slorp</li>
+				<!-- ===React to male breeder=== -->
+				<li>human_react_m(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my [penis]!</li>
+				<li>human_react_m(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my balls!</li>
+				<li>human_react_m(INITIATOR_gender==Female)->[exclaim_low]! Get your tongue out of my [vagina], [animal_noun]!</li>
+
+				<!-- ===Zoophile react to female breeder=== -->
+				<li>human_react_f(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my [penis]!</li>
+				<li>human_react_f(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my balls!</li>
+				<li>human_react_f(INITIATOR_gender==Female)->[exclaim_low]! Get your tongue out of my [vagina], [animal_noun]!</li>
+				<li>human_react_f->[exclaim_low]! Get your tongue out of my [vagina], [animal_noun]!</li>
+				
+				<!-- ===React to female breeder=== -->
+				<li>zoophile_f->Ooh! Hey there [animal_noun]!</li>
+				<li>zoophile_f->Ooh! Good [animal_noun], just like that!</li>
+				<li>zoophile_f->You're good with your tongue, [animal_noun]!</li>
+				<li>zoophile_f(INITIATOR_gender==Female)->[exclaim_low], tongue my [vagina], [animal_noun]!</li>
+				<li>zoophile_f(INITIATOR_gender==Male)->[exclaim_low], lick this [penis], [animal_noun]!</li>									
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
 	<!-- ===2 Initiator=== -->
 	<InteractionDef ParentName="BreedReply">
-		<defName>Orally_Breed_2</defName>
+		<defName>Orally_Breed_2_Reply</defName>
 		<label>oralbreed — react to</label>
-		
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_m]</li>
-						<li>not_zoophile_m->*[exclaim]* Ged oor [animal_genitals_recipient] out of *[exclaim]* my mouf, [animal_noun]!</li>
-						<li>not_zoophile_m->*[exclaim]* *[exclaim]* *[exclaim]* </li>
-						<li>not_zoophile_m->*[exclaim]* bad *[exclaim]* [animal_noun]! *[exclaim]* </li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->*[exclaim]* yoor [animal_genitals_recipient] tasds *[exclaim]* so good, [animal_noun]!</li>
-						<li>zoophile_m->*[exclaim]* *[exclaim]* *[exclaim]* </li>
-						<li>zoophile_m->*[exclaim]* good *[exclaim]* [animal_noun]! *[exclaim]*</li>
-						<li>zoophile_m->*[exclaim]* [cum] *[exclaim]* in my mouf *[exclaim]* [animal_noun]!</li>
-				<li>human_react_f(p=1, INITIATOR_trait!=zoophile)->[not_zoophile_f]</li>
-						<li>not_zoophile_f(INITIATOR_gender==Male)->Ugh! Get your tongue off my [penis]!</li>
-						<li>not_zoophile_f(INITIATOR_gender==Male)->Ugh! Get your tongue off my balls!</li>
-						<li>not_zoophile_f(INITIATOR_gender==Female)->Ugh! Get your tongue out of my [vagina], [animal_noun]!</li>
-						<li>not_zoophile_f->Ugh! Get your mouth off me, [animal_noun]!</li>
-						<li>not_zoophile_f->Ugh! Bad [animal_noun]!</li>
-				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-				<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-						<li>zoophile_f->Ooh! Hey there [animal_noun]!</li>
-						<li>zoophile_f->Ooh! Good [animal_noun], just like that!</li>
-						<li>zoophile_f->You're good with your tongue, [animal_noun]!</li>
-						<li>zoophile_f(INITIATOR_gender==Female)->Ngh, tongue my [vagina], [animal_noun]!</li>
-						<li>zoophile_f(INITIATOR_gender==Male)->Ngh, lick this [penis], [animal_noun]!</li>									
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
+				<!-- ===Zoophile react to male breeder=== -->
+				<li>zoophile_m->*[exclaim_oral]* yoor [animal_genitals_recipient] tasds *[exclaim_oral]* so good, [animal_noun]!</li>
+				<li>zoophile_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
+				<li>zoophile_m->*[exclaim_oral]* good *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>
+				<li>zoophile_m->*[exclaim_oral]* [cum] *[exclaim_oral]* in my mouf *[exclaim_oral]* [animal_noun]!</li>
 				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>		
-				<li>exclaim->ngh</li>
-				<li>exclaim->mph</li>
-				<li>exclaim->slurp</li>
-				<li>exclaim->ung</li>
-				<li>exclaim->slorp</li>
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>		
-	
-	<!-- ===2 Initiator=== -->
-	<InteractionDef ParentName="BreedReply">
-		<defName>Orally_Breed_3</defName>
-		<label>oralbreed — react to</label>
-		
-		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry->[breed_react]</li>
-				<li>breed_react(INITIATOR_kind==colonist, priority=2)->[human_react]</li>
-				<li>breed_react(INITIATOR_kind==member, priority=2)->[human_react]</li>
-				<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
-				<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>
-					<li>human_react_m->[not_zoophile_m]</li>
-						<li>not_zoophile_m->*[exclaim]* Ged oor [animal_genitals_recipient] out of *[exclaim]* my mouf, [animal_noun]!</li>
-						<li>not_zoophile_m->*[exclaim]* *[exclaim]* *[exclaim]* </li>
-						<li>not_zoophile_m->*[exclaim]* bad *[exclaim]* [animal_noun]! *[exclaim]*</li>
-					<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
-						<li>zoophile_m->*[exclaim]* yoor [animal_genitals_recipient] tasds *[exclaim]* so good, [animal_noun]!</li>
-						<li>zoophile_m->*[exclaim]* *[exclaim]* *[exclaim]* </li>
-						<li>zoophile_m->*[exclaim]* good *[exclaim]* [animal_noun]! *[exclaim]*</li>
-						<li>zoophile_m->*[exclaim]* [cum] *[exclaim]* in my mouf *[exclaim]* [animal_noun]!</li>
-				<li>human_react_f->[not_zoophile_f]</li>
-						<li>not_zoophile_f->*[exclaim]* Ged oor [animal_genitals_recipient] out of *[exclaim]* my mouf, [animal_noun]!</li>
-						<li>not_zoophile_f->*[exclaim]* bad *[exclaim]* [animal_noun]! *[exclaim]*</li>
-				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-				<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-						<li>zoophile_f->*[exclaim]* yoor [animal_genitals_recipient] tasds *[exclaim]* so good, [animal_noun]!</li>
-						<li>zoophile_f->*[exclaim]* good *[exclaim]* [animal_noun]! *[exclaim]*</li>
-						<li>zoophile_f->*[exclaim]* *[exclaim]* *[exclaim]*</li>							
-				<li>breed_react(INITIATOR_kind!=colonist, priority=1)->[animal_react]</li>		
-					<li>animal_react->...</li>
-					
-				<!-- ===Nouns=== -->
-				<li>animal_noun->[RECIPIENT_nameDef]</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-				<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
-				<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
-				<!-- ===Genitals=== -->
-				<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-						<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-						<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-				<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-				
-				<!-- ===Misc=== -->
-				<li>penis->dick</li>
-				<li>penis->cock</li>
-				<li>penis->prick</li>
-				<li>penis->pecker</li>
-				<li>ass->ass</li>
-				<li>ass->asshole</li>
-				<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_trait==masochist)->boipussy</li>
-				<li>vagina->pussy</li>
-				<li>vagina->cunt</li>
-				<li>vagina->coochie</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>fuck->fuck</li>	
-				<li>fuck->pound</li>	
-				<li>fuck->slam</li>	
-				<li>fuck->breed</li>
-				<li>cum->cum</li>	
-				<li>cum->seed</li>
-				<li>cum->sperm</li>
-				<li>cum->splooge</li>		
-				<li>exclaim->ngh</li>
-				<li>exclaim->mph</li>
-				<li>exclaim->slurp</li>
-				<li>exclaim->ung</li>
-				<li>exclaim->slorp</li>
+				<!-- ===React to male breeder=== -->
+				<li>human_react_m->*[exclaim_oral]* Ged oor [animal_genitals_recipient] out of *[exclaim_oral]* my mouf, [animal_noun]!</li>
+				<li>human_react_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
+				<li>human_react_m->*[exclaim_oral]* bad *[exclaim_oral]* [animal_noun]! *[exclaim_oral]* </li>
+
+				<!-- ===Zoophile react to female breeder=== -->
+				<li>human_react_f(INITIATOR_gender==Male)->*[exclaim_oral]* Ged oor [animal_genitals_recipient] out of *[exclaim_oral]* my mouf, [animal_noun]!</li>
+				<li>human_react_f(INITIATOR_gender==Male)->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
+				<li>human_react_f(INITIATOR_gender==Female)->*[exclaim_oral]* bad *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>
+
+				<!-- ===React to female breeder=== -->
+				<li>zoophile_f->*[exclaim_oral]* yoor [animal_genitals_recipient] tasds *[exclaim_oral]* so good, [animal_noun]!</li>
+				<li>zoophile_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
+				<li>zoophile_f->*[exclaim_oral]* good *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>															
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		

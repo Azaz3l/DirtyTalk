@@ -14,6 +14,7 @@
 						<li>bad_opinion(INITIATOR_thoughtDefName==GotRaped, RECIPIENT_trait==rapist, priority=2)->[bad_opinion_rapist]</li>
 						<li>bad_opinion(INITIATOR_thoughtDefName==GotRaped, RECIPIENT_thoughtLabel==stole some lovin’, priority=2)->[bad_opinion_rapist]</li>
 							<li>bad_opinion_rapist(INITIATOR_trait==masochist, priority=1)->[bad_opinion2]</li>
+							<li>bad_opinion_rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=1)->[bad_opinion2]</li>
 							<li>bad_opinion_rapist(INITIATOR_trait==rapist, priority=1)->[bad_opinion2]</li>
 							<li>bad_opinion_rapist(INITIATOR_thoughtDefName==Rape_Honorable, priority=1)->[bad_opinion2]</li>
 							<li>bad_opinion_rapist->Fuck off, rapist!</li>
@@ -68,8 +69,8 @@
 						<li>good_opinion(tag=Sexlife_Generic_Good_Raped, INITIATOR_thoughtDefName==GotRapedUnconscious, INITIATOR_trait!=masochist, INITIATOR_thoughtLabel!=begging for more, priority=2)->[good_opinion_ucraped]</li>
 							<li>good_opinion_ucraped->[RECIPIENT_nameDef], I...I was raped...*sobs*</li>
 							<li>good_opinion_ucraped->I...was taken advantage of...while I was unconscious...*sobs*</li>
-							<li>good_opinion_ucraped->I was raped...and I didn't even have a chance to defend myself...*sobs*</li>	
-							
+							<li>good_opinion_ucraped->I was raped...and I didn't even have a chance to defend myself...*sobs*</li>								
+						<li>good_opinion(tag=Sexlife_Generic_Good_Raped_Masochist, INITIATOR_thoughtDefName==BeenRaped_Submissive, INITIATOR_trait==masochist, priority=2)->[good_opinion_raped_masochist]</li>
 						<li>good_opinion(tag=Sexlife_Generic_Good_Raped_Masochist, INITIATOR_thoughtDefName==MasochistGotAnalRaped, INITIATOR_trait==masochist, priority=2)->[good_opinion_analraped_masochist]</li>
 							<li>good_opinion_analraped_masochist->[RECIPIENT_nameDef], I was raped...in the ass...it was [masochist_amazing]!</li>
 							<li>good_opinion_analraped_masochist->My asshole...*sniffles*...was violated...</li>
@@ -101,40 +102,10 @@
 						
 							
 				<!-- ===Misc=== -->
-						<li>expletive_adj->fucking</li>
-						<li>expletive_adj->goddamn</li>
 						<li>masochist_amazing->amazing</li>
 						<li>masochist_amazing->so hot</li>
 						<li>masochist_amazing->great</li>
 						<li>masochist_amazing->fantastic</li>
-				<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist)->rapist</li>								
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->perv</li>
-							<li>rival->creep</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -155,6 +126,7 @@
 						<li>violent_reaction->What!? Where is the [insult]!?</li>
 						<li>violent_reaction->What!? I'll kill the [insult]!</li>
 						<li>violent_reaction->I'll make the [insult] who did this regret it, [RECIPIENT_nameDef]!</li>
+					<li>not_rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_reaction]</li>
 					<li>not_rapist(INITIATOR_trait==masochist, priority=2)->[masochist_reaction]</li>
 					<li>not_rapist(INITIATOR_thoughtLabel==begging for more, priority=2)->[masochist_reaction]</li>
 						<li>masochist_reaction(INITIATOR_thoughtLabel!=sexually satisfied, INITIATOR_thoughtLabel!=ahegao)->Lucky!</li>
@@ -168,10 +140,6 @@
 				<li>r_logentry->[rapist]</li>
 					<li>rapist->...</li>
 					<li>rapist->Oh...</li>					
-				<li>insult->fucker</li>
-				<li>insult->motherfucker</li>
-				<li>insult->son of a bitch</li>
-				<li>insult->piece of shit</li>
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -181,7 +149,8 @@
 		<label>sexlife-generic-good-raped-masochist</label>
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry->[masochist_react]</li>
+				<li>r_logentry->[masochist_react]</li>	
+					<li>masochist_react(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[also_masochist]</li>
 					<li>masochist_react(INITIATOR_trait!=masochist, priority=2)->[also_masochist]</li>
 						<li>also_masochist(INITIATOR_thoughtLabel=horny, priority=1)->Lucky!</li>
 						<li>also_masochist(INITIATOR_thoughtLabel=horny, priority=1)->[expletive], I wish that were me...</li>
@@ -198,11 +167,6 @@
 					<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[rapist]</li>
 						<li>rapist->Maybe I'll use you later...</li>
 						<li>rapist->Maybe I'll take a turn in a bit...</li>					
-				<li>expletive->god</li>
-				<li>expletive->goddamn</li>
-				<li>expletive->fuck</li>
-				<li>expletive_adj->fucking</li>
-				<li>expletive_adj->goddamn</li>
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -216,8 +180,9 @@
 					<li>also_rapist->Nice!</li>
 				<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
 					<li>honor_rapist->Great job!</li>
-					<li>honor_rapist->I'm glad you're fulfilling your duty, [RECIPIENT_nameDef]</li>
+					<li>honor_rapist->I'm glad you're fulfilling your duty, [RECIPIENT_nameDef]</li>			
 				<li>r_logentry(INITIATOR_trait==masochist, priority=2)->[masochist]</li>
+				<li>r_logentry(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist]</li>
 					<li>masochist->Hot!</li>
 					<li>masochist->Sounds hot!</li>
 					<li>masochist->Do me next!</li>
@@ -279,6 +244,7 @@
 		<label>getting-raped-react</label>
 		<logRulesInitiator>
 			<rulesStrings>
+				<li>r_logentry(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=3)->[masochist]</li>
 				<li>r_logentry(INITIATOR_trait==masochist, priority=3)->[masochist]</li>
 					<li>masochist->[exclaim]! I love when master treats me like this! [exclaim]!</li>
 				<li>r_logentry(RECIPIENT_trait==rapist, priority=2)->[rapist]</li>
@@ -286,13 +252,7 @@
 					<li>rapist(INITIATOR_opinion>=25)->How could you, [RECIPIENT_nameDef]!?</li>
 					<li>rapist->Fuck you, [RECIPIENT_nameDef]!</li>
 				<li>r_logentry(RECIPIENT_moving==Yes)->Don't just walk away! Help me!</li>
-				<li>r_logentry->Don't just stand there! Do something!</li>
-				
-				<li>exclaim->ngh</li>
-				<li>exclaim->mph</li>
-				<li>exclaim->ugh</li>
-				<li>exclaim->ung</li>
-				<li>exclaim->ooh</li>
+				<li>r_logentry->Don't just stand there! Do something!</li>		
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -368,36 +328,7 @@
 						<li>good_opinion_horny(INITIATOR_gender==Male, RECIPIENT_gender==Female, INITIATOR_opinion>=50, INITIATOR_trait!=gay)->Maybe we can figure something out...*winks*</li>
 						<li>good_opinion_horny->I'm right there with you, [counterpart].</li>
 					<li>good_opinion(RECIPIENT_gender==Male)->Just go jack off or something, [counterpart].</li>
-					<li>good_opinion->I'm sure you'll figure it out, [counterpart].</li>
-					
-					<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->rapist</li>
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->perv</li>
-							<li>rival->creep</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
+					<li>good_opinion->I'm sure you'll figure it out, [counterpart].</li>					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -427,42 +358,6 @@
 						<li>good_opinion_horny(INITIATOR_gender==Male, RECIPIENT_gender==Female, INITIATOR_opinion>=50, INITIATOR_trait!=gay)->It was even better with you involved, [counterpart]!</li>
 						<li>good_opinion_horny->Just thinking about it makes me want to touch myself...</li>
 					<li>good_opinion->Yeah, we should do it again sometime!</li>
-					
-					<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->rapist</li>
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->perv</li>
-							<li>rival->creep</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -473,67 +368,20 @@
 		<symbol>UI/Icons/MilkMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, tag=Milking_Questiona, priority=1)->[is_producing]</li>
-					<li>is_producing(INITIATOR_opinion>=25)->They're [producing] wonderfully, [counterpart]!</li>
-					<li>is_producing(INITIATOR_opinion>=25)->They're [producing] wonderfully, thank you!</li>
-					<li>is_producing(INITIATOR_opinion&lt;=-25)->They're [producing] more than your [boobs] possibly could, [counterpart]!</li>
-					<li>is_producing->They're [producing] well, [counterpart].</li>
-					<li>is_producing->These [boobs] are [producing] well, it feels great!</li>
-					<li>is_producing->The [production] is coming along nicely, [counterpart].</li>
-				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, tag=Milking_Questionb, priority=1)->[not_producing]</li>
-					<li>not_producing(INITIATOR_opinion>=25)->They're not [producing] at all, [counterpart]! It's [terrible]!</li>
-					<li>not_producing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
-					<li>not_producing(INITIATOR_opinion&lt;=-25)->They aren't [producing] at all and you know it, [counterpart]!</li>
-					<li>not_producing->They're not [producing] at all, [counterpart]! It's [terrible]!</li>
-					<li>not_producing->There's no milk coming out at all! It's [terrible]!</li>			
-				<li>r_logentry->...</li>
-				<li>breastcompliment->wonderful</li>
-				<li>breastcompliment->soft</li>
-				<li>breastcompliment->firm</li>
-				<li>breastcompliment->beautiful</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>producing->lactating</li>
-				<li>producing->milking</li>
-				<li>producing->producing</li>
-				<li>production->production</li>
-				<li>production->milking</li>
-				<li>production->lactation</li>
-				<li>terrible->terrible</li>
-				<li>terrible->awful</li>
-				<li>terrible->shameful</li>
-				<li>terrible->humiliating</li>
-				
-				<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->rapist</li>
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->perv</li>
-							<li>rival->creep</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, tag=Milking_Questiona, priority=1)->[is_milkproducing]</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->They're [milkproducing] wonderfully, [counterpart]!</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->They're [milkproducing] wonderfully, thank you!</li>
+					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->They're [milkproducing] more than your [boobs] possibly could, [counterpart]!</li>
+					<li>is_milkproducing->They're [milkproducing] well, [counterpart].</li>
+					<li>is_milkproducing->These [boobs] are [milkproducing] well, it feels great!</li>
+					<li>is_milkproducing->The [milkproduction] is coming along nicely, [counterpart].</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, tag=Milking_Questionb, priority=1)->[not_milkproducing]</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->They're not [milkproducing] at all, [counterpart]! It's [milkterrible]!</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
+					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->They aren't [milkproducing] at all and you know it, [counterpart]!</li>
+					<li>not_milkproducing->They're not [milkproducing] at all, [counterpart]! It's [milkterrible]!</li>
+					<li>not_milkproducing->There's no milk coming out at all! It's [milkterrible]!</li>			
+				<li>r_logentry->...</li>				
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -544,64 +392,16 @@
 		<symbol>UI/Icons/MilkMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_producing]</li>
-					<li>is_producing(INITIATOR_opinion>=25)->That's great! My [boobs] are [producing] nicely too!</li>
-					<li>is_producing(INITIATOR_opinion&lt;=-25)->I should hope so...</li>
-					<li>is_producing->That's good, [counterpart]. Mine are too.</li>
-					<li>is_producing->My [boobs] are [producing] well too, doesn't it feel nice?</li>
-				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_producing]</li>
-					<li>not_producing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
-					<li>not_producing(INITIATOR_opinion&lt;=-25)->Your [boobs] are [producing] better than mine? [terrible]!</li>
-					<li>not_producing->I'm jealous!</li>	
-				<li>r_logentry->...</li>
-				
-				<li>breastcompliment->wonderful</li>
-				<li>breastcompliment->soft</li>
-				<li>breastcompliment->firm</li>
-				<li>breastcompliment->beautiful</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>producing->lactating</li>
-				<li>producing->milking</li>
-				<li>producing->producing</li>
-				<li>production->production</li>
-				<li>production->milking</li>
-				<li>production->lactation</li>
-				<li>terrible->terrible</li>
-				<li>terrible->awful</li>
-				<li>terrible->shameful</li>
-				<li>terrible->humiliating</li>
-				
-				<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->rapist</li>
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->perv</li>
-							<li>rival->creep</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_milkproducing]</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->That's great! My [boobs] are [milkproducing] nicely too!</li>
+					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->I should hope so...</li>
+					<li>is_milkproducing->That's good, [counterpart]. Mine are too.</li>
+					<li>is_milkproducing->My [boobs] are [milkproducing] well too, doesn't it feel nice?</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_milkproducing]</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
+					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->Your [boobs] are [milkproducing] better than mine? [milkterrible]!</li>
+					<li>not_milkproducing->I'm jealous!</li>	
+				<li>r_logentry->...</li>		
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -612,63 +412,15 @@
 		<symbol>UI/Icons/MilkMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_producing]</li>
-					<li>is_producing(INITIATOR_opinion>=25)->Your [breastcompliment] [boobs] will give us plenty of tasty milk soon enough, [counterpart]!</li>
-					<li>is_producing(INITIATOR_opinion&lt;=-25)->You should be ashamed, [counterpart]!</li>
-					<li>is_producing->I'm sure your [boobs] will get there, [counterpart].</li>
-				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_producing]</li>
-					<li>not_producing(INITIATOR_opinion>=25)->My [boobs] are dry too, [counterpart]! It is [terrible]!</li>
-					<li>not_producing(INITIATOR_opinion&lt;=-25)->At least you're not [producing] better than me...</li>
-					<li>not_producing->I'm in the same boat, [counterpart]!</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_milkproducing]</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->Your [breastcompliment] [boobs] will give us plenty of tasty milk soon enough, [counterpart]!</li>
+					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->You should be ashamed, [counterpart]!</li>
+					<li>is_milkproducing->I'm sure your [boobs] will get there, [counterpart].</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_milkproducing]</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] are dry too, [counterpart]! It is [milkterrible]!</li>
+					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->At least you're not [milkproducing] better than me...</li>
+					<li>not_milkproducing->I'm in the same boat, [counterpart]!</li>
 				<li>r_logentry->...</li>		
-				
-				<li>breastcompliment->wonderful</li>
-				<li>breastcompliment->soft</li>
-				<li>breastcompliment->firm</li>
-				<li>breastcompliment->beautiful</li>
-				<li>boobs->tits</li>
-				<li>boobs->jugs</li>
-				<li>boobs->milkers</li>
-				<li>boobs->boobs</li>
-				<li>producing->lactating</li>
-				<li>producing->milking</li>
-				<li>producing->producing</li>
-				<li>production->production</li>
-				<li>production->milking</li>
-				<li>production->lactation</li>
-				<li>terrible->terrible</li>
-				<li>terrible->awful</li>
-				<li>terrible->shameful</li>
-				<li>terrible->humiliating</li>
-				
-				<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, priority=1)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, priority=1)->rapist</li>
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->perv</li>
-							<li>rival->creep</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>

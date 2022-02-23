@@ -36,6 +36,8 @@
 				<!-- ===Orgy=== -->	
 				<li>r_logentry(INITIATOR_thoughtDefName==AttendedOrgy, RECIPIENT_thoughtDefName==AttendedOrgy, tag=OrgyChat)->[orgychat]</li>
 					<li>orgychat->That orgy was pretty fun, huh?</li>
+					<li>orgychat->That orgy was hot!</li>
+					<li>orgychat(INITIATOR_thoughtLabel==horny, priority=1)->Thinking about that orgy makes me so horny!</li>
 					
 				<!-- ===Sexlife Good Opinion=== -->		
 				<li>r_logentry(INITIATOR_opinion>=25, tag=Sexlife_Generic_Good)->[sexlife_generic_good]</li>
@@ -44,540 +46,442 @@
 					<li>sexlife_generic_good->How's the sex life going, [counterpart]?</li>
 					
 				<!-- ===Sex Grunts=== -->	
-				<li>r_logentry(RECIPIENT_moving==No, INITIATOR_jobDefName==JoinInBed, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==GettinLoved, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==GettinLicked, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==GettinSucked, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==GettinRaped, priority=10)->[exclaim_r]</li>
-				<li>r_logentry(INITIATOR_jobDefName==RapeComfortPawn, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==RandomRape, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==RapeEnemy, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_jobDefName==RJW_Masturbate, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==WhoreIsServingVisitors, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Quickie, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettingQuickie, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinBred, priority=10)->[exclaim_r]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Bestiality, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==BestialityForFemale, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==OrgySex, priority=10)->[exclaim]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinOrgySex, priority=10)->[exclaim]</li>
+				<li>r_logentry(RECIPIENT_moving==No, INITIATOR_jobDefName==JoinInBed, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==GettinLoved, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==GettinLicked, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==GettinSucked, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==GettinRaped, priority=10)->[exclaim_low_high]</li>
+				<li>r_logentry(INITIATOR_jobDefName==RapeComfortPawn, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==RandomRape, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==RapeEnemy, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_jobDefName==RJW_Masturbate, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==WhoreIsServingVisitors, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Quickie, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettingQuickie, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinBred, priority=10)->[exclaim_low_high]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Bestiality, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==BestialityForFemale, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==OrgySex, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinOrgySex, priority=10)->[exclaim_low]</li>
 				
 				<!-- ===Milking=== -->	
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==MassageBreasts, priority=10)->[massaging]</li>
 					<li>massaging(INITIATOR_thoughtLabel==horny)->[massaging_horny]</li>
 					<li>massaging(INITIATOR_thoughtLabel==sexually frustrated)->[massaging_horny]</li>
-						<li>massaging_horny->[exclaim], these are so [breastcompliment]!</li>
-						<li>massaging_horny->[exclaim], these [boobs] are so [breastcompliment]!</li>
-						<li>massaging_horny->[exclaim], these [breastcompliment] [boobs] feel so good!</li>
+						<li>massaging_horny->[exclaim_low], these are so [breastcompliment]!</li>
+						<li>massaging_horny->[exclaim_low], these [boobs] are so [breastcompliment]!</li>
+						<li>massaging_horny->[exclaim_low], these [breastcompliment] [boobs] feel so good!</li>
 					<li>massaging->These [boobs] are coming along nicely!</li>
 					<li>massaging->These [breastcompliment] [boobs] will give us lots of nice milk soon!</li>
 					
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==MilkHuman, priority=10)->[milking]</li>
 					<li>milking(INITIATOR_thoughtLabel==horny)->[milking_horny]</li>
 					<li>milking(INITIATOR_thoughtLabel==sexually frustrated)->[milking_horny]</li>
-						<li>milking_horny->[exclaim], I might have to have a little taste...</li>
-						<li>milking_horny->[exclaim], these [breastcompliment] [boobs] feel so good!</li>
+						<li>milking_horny->[exclaim_low], I might have to have a little taste...</li>
+						<li>milking_horny->[exclaim_low], these [breastcompliment] [boobs] feel so good!</li>
 					<li>milking->These [boobs] are lactating nicely!</li>
-					<li>milking->These [breastcompliment] [boobs] are producing lots of tasty milk!</li>
+					<li>milking->These [breastcompliment] [boobs] are milkproducing lots of tasty milk!</li>
 					
 				<li>r_logentry(INITIATOR_thoughtDefName==Lactating_Essential, RECIPIENT_gender==Female, tag=Milking_Question)->[milkingquestion]</li>
-					<li>milkingquestion(INITIATOR_opinion>=25, priority=1)->Hey, [counterpart] are those [breastcompliment] [boobs] [producing] well?</li>
-					<li>milkingquestion(INITIATOR_opinion&lt;=25, priority=1)->Hey, [counterpart], those [boobs] are [producing] well, I hope?</li>
-					<li>milkingquestion->Hey, [counterpart] hows the [production] coming along?</li>
-						<li>producing->lactating</li>
-						<li>producing->milking</li>
-						<li>producing->producing</li>
-						<li>production->production</li>
-						<li>production->milking</li>
-						<li>production->lactation</li>				
-				<li>breastcompliment->wonderful</li>
-				<li>breastcompliment->soft</li>
-				<li>breastcompliment->firm</li>
-				<li>breastcompliment->beautiful</li>
+					<li>milkingquestion(INITIATOR_opinion>=25, priority=1)->Hey, [counterpart] are those [breastcompliment] [boobs] [milkproducing] well?</li>
+					<li>milkingquestion(INITIATOR_opinion&lt;=25, priority=1)->Hey, [counterpart], those [boobs] are [milkproducing] well, I hope?</li>
+					<li>milkingquestion->Hey, [counterpart], how's the [milkproduction] coming along?</li>
+						
 				
 				<!-- ===Sex Reactions=== -->	
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==JoinInBed, priority=9)->[joininbed_react]</li>
 					<li>joininbed_react(INITIATOR_opinion>=25)->[joininbed_react_good]</li>
 						<li>joininbed_react_good(INITIATOR_thoughtLabel==horny)->[joininbed_react_good_horny]</li>
 						<li>joininbed_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[joininbed_react_good_horny]</li>
-							<li>joininbed_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>joininbed_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>joininbed_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>joininbed_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>joininbed_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>joininbed_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>joininbed_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>joininbed_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>joininbed_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>joininbed_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>joininbed_react(INITIATOR_opinion&lt;=-25)->[joininbed_react_bad]</li>
 						<li>joininbed_react_bad(INITIATOR_thoughtLabel==horny)->[joininbed_react_bad_horny]</li>
 						<li>joininbed_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[joininbed_react_bad_horny]</li>
-							<li>joininbed_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>joininbed_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>joininbed_react_bad_horny->[horny_reaction]!</li>
-						<li>joininbed_react_bad->[gross_reaction]!</li>
+							<li>joininbed_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>joininbed_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>joininbed_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>joininbed_react_bad->[gross_sex_reaction]!</li>
 					<li>joininbed_react->[joininbed_react_neutral]</li>
 						<li>joininbed_react_neutral(INITIATOR_thoughtLabel==horny)->[joininbed_react_neutral_horny]</li>
 						<li>joininbed_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[joininbed_react_neutral_horny]</li>
-							<li>joininbed_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>joininbed_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>joininbed_react_neutral_horny->[horny_reaction]!</li>
-						<li>joininbed_react_neutral->[normal_reaction]!</li>
+							<li>joininbed_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>joininbed_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>joininbed_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>joininbed_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=9)->[orgysex_react]</li>
 					<li>orgysex_react(INITIATOR_opinion>=25)->[orgysex_react_good]</li>
 						<li>orgysex_react_good(INITIATOR_thoughtLabel==horny)->[orgysex_react_good_horny]</li>
 						<li>orgysex_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_good_horny]</li>
-							<li>orgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>orgysex_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>orgysex_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>orgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
+							<li>orgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>orgysex_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>orgysex_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>orgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
 						<li>orgysex_react_good->[cheer_reaction], [counterpart]!</li>
 					<li>orgysex_react(INITIATOR_opinion&lt;=-25)->[orgysex_react_bad]</li>
 						<li>orgysex_react_bad(INITIATOR_thoughtLabel==horny)->[orgysex_react_bad_horny]</li>
 						<li>orgysex_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_bad_horny]</li>
-							<li>orgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>orgysex_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>orgysex_react_bad_horny->[horny_reaction]!</li>
-						<li>orgysex_react_bad->[gross_reaction], [RECIPIENT_nameDef]!</li>
+							<li>orgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>orgysex_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>orgysex_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>orgysex_react_bad->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
 					<li>orgysex_react->[orgysex_react_neutral]</li>
 						<li>orgysex_react_neutral(INITIATOR_thoughtLabel==horny)->[orgysex_react_neutral_horny]</li>
 						<li>orgysex_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_neutral_horny]</li>
-							<li>orgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
-							<li>orgysex_react_neutral_horny->[horny_reaction], [counterpart]!</li>
-							<li>orgysex_react_neutral_horny->[horny_reaction]!</li>
+							<li>orgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
+							<li>orgysex_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
+							<li>orgysex_react_neutral_horny->[horny_sex_reaction]!</li>
 						<li>orgysex_react_neutral->[cheer_reaction]!</li>		
 						
 				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=9)->[gettingorgysex_react]</li>
 					<li>gettingorgysex_react(INITIATOR_opinion>=25)->[gettingorgysex_react_good]</li>
 						<li>gettingorgysex_react_good(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_good_horny]</li>
 						<li>gettingorgysex_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_good_horny]</li>
-							<li>gettingorgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>gettingorgysex_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>gettingorgysex_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>gettingorgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
+							<li>gettingorgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>gettingorgysex_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>gettingorgysex_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>gettingorgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
 						<li>gettingorgysex_react_good->[cheer_reaction], [counterpart]!</li>
 					<li>gettingorgysex_react(INITIATOR_opinion&lt;=-25)->[gettingorgysex_react_bad]</li>
 						<li>gettingorgysex_react_bad(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_bad_horny]</li>
 						<li>gettingorgysex_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_bad_horny]</li>
-							<li>gettingorgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>gettingorgysex_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>gettingorgysex_react_bad_horny->[horny_reaction]!</li>
-						<li>gettingorgysex_react_bad->[gross_reaction], [RECIPIENT_nameDef]!</li>
+							<li>gettingorgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>gettingorgysex_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>gettingorgysex_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>gettingorgysex_react_bad->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
 					<li>gettingorgysex_react->[gettingorgysex_react_neutral]</li>
 						<li>gettingorgysex_react_neutral(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_neutral_horny]</li>
 						<li>gettingorgysex_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_neutral_horny]</li>
-							<li>gettingorgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
-							<li>gettingorgysex_react_neutral_horny->[horny_reaction], [counterpart]!</li>
-							<li>gettingorgysex_react_neutral_horny->[horny_reaction]!</li>
+							<li>gettingorgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
+							<li>gettingorgysex_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
+							<li>gettingorgysex_react_neutral_horny->[horny_sex_reaction]!</li>
 						<li>gettingorgysex_react_neutral->[cheer_reaction]!</li>		
 						
 				<li>r_logentry(RECIPIENT_jobDefName==GettinLoved, priority=9)->[loved_react]</li>
 					<li>loved_react(INITIATOR_opinion>=25)->[loved_react_good]</li>
 						<li>loved_react_good(INITIATOR_thoughtLabel==horny)->[loved_react_good_horny]</li>
 						<li>loved_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[loved_react_good_horny]</li>
-							<li>loved_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>loved_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>loved_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>loved_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>loved_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>loved_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>loved_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>loved_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>loved_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>loved_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>loved_react(INITIATOR_opinion&lt;=-25)->[loved_react_bad]</li>
 						<li>loved_react_bad(INITIATOR_thoughtLabel==horny)->[loved_react_bad_horny]</li>
 						<li>loved_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[loved_react_bad_horny]</li>
-							<li>loved_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>loved_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>loved_react_bad_horny->[horny_reaction]!</li>
-						<li>loved_react_bad->[gross_reaction]!</li>
+							<li>loved_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>loved_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>loved_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>loved_react_bad->[gross_sex_reaction]!</li>
 					<li>loved_react->[loved_react_neutral]</li>
 						<li>loved_react_neutral(INITIATOR_thoughtLabel==horny)->[loved_react_neutral_horny]</li>
 						<li>loved_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[loved_react_neutral_horny]</li>
-							<li>loved_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>loved_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>loved_react_neutral_horny->[horny_reaction]!</li>
-						<li>loved_react_neutral->[normal_reaction]!</li>
+							<li>loved_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>loved_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>loved_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>loved_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_jobDefName==GettinLicked, priority=9)->[licked_react]</li>
 					<li>licked_react(INITIATOR_opinion>=25)->[licked_react_good]</li>
 						<li>licked_react_good(INITIATOR_thoughtLabel==horny)->[licked_react_good_horny]</li>
 						<li>licked_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[licked_react_good_horny]</li>
-							<li>licked_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>licked_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>licked_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>licked_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>licked_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>licked_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>licked_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>licked_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>licked_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>licked_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>licked_react(INITIATOR_opinion&lt;=-25)->[licked_react_bad]</li>
 						<li>licked_react_bad(INITIATOR_thoughtLabel==horny)->[licked_react_bad_horny]</li>
 						<li>licked_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[licked_react_bad_horny]</li>
-							<li>licked_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>licked_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>licked_react_bad_horny->[horny_reaction]!</li>
-						<li>licked_react_bad->[gross_reaction]!</li>
+							<li>licked_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>licked_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>licked_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>licked_react_bad->[gross_sex_reaction]!</li>
 					<li>licked_react->[licked_react_neutral]</li>
 						<li>licked_react_neutral(INITIATOR_thoughtLabel==horny)->[licked_react_neutral_horny]</li>
 						<li>licked_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[licked_react_neutral_horny]</li>
-							<li>licked_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>licked_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>licked_react_neutral_horny->[horny_reaction]!</li>
-						<li>licked_react_neutral->[normal_reaction]!</li> 
+							<li>licked_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>licked_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>licked_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>licked_react_neutral->[normal_sex_reaction]!</li> 
 						
 				<li>r_logentry(RECIPIENT_jobDefName==GettinSucked, priority=9)->[sucked_react]</li>
 					<li>sucked_react(INITIATOR_opinion>=25)->[sucked_react_good]</li>
 						<li>sucked_react_good(INITIATOR_thoughtLabel==horny)->[sucked_react_good_horny]</li>
 						<li>sucked_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[sucked_react_good_horny]</li>
-							<li>sucked_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>sucked_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>sucked_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>sucked_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>sucked_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>sucked_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>sucked_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>sucked_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>sucked_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>sucked_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>sucked_react(INITIATOR_opinion&lt;=-25)->[sucked_react_bad]</li>
 						<li>sucked_react_bad(INITIATOR_thoughtLabel==horny)->[sucked_react_bad_horny]</li>
 						<li>sucked_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[sucked_react_bad_horny]</li>
-							<li>sucked_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>sucked_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>sucked_react_bad_horny->[horny_reaction]!</li>
-						<li>sucked_react_bad->[gross_reaction]!</li>
+							<li>sucked_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>sucked_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>sucked_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>sucked_react_bad->[gross_sex_reaction]!</li>
 					<li>sucked_react->[sucked_react_neutral]</li>
 						<li>sucked_react_neutral(INITIATOR_thoughtLabel==horny)->[sucked_react_neutral_horny]</li>
 						<li>sucked_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[sucked_react_neutral_horny]</li>
-							<li>sucked_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>sucked_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>sucked_react_neutral_horny->[horny_reaction]!</li>
-						<li>sucked_react_neutral->[normal_reaction]!</li>
+							<li>sucked_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>sucked_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>sucked_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>sucked_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(tag=Getting_Raped_React, RECIPIENT_jobDefName==GettinRaped, priority=9)->[raped_react]</li>
 					<li>raped_react(INITIATOR_trait==rapist, priority=2)->[raped_react_rapist]</li>
 					<li>raped_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[raped_react_rapist]</li>
-						<li>raped_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_reaction]! Just take it like a good girl, [RECIPIENT_nameDef]!</li>
-						<li>raped_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_reaction]! Just take it like a man, [RECIPIENT_nameDef]!</li>
-						<li>raped_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! Get fucked, [counterpart]!</li>
-						<li>raped_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! Get fucked, [counterpart]! [cheer_reaction]!</li>
-						<li>raped_react_rapist->[horny_reaction]! [cheer_reaction]!</li>
+						<li>raped_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Just take it like a good girl, [RECIPIENT_nameDef]!</li>
+						<li>raped_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Just take it like a man, [RECIPIENT_nameDef]!</li>
+						<li>raped_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! Get fucked, [counterpart]!</li>
+						<li>raped_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! Get fucked, [counterpart]! [cheer_reaction]!</li>
+						<li>raped_react_rapist->[horny_sex_reaction]! [cheer_reaction]!</li>
 					<li>raped_react(INITIATOR_opinion>=25, priority=1)->[raped_react_good]</li>		
-						<li>raped_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]!</li>
-						<li>raped_react_good->[normal_reaction]! Are you okay, [RECIPIENT_nameDef]?!</li>
-						<li>raped_react_good->[normal_reaction]! [RECIPIENT_nameDef], are you okay?!</li>
-						<li>raped_react_good(RECIPIENT_gender==Female)->[normal_reaction]! Get off of her, you [insult]!</li>
-						<li>raped_react_good(RECIPIENT_gender==Male)->[normal_reaction]! Get off of him, you [insult]!</li>
+						<li>raped_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]!</li>
+						<li>raped_react_good->[normal_sex_reaction]! Are you okay, [RECIPIENT_nameDef]?!</li>
+						<li>raped_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], are you okay?!</li>
+						<li>raped_react_good(RECIPIENT_gender==Female)->[normal_sex_reaction]! Get off of her, you [insult]!</li>
+						<li>raped_react_good(RECIPIENT_gender==Male)->[normal_sex_reaction]! Get off of him, you [insult]!</li>
 					<li>raped_react(INITIATOR_opinion&lt;=-25)->[raped_react_bad]</li>
 						<li>raped_react_bad(INITIATOR_thoughtLabel==horny)->[raped_react_bad_horny]</li>
 						<li>raped_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[raped_react_bad_horny]</li>
-							<li>raped_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>raped_react_bad_horny->[horny_reaction]! Get what you deserve, [counterpart]!</li>
-							<li>raped_react_bad_horny->[horny_reaction]! Take that, counterpart!</li>
-						<li>raped_react_bad->[gross_reaction]!</li>
+							<li>raped_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>raped_react_bad_horny->[horny_sex_reaction]! Get what you deserve, [counterpart]!</li>
+							<li>raped_react_bad_horny->[horny_sex_reaction]! Take that, counterpart!</li>
+						<li>raped_react_bad->[gross_sex_reaction]!</li>
 					<li>raped_react->[raped_react_neutral]</li>
-						<li>raped_react_neutral(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! [leaving]!</li>
-						<li>raped_react_neutral->[normal_reaction]!</li>
+						<li>raped_react_neutral(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! [leaving_sex_reaction]!</li>
+						<li>raped_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_jobDefName==RapeComfortPawn, priority=9)->[rapingcp_react]</li>
 					<li>rapingcp_react(INITIATOR_trait==rapist, priority=2)->[rapingcp_react_rapist]</li>
 					<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[rapingcp_react_rapist]</li>
-						<li>rapingcp_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_reaction]! Rail 'em, [counterpart]!</li>
-						<li>rapingcp_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_reaction]! Rail 'em, [counterpart]! [cheer_reaction]!</li>
-						<li>rapingcp_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! I could do much better, [counterpart]!</li>
-						<li>rapingcp_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
+						<li>rapingcp_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]!</li>
+						<li>rapingcp_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]! [cheer_reaction]!</li>
+						<li>rapingcp_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
+						<li>rapingcp_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
 					<li>rapingcp_react(INITIATOR_opinion>=25)->[rapingcp_react_good]</li>
 						<li>rapingcp_react_good(INITIATOR_thoughtLabel==horny)->[rapingcp_react_good_horny]</li>
 						<li>rapingcp_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[rapingcp_react_good_horny]</li>
-							<li>rapingcp_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>rapingcp_react_good_horny->[horny_reaction]!</li>
-							<li>rapingcp_react_good_horny->[horny_reaction]!</li>
-						<li>rapingcp_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]!</li>
-						<li>rapingcp_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>rapingcp_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>rapingcp_react_good_horny->[horny_sex_reaction]!</li>
+							<li>rapingcp_react_good_horny->[horny_sex_reaction]!</li>
+						<li>rapingcp_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]!</li>
+						<li>rapingcp_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>rapingcp_react(INITIATOR_opinion&lt;=-25)->[rapingcp_react_bad]</li>
 						<li>rapingcp_react_bad(INITIATOR_thoughtLabel==horny)->[rapingcp_react_bad_horny]</li>
 						<li>rapingcp_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[rapingcp_react_bad_horny]</li>
-							<li>rapingcp_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>rapingcp_react_bad_horny->[horny_reaction]!</li>
-						<li>rapingcp_react_bad->[gross_reaction]!</li>
+							<li>rapingcp_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>rapingcp_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>rapingcp_react_bad->[gross_sex_reaction]!</li>
 					<li>rapingcp_react->[rapingcp_react_neutral]</li>
 						<li>rapingcp_react_neutral(INITIATOR_thoughtLabel==horny)->[rapingcp_react_neutral_horny]</li>
 						<li>rapingcp_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[rapingcp_react_neutral_horny]</li>
-							<li>rapingcp_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>rapingcp_react_neutral_horny->[horny_reaction], [counterpart]!</li>
-							<li>rapingcp_react_neutral_horny->[horny_reaction]!</li>
-						<li>rapingcp_react_neutral->[normal_reaction]!</li>
+							<li>rapingcp_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>rapingcp_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
+							<li>rapingcp_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>rapingcp_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_jobDefName==RandomRape, priority=9)->[raping_react]</li>
 					<li>raping_react(INITIATOR_trait==rapist, priority=2)->[raping_react_rapist]</li>
 					<li>raping_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[raping_react_rapist]</li>
-						<li>raping_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_reaction]! Rail 'em, [counterpart]!</li>
-						<li>raping_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_reaction]! Rail 'em, [counterpart]! [cheer_reaction]!</li>
-						<li>raping_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! I could do much better, [counterpart]!</li>
-						<li>raping_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
+						<li>raping_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]!</li>
+						<li>raping_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]! [cheer_reaction]!</li>
+						<li>raping_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
+						<li>raping_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
 					<li>raping_react(INITIATOR_opinion>=25)->[raping_react_good]</li>
 						<li>raping_react_good(INITIATOR_thoughtLabel==horny)->[raping_react_good_horny]</li>
 						<li>raping_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[raping_react_good_horny]</li>
-							<li>raping_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>raping_react_good_horny->[horny_reaction]!</li>
-							<li>raping_react_good_horny->[horny_reaction]!</li>
-						<li>raping_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]!</li>
-						<li>raping_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>raping_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>raping_react_good_horny->[horny_sex_reaction]!</li>
+							<li>raping_react_good_horny->[horny_sex_reaction]!</li>
+						<li>raping_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]!</li>
+						<li>raping_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>raping_react(INITIATOR_opinion&lt;=-25)->[raping_react_bad]</li>
 						<li>raping_react_bad(INITIATOR_thoughtLabel==horny)->[raping_react_bad_horny]</li>
 						<li>raping_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[raping_react_bad_horny]</li>
-							<li>raping_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>raping_react_bad_horny->[horny_reaction]!</li>
-						<li>raping_react_bad->[gross_reaction]!</li>
+							<li>raping_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>raping_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>raping_react_bad->[gross_sex_reaction]!</li>
 					<li>raping_react->[raping_react_neutral]</li>
 						<li>raping_react_neutral(INITIATOR_thoughtLabel==horny)->[raping_react_neutral_horny]</li>
 						<li>raping_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[raping_react_neutral_horny]</li>
-							<li>raping_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>raping_react_neutral_horny->[horny_reaction], [counterpart]!</li>
-							<li>raping_react_neutral_horny->[horny_reaction]!</li>
-						<li>raping_react_neutral->[normal_reaction]!</li>
+							<li>raping_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>raping_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
+							<li>raping_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>raping_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_jobDefName==RapeEnemy, priority=9)->[rapingenemy_react]</li>
 					<li>rapingenemy_react(INITIATOR_trait==kind)->Even they don't deserve that!</li>
 					<li>rapingenemy_react(INITIATOR_opinion>=25)->[rapingenemy_react_good]</li>
 						<li>rapingenemy_react_good(INITIATOR_thoughtLabel==horny)->[rapingenemy_react_good_horny]</li>
 						<li>rapingenemy_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[rapingenemy_react_good_horny]</li>
-							<li>rapingenemy_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>rapingenemy_react_good_horny->[horny_reaction]! Give 'em what they deserve, [counterpart]! [cheer_reaction]</li>
-							<li>rapingenemy_react_good_horny->[horny_reaction]! You go, [counterpart]!</li>
+							<li>rapingenemy_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>rapingenemy_react_good_horny->[horny_sex_reaction]! Give 'em what they deserve, [counterpart]! [cheer_reaction]</li>
+							<li>rapingenemy_react_good_horny->[horny_sex_reaction]! You go, [counterpart]!</li>
 						<li>rapingenemy_react_good(INITIATOR_moving==Yes, priority=1)->[cheer_reaction]!</li>
 						<li>rapingenemy_react_good->[cheer_reaction]!</li>
 					<li>rapingenemy_react(INITIATOR_opinion&lt;=-25)->[rapingenemy_react_bad]</li>
 						<li>rapingenemy_react_bad(INITIATOR_thoughtLabel==horny)->[rapingenemy_react_bad_horny]</li>
 						<li>rapingenemy_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[rapingenemy_react_bad_horny]</li>
-							<li>rapingenemy_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>rapingenemy_react_bad_horny->[horny_reaction]! I could show 'em better than that, [counterpart]!</li>
-							<li>rapingenemy_react_bad_horny->[horny_reaction]!</li>
-						<li>rapingenemy_react_bad->[gross_reaction]!</li>
+							<li>rapingenemy_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>rapingenemy_react_bad_horny->[horny_sex_reaction]! I could show 'em better than that, [counterpart]!</li>
+							<li>rapingenemy_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>rapingenemy_react_bad->[gross_sex_reaction]!</li>
 					<li>rapingenemy_react->[rapingenemy_react_neutral]</li>
 						<li>rapingenemy_react_neutral(INITIATOR_thoughtLabel==horny)->[rapingenemy_react_neutral_horny]</li>
 						<li>rapingenemy_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[rapingenemy_react_neutral_horny]</li>
-							<li>rapingenemy_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]!</li>
-							<li>rapingenemy_react_neutral_horny->[horny_reaction]! You show 'em, [counterpart]!</li>
-							<li>rapingenemy_react_neutral_horny->[horny_reaction]!</li>
-						<li>rapingenemy_react_neutral->[normal_reaction]!</li>
+							<li>rapingenemy_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+							<li>rapingenemy_react_neutral_horny->[horny_sex_reaction]! You show 'em, [counterpart]!</li>
+							<li>rapingenemy_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>rapingenemy_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_jobDefName==RJW_Masturbate, priority=9)->[masturbate_react]</li>
 					<li>masturbate_react(INITIATOR_opinion>=25)->[masturbate_react_good]</li>
-							<li>masturbate_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>masturbate_react_good_horny(INITIATOR_opinion>=85, INITIATOR_moving==Yes, priority=1)->[horny_reaction]! I might join you if I weren't busy!</li>
-							<li>masturbate_react_good_horny->[horny_reaction]!</li>
-						<li>masturbate_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>masturbate_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>masturbate_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>masturbate_react_good_horny(INITIATOR_opinion>=85, INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! I might join you if I weren't busy!</li>
+							<li>masturbate_react_good_horny->[horny_sex_reaction]!</li>
+						<li>masturbate_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>masturbate_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>masturbate_react(INITIATOR_opinion&lt;=-25)->[masturbate_react_bad]</li>
-						<li>masturbate_react_bad->[gross_reaction]!</li>
+						<li>masturbate_react_bad->[gross_sex_reaction]!</li>
 					<li>masturbate_react->[masturbate_react_neutral]</li>
 						<li>masturbate_react_neutral(INITIATOR_thoughtLabel==horny)->[masturbate_react_neutral_horny]</li>
 						<li>masturbate_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[masturbate_react_neutral_horny]</li>
-							<li>masturbate_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>masturbate_react_neutral_horny->[horny_reaction]!</li>
-						<li>masturbate_react_neutral->[normal_reaction]!</li>
+							<li>masturbate_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>masturbate_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>masturbate_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==WhoreIsServingVisitors, priority=9)->[whoreserve_react]</li>
 					<li>whoreserve_react(INITIATOR_opinion>=25)->[whoreserve_react_good]</li>
 						<li>whoreserve_react_good(INITIATOR_thoughtLabel==horny)->[whoreserve_react_good_horny]</li>
 						<li>whoreserve_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[whoreserve_react_good_horny]</li>
-							<li>whoreserve_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>whoreserve_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>whoreserve_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>whoreserve_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
+							<li>whoreserve_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>whoreserve_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>whoreserve_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>whoreserve_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
 						<li>whoreserve_react_good->Give 'em their money's worth, [RECIPIENT_nameDef]!</li>
 					<li>whoreserve_react(INITIATOR_opinion&lt;=-25)->[whoreserve_react_bad]</li>
 						<li>whoreserve_react_bad(INITIATOR_thoughtLabel==horny)->[whoreserve_react_bad_horny]</li>
 						<li>whoreserve_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[whoreserve_react_bad_horny]</li>
-							<li>whoreserve_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>whoreserve_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>whoreserve_react_bad_horny->[horny_reaction]!</li>
-						<li>whoreserve_react_bad->[gross_reaction], at least give 'em their money's worth, [counterpart]!</li>
+							<li>whoreserve_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>whoreserve_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>whoreserve_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>whoreserve_react_bad->[gross_sex_reaction], at least give 'em their money's worth, [counterpart]!</li>
 					<li>whoreserve_react->[whoreserve_react_neutral]</li>
 						<li>whoreserve_react_neutral(INITIATOR_thoughtLabel==horny)->[whoreserve_react_neutral_horny]</li>
 						<li>whoreserve_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[whoreserve_react_neutral_horny]</li>
-							<li>whoreserve_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>whoreserve_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>whoreserve_react_neutral_horny->[horny_reaction]!</li>
+							<li>whoreserve_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>whoreserve_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>whoreserve_react_neutral_horny->[horny_sex_reaction]!</li>
 						<li>whoreserve_react_neutral->Give 'em their money's worth, [RECIPIENT_nameDef]!</li>
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==Quickie, priority=9)->[quickie_react]</li>
 					<li>quickie_react(INITIATOR_opinion>=25)->[quickie_react_good]</li>
 						<li>quickie_react_good(INITIATOR_thoughtLabel==horny)->[quickie_react_good_horny]</li>
 						<li>quickie_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[quickie_react_good_horny]</li>
-							<li>quickie_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>quickie_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>quickie_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>quickie_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>quickie_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>quickie_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>quickie_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>quickie_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>quickie_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>quickie_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>quickie_react(INITIATOR_opinion&lt;=-25)->[quickie_react_bad]</li>
 						<li>quickie_react_bad(INITIATOR_thoughtLabel==horny)->[quickie_react_bad_horny]</li>
 						<li>quickie_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[quickie_react_bad_horny]</li>
-							<li>quickie_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>quickie_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>quickie_react_bad_horny->[horny_reaction]!</li>
-						<li>quickie_react_bad->[gross_reaction]!</li>
+							<li>quickie_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>quickie_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>quickie_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>quickie_react_bad->[gross_sex_reaction]!</li>
 					<li>quickie_react->[quickie_react_neutral]</li>
 						<li>quickie_react_neutral(INITIATOR_thoughtLabel==horny)->[quickie_react_neutral_horny]</li>
 						<li>quickie_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[quickie_react_neutral_horny]</li>
-							<li>quickie_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>quickie_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>quickie_react_neutral_horny->[horny_reaction]!</li>
-						<li>quickie_react_neutral->[normal_reaction]!</li>
+							<li>quickie_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>quickie_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>quickie_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>quickie_react_neutral->[normal_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettingQuickie, priority=9)->[quickie2_react]</li>
 					<li>quickie2_react(INITIATOR_opinion>=25)->[quickie2_react_good]</li>
 						<li>quickie2_react_good(INITIATOR_thoughtLabel==horny)->[quickie2_react_good_horny]</li>
 						<li>quickie2_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[quickie2_react_good_horny]</li>
-							<li>quickie2_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>quickie2_react_good_horny->[horny_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>quickie2_react_good_horny->[horny_reaction]! You go [counterpart]!</li>
-						<li>quickie2_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]! Sorry, [leaving]!</li>
-						<li>quickie2_react_good->[normal_reaction]! [RECIPIENT_nameDef]!</li>
+							<li>quickie2_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>quickie2_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+							<li>quickie2_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+						<li>quickie2_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]! Sorry, [leaving_sex_reaction]!</li>
+						<li>quickie2_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef]!</li>
 					<li>quickie2_react(INITIATOR_opinion&lt;=-25)->[quickie2_react_bad]</li>
 						<li>quickie2_react_bad(INITIATOR_thoughtLabel==horny)->[quickie2_react_bad_horny]</li>
 						<li>quickie2_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[quickie2_react_bad_horny]</li>
-							<li>quickie2_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>quickie2_react_bad_horny->[horny_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>quickie2_react_bad_horny->[horny_reaction]!</li>
-						<li>quickie2_react_bad->[gross_reaction]!</li>
+							<li>quickie2_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>quickie2_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+							<li>quickie2_react_bad_horny->[horny_sex_reaction]!</li>
+						<li>quickie2_react_bad->[gross_sex_reaction]!</li>
 					<li>quickie2_react->[quickie2_react_neutral]</li>
 						<li>quickie2_react_neutral(INITIATOR_thoughtLabel==horny)->[quickie2_react_neutral_horny]</li>
 						<li>quickie2_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[quickie2_react_neutral_horny]</li>
-							<li>quickie2_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_reaction]! [leaving]!</li>
-							<li>quickie2_react_neutral_horny->[horny_reaction]! [counterpart]!</li>
-							<li>quickie2_react_neutral_horny->[horny_reaction]!</li>
-						<li>quickie2_react_neutral->[normal_reaction]!</li>
+							<li>quickie2_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+							<li>quickie2_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
+							<li>quickie2_react_neutral_horny->[horny_sex_reaction]!</li>
+						<li>quickie2_react_neutral->[normal_sex_reaction]!</li>
 					
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettinBred, priority=9)->[gettingbred_react]</li>
 					<li>gettingbred_react(INITIATOR_trait==zoophile, priority=2)->[gettingbred_react_zoophile]</li>
 					<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[gettingbred_react_zoophile]</li>
-						<li>gettingbred_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_reaction]! Show that animal a good time, [counterpart]!</li>
-						<li>gettingbred_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_reaction]! Show that animal a good time, [counterpart]! [cheer_reaction]!</li>
-						<li>gettingbred_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! I could do much better, [counterpart]!</li>
-						<li>gettingbred_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
+						<li>gettingbred_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]!</li>
+						<li>gettingbred_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]! [cheer_reaction]!</li>
+						<li>gettingbred_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
+						<li>gettingbred_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
 					<li>gettingbred_react(INITIATOR_opinion>=25)->[gettingbred_react_good]</li>					
-						<li>gettingbred_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]!</li>
-						<li>gettingbred_react_good->[normal_reaction]! [RECIPIENT_nameDef], are you alright?!</li>
-						<li>gettingbred_react_good->[normal_reaction]! [RECIPIENT_nameDef], what's that animal doing to you?!</li>
+						<li>gettingbred_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]!</li>
+						<li>gettingbred_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], are you alright?!</li>
+						<li>gettingbred_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], what's that animal doing to you?!</li>
 					<li>gettingbred_react(INITIATOR_opinion&lt;=-25)->[gettingbred_react_bad]</li>
-						<li>gettingbred_react_bad(INITIATOR_moving==Yes, priority=1)->[gross_reaction]! You deserve it, [counterpart], so [leaving]!</li>
-						<li>gettingbred_react_bad->[gross_reaction]!</li>
+						<li>gettingbred_react_bad(INITIATOR_moving==Yes, priority=1)->[gross_sex_reaction]! You deserve it, [counterpart], so [leaving_sex_reaction]!</li>
+						<li>gettingbred_react_bad->[gross_sex_reaction]!</li>
 					<li>gettingbred_react->[gettingbred_react_neutral]</li>
-						<li>gettingbred_react_neutral->[gross_reaction]! [counterpart]!</li>
-						<li>gettingbred_react_neutral->[gross_reaction]!</li>
+						<li>gettingbred_react_neutral->[gross_sex_reaction]! [counterpart]!</li>
+						<li>gettingbred_react_neutral->[gross_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==Bestiality, priority=9)->[bestiality_react]</li>
 					<li>bestiality_react(INITIATOR_trait==zoophile, priority=2)->[bestiality_react_zoophile]</li>
 					<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[bestiality_react_zoophile]</li>
-						<li>bestiality_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_reaction]! Show that animal a good time, [counterpart]!</li>
-						<li>bestiality_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_reaction]! [fuck] that animal, [counterpart]! [cheer_reaction]!</li>
-						<li>bestiality_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! I could do much better, [counterpart]!</li>
-						<li>bestiality_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
+						<li>bestiality_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]!</li>
+						<li>bestiality_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! [fuck] that animal, [counterpart]! [cheer_reaction]!</li>
+						<li>bestiality_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
+						<li>bestiality_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
 					<li>bestiality_react(INITIATOR_opinion>=25)->[bestiality_react_good]</li>					
-						<li>bestiality_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]!</li>
-						<li>bestiality_react_good->[normal_reaction]! [RECIPIENT_nameDef], what are you doing?!</li>
-						<li>bestiality_react_good->[normal_reaction]! [RECIPIENT_nameDef], what are you doing to that animal?!</li>
+						<li>bestiality_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]!</li>
+						<li>bestiality_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], what are you doing?!</li>
+						<li>bestiality_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], what are you doing to that animal?!</li>
 					<li>bestiality_react(INITIATOR_opinion&lt;=-25)->[bestiality_react_bad]</li>
-						<li>bestiality_react_bad(INITIATOR_moving==Yes, priority=1)->[gross_reaction]!</li>
-						<li>bestiality_react_bad->[gross_reaction]!</li>
+						<li>bestiality_react_bad(INITIATOR_moving==Yes, priority=1)->[gross_sex_reaction]!</li>
+						<li>bestiality_react_bad->[gross_sex_reaction]!</li>
 					<li>bestiality_react->[bestiality_react_neutral]</li>
-						<li>bestiality_react_neutral->[gross_reaction]! [counterpart]!</li>
-						<li>bestiality_react_neutral->[gross_reaction]!</li>
+						<li>bestiality_react_neutral->[gross_sex_reaction]! [counterpart]!</li>
+						<li>bestiality_react_neutral->[gross_sex_reaction]!</li>
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==BestialityForFemale, priority=9)->[bestialityf_react]</li>
 					<li>bestialityf_react(INITIATOR_trait==zoophile, priority=2)->[bestialityf_react_zoophile]</li>
 					<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[bestialityf_react_zoophile]</li>
-						<li>bestialityf_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_reaction]! Show that animal a good time, [counterpart]!</li>
-						<li>bestialityf_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_reaction]! [fuck] that animal, [counterpart]! [cheer_reaction]!</li>
-						<li>bestialityf_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! I could do much better, [counterpart]!</li>
-						<li>bestialityf_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_reaction]! [cheer_reaction]!</li>
+						<li>bestialityf_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]!</li>
+						<li>bestialityf_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! [fuck] that animal, [counterpart]! [cheer_reaction]!</li>
+						<li>bestialityf_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
+						<li>bestialityf_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
 					<li>bestialityf_react(INITIATOR_opinion>=25)->[bestialityf_react_good]</li>					
-						<li>bestialityf_react_good(INITIATOR_moving==Yes, priority=1)->[normal_reaction]!</li>
-						<li>bestialityf_react_good->[normal_reaction]! [RECIPIENT_nameDef], what are you doing?!</li>
-						<li>bestialityf_react_good->[normal_reaction]! [RECIPIENT_nameDef], what are you doing to that animal?!</li>
+						<li>bestialityf_react_good(INITIATOR_moving==Yes, priority=1)->[normal_sex_reaction]!</li>
+						<li>bestialityf_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], what are you doing?!</li>
+						<li>bestialityf_react_good->[normal_sex_reaction]! [RECIPIENT_nameDef], what are you doing to that animal?!</li>
 					<li>bestialityf_react(INITIATOR_opinion&lt;=-25)->[bestialityf_react_bad]</li>
-						<li>bestialityf_react_bad(INITIATOR_moving==Yes, priority=1)->[gross_reaction]!</li>
-						<li>bestialityf_react_bad->[gross_reaction]!</li>
+						<li>bestialityf_react_bad(INITIATOR_moving==Yes, priority=1)->[gross_sex_reaction]!</li>
+						<li>bestialityf_react_bad->[gross_sex_reaction]!</li>
 					<li>bestialityf_react->[bestialityf_react_neutral]</li>
-						<li>bestialityf_react_neutral->[gross_reaction]! [counterpart]!</li>
-						<li>bestialityf_react_neutral->[gross_reaction]!</li>
-
-				<!-- ===Misc=== -->
-						<li>expletive_adj->fucking</li>
-						<li>expletive_adj->goddamn</li>
-						<li>expletive->god</li>
-						<li>expletive->goddamn</li>
-						<li>expletive->fuck</li>
-						<li>exclaim->ngh</li>
-						<li>exclaim->mph</li>
-						<li>exclaim->ugh</li>
-						<li>exclaim->ung</li>
-						<li>exclaim->ooh</li>
-						<li>normal_reaction->wow</li>
-						<li>normal_reaction->oh my</li>
-						<li>normal_reaction->*gasp*</li>
-						<li>normal_reaction->ah</li>
-						<li>horny_reaction->wow</li>
-						<li>horny_reaction->ooh</li>
-						<li>horny_reaction->hot</li>
-						<li>gross_reaction->ew</li>
-						<li>gross_reaction->ugh</li>
-						<li>gross_reaction->gross</li>
-						<li>gross_reaction->yuck</li>
-						<li>cheer_reaction->woo</li>
-						<li>cheer_reaction->nice</li>
-						<li>exclaim_r->ARGH</li>
-						<li>exclaim_r->AAH</li>
-						<li>exclaim_r->OH</li>
-						<li>exclaim_r->OGH</li>
-						<li>exclaim_r->EEK</li>
-						<li>exclaim_r->ERGH</li>
-						<li>exclaim_r->OOF</li>
-						<li>exclaim_r->UNG</li>
-						<li>leaving->i'll get out of here</li>
-						<li>leaving->i'll go</li>
-						<li>leaving->i'll leave you to it</li>
-						<li>fuck->fuck</li>	
-						<li>fuck->pound</li>	
-						<li>fuck->breed</li>	
-						<li>insult->fucker</li>
-						<li>insult->motherfucker</li>
-						<li>insult->son of a bitch</li>
-						<li>insult->piece of shit</li>
-						<li>penis->dick</li>
-						<li>penis->cock</li>
-						<li>penis->prick</li>
-						<li>penis->pecker</li>
-						<li>ass(INITIATOR_gender==Male, RECIPIENT_gender==Male)->boipussy</li>
-						<li>ass->ass</li>
-						<li>ass->asshole</li>
-						<li>vagina->pussy</li>
-						<li>vagina->cunt</li>
-						<li>vagina->coochie</li>
-						<li>boobs->tits</li>
-						<li>boobs->jugs</li>
-						<li>boobs->milkers</li>
-						<li>boobs->boobs</li>
-						<li>fuck->fuck</li>	
-						<li>fuck->pound</li>	
-						<li>fuck->slam</li>
-						<li>cum->cum</li>	
-						<li>cum->seed</li>
-						<li>cum->sperm</li>
-						<li>cum->splooge</li>
-				<!-- ===Nouns=== -->	
-						<li>counterpart(INITIATOR_opinion>=25)->[friend]</li>
-							<li>friend->friend</li>
-							<li>friend->pal</li>
-							<li>friend(RECIPIENT_gender==Female)->gal</li>
-							<li>friend(RECIPIENT_gender==Male)->dude</li>
-							<li>friend(RECIPIENT_gender==Male)->bud</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->bro</li>
-							<li>friend(RECIPIENT_gender==Male, INITIATOR_gender==Male)->man</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->gurl</li>
-							<li>friend(RECIPIENT_gender==Female, INITIATOR_gender==Female)->girlfriend</li>
-						<li>counterpart->[neutral]</li>
-							<li>neutral->[RECIPIENT_nameDef]</li>							
-						<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-							<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
-							<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>				
-								<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile)->animal fucker</li>
-								<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist)->rapist</li>
-								<li>disapprove->degenerate</li>
-								<li>disapprove->freak</li>
-								<li>disapprove(INITIATOR_intellectual_level>=10)->profligate</li>
-							<li>rival->punk</li>
-							<li>rival(RECIPIENT_gender==Male)->asshole</li>
-							<li>rival(RECIPIENT_gender==Female)->bitch</li>
+						<li>bestialityf_react_neutral->[gross_sex_reaction]! [counterpart]!</li>
+						<li>bestialityf_react_neutral->[gross_sex_reaction]!</li>
 		</value>
 	</Operation>
 	
@@ -696,52 +600,11 @@
 					<li>gettingorgysex_react->Wow, nice moves, [RECIPIENT_nameDef]!</li>
 					<li>gettingorgysex_react->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
 					<li>gettingorgysex_react(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
-				
-				<!-- ===Misc=== -->
-						<li>expletive_adj->fucking</li>
-						<li>expletive_adj->goddamn</li>
-						<li>expletive->god</li>
-						<li>expletive->goddamn</li>
-						<li>expletive->fuck</li>
-						<li>exclaim->ngh</li>
-						<li>exclaim->mph</li>
-						<li>exclaim->ugh</li>
-						<li>exclaim->ung</li>
-						<li>exclaim->ooh</li>
-						<li>normal_reaction->wow</li>
-						<li>normal_reaction->oh my</li>
-						<li>normal_reaction->*gasp*</li>
-						<li>normal_reaction->ah</li>
-						<li>horny_reaction->wow</li>
-						<li>horny_reaction->ooh</li>
-						<li>horny_reaction->hot</li>
-						<li>gross_reaction->ew</li>
-						<li>gross_reaction->ugh</li>
-						<li>gross_reaction->gross</li>
-						<li>gross_reaction->yuck</li>
-						<li>cheer_reaction->woo</li>
-						<li>cheer_reaction->nice</li>
-						<li>exclaim_r->ARGH</li>
-						<li>exclaim_r->AAH</li>
-						<li>exclaim_r->OH</li>
-						<li>exclaim_r->OGH</li>
-						<li>exclaim_r->EEK</li>
-						<li>exclaim_r->ERGH</li>
-						<li>exclaim_r->OOF</li>
-						<li>exclaim_r->UNG</li>
-						<li>leaving->i'll get out of here</li>
-						<li>leaving->i'll go</li>
-						<li>leaving->i'll leave you to it</li>
-						<li>fuck->fuck</li>	
-						<li>fuck->pound</li>	
-						<li>fuck->breed</li>	
-						<li>insult->fucker</li>
-						<li>insult->creep</li>
 		</value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
-        <xpath>/Defs/InteractionDef[defName = "Insult"]/logRulesInitiator/rulesStrings</xpath>
+        <xpath>/Defs/InteractionDef[defName="Insult" or defName="Slight"]/logRulesInitiator/rulesStrings</xpath>
         <value>
 			<!-- ===make insults a bit more relevant=== -->
 				<li>r_logentry(RECIPIENT_moving==No, INITIATOR_jobDefName==JoinInBed, priority=10)->[joininbed]</li>
@@ -798,9 +661,9 @@
 					<li>bestialityf(INITIATOR_trait==rapist, priority=9)->Quit staring, [insult]!</li>
 					<li>bestialityf->Quit staring, [insult]!</li>
 				<li>r_logentry(INITIATOR_jobDefName==OrgySex, priority=10)->[orgysex]</li>
-					<li>orgysex->[gross_reaction], [RECIPIENT_nameDef]!</li>
+					<li>orgysex->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
 				<li>r_logentry(INITIATOR_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex]</li>
-					<li>gettingorgysex->[gross_reaction], [RECIPIENT_nameDef]!</li>
+					<li>gettingorgysex->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
 					
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==JoinInBed, priority=9)->[joininbed_react]</li>
 					<li>joininbed(RECIPIENT_jobDefName==GettinLoved, priority=10)->You suck in bed!</li>
@@ -844,52 +707,9 @@
 					<li>bestialityf_react(INITIATOR_trait==rapist, priority=9)->Pft, you can't even make the creature enjoy it!</li>
 					<li>bestialityf_react->What are you doing, [insult]!</li>
 				<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=10)->[orgysex_react]</li>
-					<li>orgysex_react->[gross_reaction], [RECIPIENT_nameDef]!</li>
+					<li>orgysex_react->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
 				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex_react]</li>
-					<li>gettingorgysex_react->[gross_reaction], [RECIPIENT_nameDef]!</li>
-				
-				<!-- ===Misc=== -->
-						<li>expletive_adj->fucking</li>
-						<li>expletive_adj->goddamn</li>
-						<li>expletive->god</li>
-						<li>expletive->goddamn</li>
-						<li>expletive->fuck</li>
-						<li>exclaim->ngh</li>
-						<li>exclaim->mph</li>
-						<li>exclaim->ugh</li>
-						<li>exclaim->ung</li>
-						<li>exclaim->ooh</li>
-						<li>normal_reaction->wow</li>
-						<li>normal_reaction->oh my</li>
-						<li>normal_reaction->*gasp*</li>
-						<li>normal_reaction->ah</li>
-						<li>horny_reaction->wow</li>
-						<li>horny_reaction->ooh</li>
-						<li>horny_reaction->hot</li>
-						<li>gross_reaction->ew</li>
-						<li>gross_reaction->ugh</li>
-						<li>gross_reaction->gross</li>
-						<li>gross_reaction->yuck</li>
-						<li>cheer_reaction->woo</li>
-						<li>cheer_reaction->nice</li>
-						<li>exclaim_r->ARGH</li>
-						<li>exclaim_r->AAH</li>
-						<li>exclaim_r->OH</li>
-						<li>exclaim_r->OGH</li>
-						<li>exclaim_r->EEK</li>
-						<li>exclaim_r->ERGH</li>
-						<li>exclaim_r->OOF</li>
-						<li>exclaim_r->UNG</li>
-						<li>leaving->i'll get out of here</li>
-						<li>leaving->i'll go</li>
-						<li>leaving->i'll leave you to it</li>
-						<li>fuck->fuck</li>	
-						<li>fuck->pound</li>	
-						<li>fuck->breed</li>	
-						<li>insult->fucker</li>
-						<li>insult->creep</li>
-						<li>laughs->AHAHAHA</li>
-						<li>laughs->HA HA</li>
+					<li>gettingorgysex_react->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>		
 		</value>
     </Operation>
 </Patch>
