@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- ===ChitchatReplies=== -->
+	<InteractionDef ParentName="SexTalkReply">
+		<defName>OrgyChat</defName>
+		<label>orgy-chat</label>
+		<logRulesInitiator>
+			<rulesStrings>
+				<!-- ===Bad opinion of recipient=== -->
+					<li>r_logentry(INITIATOR_opinion&lt;-25, priority=1)->[bad_opinion]</li>
+						<li>bad_opinion(RECIPIENT_gender==Male)->It would've been much better without your nasty [penis] involved.</li>
+						<li>bad_opinion(RECIPIENT_gender==Female)->It would've been much better without your nasty [vagina] involved.</li>
+						<li>bad_opinion->It would've been much better without your nasty ass involved.</li>					
+					
+				<!-- ===Neutral opinion of recipient=== -->
+					<li>r_logentry->[neutral_opinion]</li>		
+						<li>neutral_opinion->Yeah, I had a good time, [counterpart].</li>	
+						
+				<!-- ===Good opinion of recipient generic=== -->
+					<li>r_logentry(INITIATOR_opinion>=25, priority=1)->[good_opinion]</li>
+					<li>good_opinion(INITIATOR_thoughtLabel==sexually frustrated, priority=1)->[good_opinion_horny]</li>						
+					<li>good_opinion(INITIATOR_thoughtLabel==horny, priority=1)->[good_opinion_horny]</li>
+						<li>good_opinion_horny(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_opinion>=50, INITIATOR_trait==gay)->It was even better with you involved, [counterpart]!</li>
+						<li>good_opinion_horny(INITIATOR_gender==Female, RECIPIENT_gender==Female, INITIATOR_opinion>=50, INITIATOR_trait==gay)->It was even better with you involved, [counterpart]!</li>
+						<li>good_opinion_horny(INITIATOR_gender==Female, RECIPIENT_gender==Male, INITIATOR_opinion>=50, INITIATOR_trait!=gay)->It was even better with you involved, [counterpart]!</li>
+						<li>good_opinion_horny(INITIATOR_gender==Male, RECIPIENT_gender==Female, INITIATOR_opinion>=50, INITIATOR_trait!=gay)->It was even better with you involved, [counterpart]!</li>
+						<li>good_opinion_horny->Just thinking about it makes me want to touch myself...</li>
+					<li>good_opinion->Yeah, we should do it again sometime!</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
+</Defs>	

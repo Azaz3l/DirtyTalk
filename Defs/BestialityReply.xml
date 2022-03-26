@@ -5,120 +5,263 @@
 	</InteractionDef>
 	
 <!-- ===AnalBreeding=== -->
+
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="BreedReply">
 		<defName>Anal_Breed_Reply</defName>
 		<label>analbreed — react to</label>		
 		<logRulesInitiator>
 			<rulesStrings>
+					<!-- ===Neutral Zoophile=== -->
+					<li>zoophile_n->[exclaim_low]! [fuck] my [ass] with that [animal_penis_recipient]!</li>
+					<!-- ===Neutral=== -->
+					<li>human_react_n->What the fuck! Get off! [exclaim_high]!</li>
+					<li>human_react_n->[exclaim_high]! Get your [derogadj] [animal_penis_recipient] out of my [ass]!</li>	
+					<li>human_react_n->[exclaim_high]! Get your [animal_penis_recipient] out of my [ass]!</li>	
 					<!-- ===Zoophile react to male breeder=== -->
-					<li>zoophile_m->[fuck] my [ass] with that [animal_genitals_recipient]!</li>
 					
 					<!-- ===React to male breeder=== -->
-					<li>human_react_m->What the fuck! Get off!</li>
-					<li>human_react_m->[exclaim_high]! Get your [animal_genitals_recipient] out of my [ass]!</li>	
 					
 					<!-- ===Zoophile react to female breeder=== -->
-					<li>zoophile_f->If you insist, [animal_noun]!</li>
-					<li>zoophile_f->I'll never turn down a [RECIPIENT_kind] [ass]!</li>	
 					
 					<!-- ===React to female breeder=== -->
-					<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-					<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-					<li>human_react_f->Oh...I shouldn't do this!</li>
-					<li>human_react_f->Oh...I shouldn't, but your [ass]!</li>
-					<li>human_react_f->This is so wrong, [animal_noun], but your [ass] is irresistable!</li>
-					<li>human_react_f->Your [ass] shouldn't feel this good, [animal_noun]!</li>										
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="BreedReply">
+		<defName>Anal_Breed_Reply_Reverse</defName>
+		<label>analbreed — react to</label>		
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral Zoophile=== -->
+					<li>zoophile_n->If you insist, [animal_noun]!</li>
+					<li>zoophile_n->I'll never turn down a [RECIPIENT_kind] [ass]!</li>	
+					<!-- ===Neutral=== -->
+					<li>human_react_n->Oh...I shouldn't do this!</li>
+					<li>human_react_n->Oh...I shouldn't, but your [animal_ass_recipient]...</li>
+					<li>human_react_n->This is so wrong, [animal_noun], but your [animal_ass_recipient] is irresistable!</li>
+					<li>human_react_n->Your [animal_ass_recipient] shouldn't feel this good, [animal_noun]!</li>		
+					<!-- ===Zoophile react to male breeder=== -->
+					
+					<!-- ===React to male breeder=== -->
+				
+					<!-- ===Zoophile react to female breeder=== -->
+					
+					<!-- ===React to female breeder=== -->
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
 <!-- ===VaginalBreeding=== -->
+	
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="BreedReply">
 		<defName>Vaginal_Breed_Reply</defName>
 		<label>vaginalbreed — react to</label>	
 		<logRulesInitiator>
 			<rulesStrings>				
+				<!-- ===Neutral Zoophile=== -->
+				<li>zoophile_n->[exclaim_low]! [fuck] my [vagina] with that [animal_penis_recipient], [animal_noun]!</li>
+				<!-- ===Neutral=== -->
+				<li>human_react_n->What the fuck! Get off!</li>
+				<li>human_react_n->[exclaim_high]! Get your [animal_penis_recipient] out of my [vagina]!</li>
+				<li>human_react_n->[exclaim_high]! Get your [derogadj] [animal_penis_recipient] out of my [vagina]!</li>
 				<!-- ===Zoophile react to male breeder=== -->
-				<li>zoophile_m->[fuck] my [vagina] with that [animal_genitals_recipient]!</li>
 				
 				<!-- ===React to male breeder=== -->
-				<li>human_react_m->What the fuck! Get off!</li>
-				<li>human_react_m->[exclaim_high]! Get your [animal_genitals_recipient] out of my [vagina]!</li>
 				
 				<!-- ===Zoophile react to female breeder=== -->
-				<li>zoophile_f->If you insist, [animal_noun]!</li>
-				<li>zoophile_f->I'll never turn down a [animal_genitals_recipient]!</li>
 				
 				<!-- ===React to female breeder=== -->
-				<li>human_react_f->Oh...I shouldn't do this!</li>
-				<li>human_react_f->Oh...I shouldn't, but your [animal_genitals_recipient]...</li>
-				<li>human_react_f->This is so wrong, [animal_noun], but your [animal_genitals_recipient] is irresistable!</li>
-				<li>human_react_f->Your [animal_genitals_recipient] shouldn't feel this good, [animal_noun]!</li>												
+
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="BreedReply">
+		<defName>Vaginal_Breed_Reply_Reverse</defName>
+		<label>vaginalbreed — react to</label>	
+		<logRulesInitiator>
+			<rulesStrings>				
+				<!-- ===Neutral Zoophile=== -->
+				<li>zoophile_n->If you insist, [animal_noun]!</li>
+				<li>zoophile_n->I'll never turn down a [animal_vagina_recipient]!</li>
+				<!-- ===Neutral=== -->
+				<li>human_react_n->Oh...I shouldn't do this!</li>
+				<li>human_react_n->Oh...I shouldn't, but your [animal_vagina_recipient]...</li>
+				<li>human_react_n->This is so wrong, [animal_noun], but your [animal_vagina_recipient] is irresistable!</li>
+				<li>human_react_n->Your [animal_vagina_recipient] shouldn't feel this good, [animal_noun]!</li>
+				<!-- ===Zoophile react to male breeder=== -->
+
+				<!-- ===React to male breeder=== -->
+
+				<!-- ===Zoophile react to female breeder=== -->
+				
+				<!-- ===React to female breeder=== -->
+			
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
 <!-- ===OralBreeding=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="BreedReply">
 		<defName>Orally_Breed_Reply</defName>
 		<label>oralbreed — react to</label>		
 		<logRulesInitiator>
 			<rulesStrings>
+				<!-- ===Neutral Zoophile=== -->
+				<li>zoophile_n->*[exclaim_oral]* yoor [animal_penis_recipient] tasds *[exclaim_oral]* so good, [animal_noun]!</li>
+				<li>zoophile_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
+				<li>zoophile_n->*[exclaim_oral]* good *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>
+				<li>zoophile_n->*[exclaim_oral]* cum *[exclaim_oral]* in my mouf *[exclaim_oral]* [animal_noun]!</li>
+				<li>zoophile_n->*[exclaim_oral]* feed me *[exclaim_oral]* [cum] *[exclaim_oral]* [animal_noun]!</li>
+				<!-- ===Neutral=== -->
+				<li>human_react_n->*[exclaim_oral]* Ged oor [animal_penis_recipient] out of *[exclaim_oral]* my mouf, [animal_noun]!</li>
+				<li>human_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
+				<li>human_react_n->*[exclaim_oral]* bad *[exclaim_oral]* [animal_noun]! *[exclaim_oral]* </li>
 				<!-- ===Zoophile react to male breeder=== -->
-				<li>zoophile_m->Ooh! Hey there [animal_noun]!</li>
-				<li>zoophile_m->Ooh! Good [animal_noun], just like that!</li>
-				<li>zoophile_m->You're good with your tongue, [animal_noun]!</li>
-				<li>zoophile_m(INITIATOR_gender==Female)->[exclaim_low], tongue my [vagina], [animal_noun]!</li>
-				<li>zoophile_m(INITIATOR_gender==Male)->[exclaim_low], lick this [penis], [animal_noun]!</li>
 				
 				<!-- ===React to male breeder=== -->
-				<li>human_react_m(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my [penis]!</li>
-				<li>human_react_m(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my balls!</li>
-				<li>human_react_m(INITIATOR_gender==Female)->[exclaim_low]! Get your tongue out of my [vagina], [animal_noun]!</li>
-
-				<!-- ===Zoophile react to female breeder=== -->
-				<li>human_react_f(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my [penis]!</li>
-				<li>human_react_f(INITIATOR_gender==Male)->[exclaim_low]! Get your tongue off my balls!</li>
-				<li>human_react_f(INITIATOR_gender==Female)->[exclaim_low]! Get your tongue out of my [vagina], [animal_noun]!</li>
-				<li>human_react_f->[exclaim_low]! Get your tongue out of my [vagina], [animal_noun]!</li>
 				
+				<!-- ===Zoophile react to female breeder=== -->
+
 				<!-- ===React to female breeder=== -->
-				<li>zoophile_f->Ooh! Hey there [animal_noun]!</li>
-				<li>zoophile_f->Ooh! Good [animal_noun], just like that!</li>
-				<li>zoophile_f->You're good with your tongue, [animal_noun]!</li>
-				<li>zoophile_f(INITIATOR_gender==Female)->[exclaim_low], tongue my [vagina], [animal_noun]!</li>
-				<li>zoophile_f(INITIATOR_gender==Male)->[exclaim_low], lick this [penis], [animal_noun]!</li>									
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
-	<!-- ===2 Initiator=== -->
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="BreedReply">
-		<defName>Orally_Breed_2_Reply</defName>
+		<defName>Orally_Breed_Reply_Reverse</defName>
+		<label>oralbreed — react to</label>		
+		<logRulesInitiator>
+			<rulesStrings>
+				<!-- ===Neutral Zoophile=== -->
+				<li>zoophile_n->[exclaim_low]! Good [animal_noun], just like that!</li>
+				<li>zoophile_n->[exclaim_low]! You're mouth feels so good!</li>
+				<li>zoophile_n->[exclaim_low]... How's that taste, [animal_noun]?</li>
+				<li>zoophile_n->You're good with your tongue, [animal_noun]!</li>
+				<!-- ===Neutral=== -->
+				<li>human_react_n->Get your mouth away from my...[exclaim_low]...</li>
+				<li>human_react_n->[exclaim_low]! Your mouth shouldn't feel this good, [animal_noun]...</li>
+				<li>human_react_n->When you offer up your mouth like that...[exclaim_low]...</li>
+				<li>human_react_n->[exclaim_low]...this is so wrong...</li>
+				<!-- ===Zoophile react to male breeder=== -->
+				
+				<!-- ===React to male breeder=== -->
+				
+				<!-- ===Zoophile react to female breeder=== -->
+				
+				<!-- ===React to female breeder=== -->	
+				
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
+	<!-- ===Serviced=== -->
+	<InteractionDef ParentName="BreedReply">
+		<defName>Orally_Service_Reply</defName>
 		<label>oralbreed — react to</label>
 		<logRulesInitiator>
 			<rulesStrings>
+				<!-- ===Neutral Zoophile=== -->
+				<li>zoophile_n->[exclaim_low]! Hey there [animal_noun]!</li>
+				<li>zoophile_n->[exclaim_low]! Good [animal_noun], just like that!</li>
+				<li>zoophile_n->[exclaim_low]! Good [animal_noun], right there!</li>
+				<li>zoophile_n->[exclaim_low]... How's that taste, [animal_noun]?</li>
+				<li>zoophile_n->You're good with your tongue, [animal_noun]!</li>
+				<!-- ===Neutral=== -->
+				<li>human_react_n->Get your mouth away from my...[exclaim_low]...</li>
+				<li>human_react_n->Get your tongue off of my...[exclaim_low]...</li>
+				<li>human_react_n->[exclaim_low]...stop licking there, [animal_noun]...[exclaim_low]...</li>
+				<li>human_react_n->[exclaim_low]...this is so wrong...</li>
+				<li>human_react_n->[exclaim_low]! Bad [animal_noun]! Don't lick there! [exclaim_low]...</li>
 				<!-- ===Zoophile react to male breeder=== -->
-				<li>zoophile_m->*[exclaim_oral]* yoor [animal_genitals_recipient] tasds *[exclaim_oral]* so good, [animal_noun]!</li>
-				<li>zoophile_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
-				<li>zoophile_m->*[exclaim_oral]* good *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>
-				<li>zoophile_m->*[exclaim_oral]* [cum] *[exclaim_oral]* in my mouf *[exclaim_oral]* [animal_noun]!</li>
 				
 				<!-- ===React to male breeder=== -->
-				<li>human_react_m->*[exclaim_oral]* Ged oor [animal_genitals_recipient] out of *[exclaim_oral]* my mouf, [animal_noun]!</li>
-				<li>human_react_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
-				<li>human_react_m->*[exclaim_oral]* bad *[exclaim_oral]* [animal_noun]! *[exclaim_oral]* </li>
 
 				<!-- ===Zoophile react to female breeder=== -->
-				<li>human_react_f(INITIATOR_gender==Male)->*[exclaim_oral]* Ged oor [animal_genitals_recipient] out of *[exclaim_oral]* my mouf, [animal_noun]!</li>
-				<li>human_react_f(INITIATOR_gender==Male)->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
-				<li>human_react_f(INITIATOR_gender==Female)->*[exclaim_oral]* bad *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>
+				
+				<!-- ===React to female breeder=== -->		
+				
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+<!-- ===Handjob=== -->
+	<InteractionDef ParentName="BreedReply">
+		<defName>Handjob_Service_Reply</defName>
+		<label>oralbreed — react to</label>
+		<logRulesInitiator>
+			<rulesStrings>
+				<!-- ===Neutral Zoophile=== -->
+				<li>zoophile_n->[exclaim_low]!</li>
+				<!-- ===Neutral=== -->
+				<li>human_react_n->[exclaim_low]!</li>
 
-				<!-- ===React to female breeder=== -->
-				<li>zoophile_f->*[exclaim_oral]* yoor [animal_genitals_recipient] tasds *[exclaim_oral]* so good, [animal_noun]!</li>
-				<li>zoophile_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]* </li>
-				<li>zoophile_f->*[exclaim_oral]* good *[exclaim_oral]* [animal_noun]! *[exclaim_oral]*</li>															
+				<!-- ===Zoophile react to male breeder=== -->
+				
+				<!-- ===React to male breeder=== -->
+
+				<!-- ===Zoophile react to female breeder=== -->
+				
+				<!-- ===React to female breeder=== -->		
+				
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+
+<!-- ===DoublePenetration=== -->
+
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="BreedReply">
+		<defName>DP_Breed_Reply</defName>
+		<label>analbreed — react to</label>		
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral Zoophile=== -->
+					<li>zoophile_n->[exclaim_low]! [fuck] me with those [penis]s!</li>
+					<!-- ===Neutral=== -->
+					<li>human_react_n->What the fuck! Get off! [exclaim_high]!</li>
+					<li>human_react_n->[exclaim_high]! Get your [penis]s out of me, [animal_noun]!</li>	
+					<!-- ===Zoophile react to male breeder=== -->
+					
+					<!-- ===React to male breeder=== -->
+					
+					<!-- ===Zoophile react to female breeder=== -->
+					
+					<!-- ===React to female breeder=== -->
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="BreedReply">
+		<defName>DP_Breed_Reply_Reverse</defName>
+		<label>analbreed — react to</label>		
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral Zoophile=== -->
+					<li>zoophile_n->If you insist, [animal_noun]!</li>
+					<li>zoophile_n->[exclaim_low]! You like these [penis]s, [animal_noun]? [exclaim_low]!</li>	
+					<!-- ===Neutral=== -->
+					<li>human_react_n->Oh...I shouldn't do this!</li>
+					<li>human_react_n->Oh...I shouldn't, but...[exclaim_low]!</li>
+					<li>human_react_n->This is so wrong, [animal_noun], but you're irresistable!</li>
+					<li>human_react_n->You shouldn't make my [penis]s feel this good, [animal_noun]! [exclaim_low]!</li>		
+					<!-- ===Zoophile react to male breeder=== -->
+					
+					<!-- ===React to male breeder=== -->
+				
+					<!-- ===Zoophile react to female breeder=== -->
+					
+					<!-- ===React to female breeder=== -->
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		

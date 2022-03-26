@@ -9,7 +9,6 @@
 					<li>new_colony_masochist->We're out in the open here. I sure hope nobody...*blushes*...takes advantage...</li>
 					
 				<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_trait==zoophile, tag=New_Colony_Zoophile)->[new_colony_zoophile]</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtDefName==Bestiality_Honorable, tag=New_Colony_Zoophile)->[new_colony_zoophile]</li>
 					<li>new_colony_zoophile(INITIATOR_thoughtLabel==horny, priority=1)->I wonder if any [new_zoo_adj] wildlife roams around here. I'm horny...</li>
 					<li>new_colony_zoophile(INITIATOR_thoughtLabel==sexually frustrated, priority=1)->I wonder if any [new_zoo_adj] wildlife roams around here. I'm horny...</li>
 					<li>new_colony_zoophile->I hope there's some [new_zoo_adj] animals around here to [new_zoo_fuck].</li>
@@ -20,8 +19,8 @@
 						<li>new_zoo_fuck->plow</li>
 						<li>new_zoo_fuck->breed</li>
 						
-				<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtLabel==horny, tag=New_Colony_Horny)->[new_colony_horny]</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtLabel==sexually frustrated, tag=New_Colony_Horny)->[new_colony_horny]</li>
+				<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtLabel==horny, tag=Colonist_Horny)->[new_colony_horny]</li>
+				<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtLabel==sexually frustrated, tag=Colonist_Horny)->[new_colony_horny]</li>
 					<li>new_colony_horny->I hope I can find some way to get laid around here...</li>
 					<li>new_colony_horny->I'll go crazy if I don't find some way to get off around here...</li>
 					<li>new_colony_horny->Despite the situation, I really need to find some way to get off...</li>
@@ -32,12 +31,6 @@
 					<li>colonist_horny->[expletive], I need to get laid...</li>
 					<li>colonist_horny->[expletive], I'm horny...</li>
 					<li>colonist_horny(INITIATOR_gender==Male)->My [expletive_adj] balls are gonna explode!</li>
-				
-				<!-- ===Orgy=== -->	
-				<li>r_logentry(INITIATOR_thoughtDefName==AttendedOrgy, RECIPIENT_thoughtDefName==AttendedOrgy, tag=OrgyChat)->[orgychat]</li>
-					<li>orgychat->That orgy was pretty fun, huh?</li>
-					<li>orgychat->That orgy was hot!</li>
-					<li>orgychat(INITIATOR_thoughtLabel==horny, priority=1)->Thinking about that orgy makes me so horny!</li>
 					
 				<!-- ===Sexlife Good Opinion=== -->		
 				<li>r_logentry(INITIATOR_opinion>=25, tag=Sexlife_Generic_Good)->[sexlife_generic_good]</li>
@@ -61,32 +54,7 @@
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinBred, priority=10)->[exclaim_low_high]</li>
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Bestiality, priority=10)->[exclaim_low]</li>
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==BestialityForFemale, priority=10)->[exclaim_low]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==OrgySex, priority=10)->[exclaim_low]</li>
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinOrgySex, priority=10)->[exclaim_low]</li>
-				
-				<!-- ===Milking=== -->	
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==MassageBreasts, priority=10)->[massaging]</li>
-					<li>massaging(INITIATOR_thoughtLabel==horny)->[massaging_horny]</li>
-					<li>massaging(INITIATOR_thoughtLabel==sexually frustrated)->[massaging_horny]</li>
-						<li>massaging_horny->[exclaim_low], these are so [breastcompliment]!</li>
-						<li>massaging_horny->[exclaim_low], these [boobs] are so [breastcompliment]!</li>
-						<li>massaging_horny->[exclaim_low], these [breastcompliment] [boobs] feel so good!</li>
-					<li>massaging->These [boobs] are coming along nicely!</li>
-					<li>massaging->These [breastcompliment] [boobs] will give us lots of nice milk soon!</li>
 					
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==MilkHuman, priority=10)->[milking]</li>
-					<li>milking(INITIATOR_thoughtLabel==horny)->[milking_horny]</li>
-					<li>milking(INITIATOR_thoughtLabel==sexually frustrated)->[milking_horny]</li>
-						<li>milking_horny->[exclaim_low], I might have to have a little taste...</li>
-						<li>milking_horny->[exclaim_low], these [breastcompliment] [boobs] feel so good!</li>
-					<li>milking->These [boobs] are lactating nicely!</li>
-					<li>milking->These [breastcompliment] [boobs] are milkproducing lots of tasty milk!</li>
-					
-				<li>r_logentry(INITIATOR_thoughtDefName==Lactating_Essential, RECIPIENT_gender==Female, tag=Milking_Question)->[milkingquestion]</li>
-					<li>milkingquestion(INITIATOR_opinion>=25, priority=1)->Hey, [counterpart] are those [breastcompliment] [boobs] [milkproducing] well?</li>
-					<li>milkingquestion(INITIATOR_opinion&lt;=25, priority=1)->Hey, [counterpart], those [boobs] are [milkproducing] well, I hope?</li>
-					<li>milkingquestion->Hey, [counterpart], how's the [milkproduction] coming along?</li>
-						
 				
 				<!-- ===Sex Reactions=== -->	
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==JoinInBed, priority=9)->[joininbed_react]</li>
@@ -112,54 +80,6 @@
 							<li>joininbed_react_neutral_horny->[horny_sex_reaction]! [counterpart]!</li>
 							<li>joininbed_react_neutral_horny->[horny_sex_reaction]!</li>
 						<li>joininbed_react_neutral->[normal_sex_reaction]!</li>
-						
-				<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=9)->[orgysex_react]</li>
-					<li>orgysex_react(INITIATOR_opinion>=25)->[orgysex_react_good]</li>
-						<li>orgysex_react_good(INITIATOR_thoughtLabel==horny)->[orgysex_react_good_horny]</li>
-						<li>orgysex_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_good_horny]</li>
-							<li>orgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
-							<li>orgysex_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>orgysex_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
-						<li>orgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
-						<li>orgysex_react_good->[cheer_reaction], [counterpart]!</li>
-					<li>orgysex_react(INITIATOR_opinion&lt;=-25)->[orgysex_react_bad]</li>
-						<li>orgysex_react_bad(INITIATOR_thoughtLabel==horny)->[orgysex_react_bad_horny]</li>
-						<li>orgysex_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_bad_horny]</li>
-							<li>orgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
-							<li>orgysex_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>orgysex_react_bad_horny->[horny_sex_reaction]!</li>
-						<li>orgysex_react_bad->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
-					<li>orgysex_react->[orgysex_react_neutral]</li>
-						<li>orgysex_react_neutral(INITIATOR_thoughtLabel==horny)->[orgysex_react_neutral_horny]</li>
-						<li>orgysex_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_neutral_horny]</li>
-							<li>orgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
-							<li>orgysex_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
-							<li>orgysex_react_neutral_horny->[horny_sex_reaction]!</li>
-						<li>orgysex_react_neutral->[cheer_reaction]!</li>		
-						
-				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=9)->[gettingorgysex_react]</li>
-					<li>gettingorgysex_react(INITIATOR_opinion>=25)->[gettingorgysex_react_good]</li>
-						<li>gettingorgysex_react_good(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_good_horny]</li>
-						<li>gettingorgysex_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_good_horny]</li>
-							<li>gettingorgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
-							<li>gettingorgysex_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
-							<li>gettingorgysex_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
-						<li>gettingorgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
-						<li>gettingorgysex_react_good->[cheer_reaction], [counterpart]!</li>
-					<li>gettingorgysex_react(INITIATOR_opinion&lt;=-25)->[gettingorgysex_react_bad]</li>
-						<li>gettingorgysex_react_bad(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_bad_horny]</li>
-						<li>gettingorgysex_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_bad_horny]</li>
-							<li>gettingorgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
-							<li>gettingorgysex_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
-							<li>gettingorgysex_react_bad_horny->[horny_sex_reaction]!</li>
-						<li>gettingorgysex_react_bad->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
-					<li>gettingorgysex_react->[gettingorgysex_react_neutral]</li>
-						<li>gettingorgysex_react_neutral(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_neutral_horny]</li>
-						<li>gettingorgysex_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_neutral_horny]</li>
-							<li>gettingorgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
-							<li>gettingorgysex_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
-							<li>gettingorgysex_react_neutral_horny->[horny_sex_reaction]!</li>
-						<li>gettingorgysex_react_neutral->[cheer_reaction]!</li>		
 						
 				<li>r_logentry(RECIPIENT_jobDefName==GettinLoved, priority=9)->[loved_react]</li>
 					<li>loved_react(INITIATOR_opinion>=25)->[loved_react_good]</li>
@@ -235,7 +155,6 @@
 						
 				<li>r_logentry(tag=Getting_Raped_React, RECIPIENT_jobDefName==GettinRaped, priority=9)->[raped_react]</li>
 					<li>raped_react(INITIATOR_trait==rapist, priority=2)->[raped_react_rapist]</li>
-					<li>raped_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[raped_react_rapist]</li>
 						<li>raped_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Just take it like a good girl, [RECIPIENT_nameDef]!</li>
 						<li>raped_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Just take it like a man, [RECIPIENT_nameDef]!</li>
 						<li>raped_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! Get fucked, [counterpart]!</li>
@@ -260,7 +179,6 @@
 						
 				<li>r_logentry(RECIPIENT_jobDefName==RapeComfortPawn, priority=9)->[rapingcp_react]</li>
 					<li>rapingcp_react(INITIATOR_trait==rapist, priority=2)->[rapingcp_react_rapist]</li>
-					<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[rapingcp_react_rapist]</li>
 						<li>rapingcp_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]!</li>
 						<li>rapingcp_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]! [cheer_reaction]!</li>
 						<li>rapingcp_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
@@ -289,7 +207,6 @@
 						
 				<li>r_logentry(RECIPIENT_jobDefName==RandomRape, priority=9)->[raping_react]</li>
 					<li>raping_react(INITIATOR_trait==rapist, priority=2)->[raping_react_rapist]</li>
-					<li>raping_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[raping_react_rapist]</li>
 						<li>raping_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]!</li>
 						<li>raping_react_rapist(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Rail 'em, [counterpart]! [cheer_reaction]!</li>
 						<li>raping_react_rapist(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
@@ -431,7 +348,6 @@
 					
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettinBred, priority=9)->[gettingbred_react]</li>
 					<li>gettingbred_react(INITIATOR_trait==zoophile, priority=2)->[gettingbred_react_zoophile]</li>
-					<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[gettingbred_react_zoophile]</li>
 						<li>gettingbred_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]!</li>
 						<li>gettingbred_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]! [cheer_reaction]!</li>
 						<li>gettingbred_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
@@ -449,7 +365,6 @@
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==Bestiality, priority=9)->[bestiality_react]</li>
 					<li>bestiality_react(INITIATOR_trait==zoophile, priority=2)->[bestiality_react_zoophile]</li>
-					<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[bestiality_react_zoophile]</li>
 						<li>bestiality_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]!</li>
 						<li>bestiality_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! [fuck] that animal, [counterpart]! [cheer_reaction]!</li>
 						<li>bestiality_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
@@ -467,7 +382,6 @@
 						
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==BestialityForFemale, priority=9)->[bestialityf_react]</li>
 					<li>bestialityf_react(INITIATOR_trait==zoophile, priority=2)->[bestialityf_react_zoophile]</li>
-					<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[bestialityf_react_zoophile]</li>
 						<li>bestialityf_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Female, priority=1)->[horny_sex_reaction]! Show that animal a good time, [counterpart]!</li>
 						<li>bestialityf_react_zoophile(INITIATOR_opinion>=25, RECIPIENT_gender==Male, priority=1)->[horny_sex_reaction]! [fuck] that animal, [counterpart]! [cheer_reaction]!</li>
 						<li>bestialityf_react_zoophile(INITIATOR_opinion&lt;=-25, priority=1)->[horny_sex_reaction]! I could do much better, [counterpart]!</li>
@@ -530,26 +444,16 @@
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettingQuickie, priority=10)->[quickie2]</li>
 					<li>quickie2(RECIPIENT_jobDefName==Quickie, priority=10)->You're such a good fuck!</li>
 					<li>quickie2->Like what you see?</li>			
-				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinBred, priority=10)->[gettingbred]</li>	
-					<li>gettingbred(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Seems like the creature likes me!</li>
-					<li>gettingbred(INITIATOR_trait==rapist, priority=9)->Seems like the creature likes me!</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinBred, priority=10)->[gettingbred]</li>					
+					<li>gettingbred(INITIATOR_trait==zoophile, priority=9)->Seems like the creature likes me!</li>
 					<li>gettingbred->Can't you get this thing off of me, [RECIPIENT_nameDef]!?</li>
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Bestiality, priority=10)->[bestiality]</li>	
-					<li>bestiality(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Do you want a turn?</li>
-					<li>bestiality(INITIATOR_trait==rapist, priority=9)->Do you want a turn?</li>
+					<li>bestiality(INITIATOR_trait==zoophile, priority=9)->Do you want a turn?</li>
 					<li>bestiality->I couldn't help myself, [RECIPIENT_nameDef]!</li>
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==BestialityForFemale, priority=10)->[bestialityf]</li>
-					<li>bestialityf(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Do you want a turn?</li>
-					<li>bestialityf(INITIATOR_trait==rapist, priority=9)->Do you want a turn?</li>
+					<li>bestialityf(INITIATOR_trait==zoophile, priority=9)->Do you want a turn?</li>
 					<li>bestialityf->I couldn't help myself, [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(INITIATOR_jobDefName==OrgySex, priority=10)->[orgysex]</li>
-					<li>orgysex->Wow, nice moves, [RECIPIENT_nameDef]!</li>
-					<li>orgysex->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
-					<li>orgysex(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(INITIATOR_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex]</li>
-					<li>gettingorgysex->Wow, nice moves, [RECIPIENT_nameDef]!</li>
-					<li>gettingorgysex->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
-					<li>gettingorgysex(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
+				
 					
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==JoinInBed, priority=9)->[joininbed_react]</li>
 					<li>joininbed(RECIPIENT_jobDefName==GettinLoved, priority=10)->You're so amazing in bed!</li>
@@ -564,11 +468,9 @@
 					<li>gettinraped_react->I'm sorry...</li>				
 				<li>r_logentry(RECIPIENT_jobDefName==RapeComfortPawn, priority=9)->[rapingcp_react]</li>
 					<li>rapingcp_react(INITIATOR_trait==rapist, priority=9)->You really know how to dominate!</li>
-					<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=9)->You really know how to dominate!</li>
 					<li>rapingcp_react->I don't see how you can do something like this...</li>					
 				<li>r_logentry(RECIPIENT_jobDefName==RandomRape, priority=9)->[raping_react]</li>
-					<li>raping_react(INITIATOR_trait==rapist, priority=9)->You're really know how to dominate!</li>
-					<li>raping_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=9)->You're really know how to dominate!</li>
+					<li>raping_react(INITIATOR_trait==rapist, priority=9)->You really know how to dominate!</li>
 					<li>raping_react->I don't see how you can do something like this...</li>	
 				<li>r_logentry(RECIPIENT_jobDefName==RapeEnemy, priority=9)->[rapingenemy_react]</li>
 					<li>rapingenemy_react->It's what he deserves!</li>	
@@ -580,26 +482,16 @@
 					<li>quickie_react->You look great at that!</li>			
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettingQuickie, priority=9)->[quickie2_react]</li>
 					<li>quickie2_react->You look great at that!</li>			
-				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettinBred, priority=9)->[gettingbred_react]</li>	
-					<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Seems like the creature likes you!</li>
-					<li>gettingbred_react(INITIATOR_trait==rapist, priority=9)->Seems like the creature likes you!</li>
+				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettinBred, priority=9)->[gettingbred_react]</li>					
+					<li>gettingbred_react(INITIATOR_trait==zoophile, priority=9)->Seems like the creature likes you!</li>
 					<li>gettingbred->How did this happen, [RECIPIENT_nameDef]!?</li>
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==Bestiality, priority=9)->[bestiality_react]</li>		
-					<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Mind if I have a turn?</li>
-					<li>bestiality_react(INITIATOR_trait==rapist, priority=9)->Mind if I have a turn?</li>
+					<li>bestiality_react(INITIATOR_trait==zoophile, priority=9)->Mind if I have a turn?</li>
 					<li>bestiality_react->Look at what you're doing, [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==BestialityForFemale, priority=9)->[bestialityf_react]</li>
-					<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Mind if I have a turn?</li>
-					<li>bestialityf_react(INITIATOR_trait==rapist, priority=9)->Mind if I have a turn?</li>
+				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==BestialityForFemale, priority=9)->[bestialityf_react]</li>				
+					<li>bestialityf_react(INITIATOR_trait==zoophile, priority=9)->Mind if I have a turn?</li>
 					<li>bestialityf_react->Look at what you're doing, [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=10)->[orgysex_react]</li>
-					<li>orgysex_react->Wow, nice moves, [RECIPIENT_nameDef]!</li>
-					<li>orgysex_react->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
-					<li>orgysex_react(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex_react]</li>
-					<li>gettingorgysex_react->Wow, nice moves, [RECIPIENT_nameDef]!</li>
-					<li>gettingorgysex_react->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
-					<li>gettingorgysex_react(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
+				
 		</value>
 	</Operation>
 	
@@ -649,22 +541,16 @@
 					<li>quickie2(RECIPIENT_jobDefName==Quickie, priority=10)->C'mon put some effort into it!!</li>
 					<li>quickie2->Quit staring, [insult]!</li>			
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinBred, priority=10)->[gettingbred]</li>	
-					<li>gettingbred(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->No animal would ever trust you like this!</li>
-					<li>gettingbred(INITIATOR_trait==rapist, priority=9)->No animal would ever trust you like this!</li>
+					
+					<li>gettingbred(INITIATOR_trait==zoophile, priority=9)->No animal would ever trust you like this!</li>
 					<li>gettingbred->Get this thing off of me, [insult]!</li>
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==Bestiality, priority=10)->[bestiality]</li>	
-					<li>bestiality(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Quit staring, [insult]!</li>
-					<li>bestiality(INITIATOR_trait==rapist, priority=9)->Quit staring, [insult]!</li>
+					<li>bestiality(INITIATOR_trait==zoophile, priority=9)->Quit staring, [insult]!</li>
 					<li>bestiality->Quit staring, [insult]!</li>
 				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==BestialityForFemale, priority=10)->[bestialityf]</li>
-					<li>bestialityf(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Quit staring, [insult]!</li>
-					<li>bestialityf(INITIATOR_trait==rapist, priority=9)->Quit staring, [insult]!</li>
+					<li>bestialityf(INITIATOR_trait==zoophile, priority=9)->Quit staring, [insult]!</li>
 					<li>bestialityf->Quit staring, [insult]!</li>
-				<li>r_logentry(INITIATOR_jobDefName==OrgySex, priority=10)->[orgysex]</li>
-					<li>orgysex->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(INITIATOR_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex]</li>
-					<li>gettingorgysex->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
-					
+				
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==JoinInBed, priority=9)->[joininbed_react]</li>
 					<li>joininbed(RECIPIENT_jobDefName==GettinLoved, priority=10)->You suck in bed!</li>
 					<li>joininbed->Quit staring, [insult]!</li>
@@ -678,11 +564,9 @@
 					<li>gettinraped_react->Not my problem, [RECIPIENT_nameDef]!</li>				
 				<li>r_logentry(RECIPIENT_jobDefName==RapeComfortPawn, priority=9)->[rapingcp_react]</li>
 					<li>rapingcp_react(INITIATOR_trait==rapist, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
-					<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
 					<li>rapingcp_react->How could you do this, [insult]!?</li>					
 				<li>r_logentry(RECIPIENT_jobDefName==RandomRape, priority=9)->[raping_react]</li>
 					<li>raping_react(INITIATOR_trait==rapist, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
-					<li>raping_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
 					<li>raping_react->How could you do this, [insult]!?</li>	
 				<li>r_logentry(RECIPIENT_jobDefName==RapeEnemy, priority=9)->[rapingenemy_react]</li>
 					<li>rapingenemy_react->I could punish him better than that!</li>	
@@ -695,21 +579,14 @@
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettingQuickie, priority=9)->[quickie2_react]</li>
 					<li>quickie2_react->You look terrible at that!</li>			
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==GettinBred, priority=9)->[gettingbred_react]</li>	
-					<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->The creature is just using you, it doesn't respect you!</li>
-					<li>gettingbred_react(INITIATOR_trait==rapist, priority=9)->The creature is just using you, it doesn't respect you!</li>
+					<li>gettingbred_react(INITIATOR_trait==zoophile, priority=9)->The creature is just using you, it doesn't respect you!</li>
 					<li>gettingbred->Disgusting, [RECIPIENT_nameDef]!</li>
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==Bestiality, priority=9)->[bestiality_react]</li>		
-					<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Pft, you can't even make the creature enjoy it!</li>
-					<li>bestiality_react(INITIATOR_trait==rapist, priority=9)->Pft, you can't even make the creature enjoy it!</li>
+					<li>bestiality_react(INITIATOR_trait==zoophile, priority=9)->Pft, you can't even make the creature enjoy it!</li>
 					<li>bestiality_react->What are you doing, [insult]!?</li>
 				<li>r_logentry(RECIPIENT_moving==No, RECIPIENT_jobDefName==BestialityForFemale, priority=9)->[bestialityf_react]</li>
-					<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Pft, you can't even make the creature enjoy it!</li>
-					<li>bestialityf_react(INITIATOR_trait==rapist, priority=9)->Pft, you can't even make the creature enjoy it!</li>
-					<li>bestialityf_react->What are you doing, [insult]!</li>
-				<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=10)->[orgysex_react]</li>
-					<li>orgysex_react->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
-				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex_react]</li>
-					<li>gettingorgysex_react->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>		
+					<li>bestialityf_react(INITIATOR_trait==zoophile, priority=9)->Pft, you can't even make the creature enjoy it!</li>
+					<li>bestialityf_react->What are you doing, [insult]!</li>	
 		</value>
     </Operation>
 </Patch>

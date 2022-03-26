@@ -35,8 +35,7 @@
 		<li>licks->licks</li>
 		<li>licks->tongues</li>
 		<li>fuck->fuck</li>	
-		<li>fuck->pound</li>	
-		<li>fuck->slam</li>			
+		<li>fuck->pound</li>			
 		<li>desire->need</li>
 		<li>desire->want</li>
 		<!--<li>desire->demand</li>-->
@@ -89,7 +88,6 @@
 				<li>vagina_adj_bad->hot</li>
 				<li>vagina_adj_bad->tight</li>
 				<li>vagina_adj_bad->wet</li>
-				<!-- <li>vagina_adj_bad->virgin</li>-->
 				<li>vagina_adj_bad->filthy</li>
 				<li>vagina_adj_bad->dirty</li>
 			
@@ -110,7 +108,6 @@
 				
 			<li>counterpart_adj_age(RECIPIENT_age>=INITIATOR_age)->big</li>
 			<li>counterpart_adj_age(INITIATOR_age>=RECIPIENT_age)->little</li>
-			<li>counterpart_adj_age(INITIATOR_age>=RECIPIENT_age)->baby</li>
 			<li>counterpart_adj_age-></li>
 			
 		<li>derogadj->nasty</li>
@@ -121,7 +118,6 @@
 		<li>penis->dick</li>
 		<li>penis->cock</li>
 		<li>penis->prick</li>
-		<li>penis->pecker</li>
 		<li>ass->ass</li>
 		<li>ass->booty</li>
 		<li>ass->butt</li>
@@ -136,8 +132,8 @@
 		<!-- ===Misc=== -->			
 		<li>cum->cum</li>	
 		<li>cum->seed</li>
-		<li>cum->sperm</li>
 		<li>cum->splooge</li>			
+		<li>cum->jizz</li>	
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -164,21 +160,6 @@
 		<li>leaving_sex_reaction->i'll get out of here</li>
 		<li>leaving_sex_reaction->i'll go</li>
 		<li>leaving_sex_reaction->i'll leave you to it</li>
-		<!-- ===Boobs and milking=== -->	
-		<li>milkproducing->lactating</li>
-		<li>milkproducing->milking</li>
-		<li>milkproducing->producing</li>
-		<li>milkproduction->production</li>
-		<li>milkproduction->milking</li>
-		<li>milkproduction->lactation</li>				
-		<li>breastcompliment->wonderful</li>
-		<li>breastcompliment->soft</li>
-		<li>breastcompliment->firm</li>
-		<li>breastcompliment->beautiful</li>
-		<li>milkterrible->terrible</li>
-		<li>milkterrible->awful</li>
-		<li>milkterrible->shameful</li>
-		<li>milkterrible->humiliating</li>
 		<!-- ===Misc=== -->
 		<li>expletive_adj->fucking</li>
 		<li>expletive_adj->goddamn</li>
@@ -209,8 +190,6 @@
 	<li>counterpart->[neutral]</li>
 		<li>neutral->[RECIPIENT_nameDef]</li>							
 	<li>counterpart(INITIATOR_opinion&lt;=-25)->[rival]</li>
-		<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
-		<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
 		<li>rival(RECIPIENT_trait==masochist, INITIATOR_trait!=masochist, priority=1)->[disapprove]</li>				
 			<li>disapprove(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile)->animal fucker</li>
 			<li>disapprove(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist)->rapist</li>
@@ -232,6 +211,8 @@
 		<!-- ===Who's doing what to who=== -->
 		<li>sex(INITIATOR_gender==Male, priority=1)->[sex_m]</li>
 		<li>sex(INITIATOR_gender==Female, priority=1)->[sex_f]</li>
+			<li>sex_m->[sex_n]</li>
+			<li>sex_f->[sex_n]</li>
 		<!-- ===Nouns=== -->
 		<li>lover(INITIATOR_opinion>=85)->[best]</li>
 			<li>best->babe</li>
@@ -268,6 +249,8 @@
 		<li>r_logentry->[sex_react]</li>
 			<li>sex_react(RECIPIENT_gender==Female, priority=1)->[sex_react_f]</li>
 			<li>sex_react(RECIPIENT_gender==Male, priority=1)->[sex_react_m]</li>
+				<li>sex_react_f->[sex_react_n]</li>
+				<li>sex_react_m->[sex_react_n]</li>
 		<!-- ===Nouns=== -->
 		<li>lover(INITIATOR_opinion>=85)->[best]</li>
 			<li>best->babe</li>
@@ -303,6 +286,8 @@
 		<!-- ===Who's doing what to who=== -->
 		<li>rape(INITIATOR_gender==Male, priority=1)->[rape_m]</li>
 		<li>rape(INITIATOR_gender==Female, priority=1)->[rape_f]</li>
+			<li>rape_m->[rape_n]</li>
+			<li>rape_f->[rape_n]</li>
 		<!-- ===Nouns=== -->
 		<li>victim->[RECIPIENT_nameDef]</li>
 		<li>victim(RECIPIENT_gender==Female)->[victim_f]</li>
@@ -327,21 +312,27 @@
 		<!-- ===Who's doing what to who=== -->
 		<li>r_logentry->[rape_react]</li>
 			<li>rape_react(RECIPIENT_gender==Female, priority=1)->[rape_react_f]</li>
-				<li>rape_react_f(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_f]</li>
+				
 				<li>rape_react_f(INITIATOR_trait==masochist, priority=2)->[masochist_f]</li>
 				<li>rape_react_f(INITIATOR_thoughtLabel==begging for more, priority=1)->[masochist_f]</li>
 				<li>rape_react_f(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_f]</li>
 				<li>rape_react_f(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_f]</li>
 			<li>rape_react(RECIPIENT_gender==Male, priority=1)->[rape_react_m]</li>
-				<li>rape_react_m(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_m]</li>
 				<li>rape_react_m(INITIATOR_trait==masochist, priority=2)->[masochist_m]</li>
 				<li>rape_react_m(INITIATOR_thoughtLabel==begging for more, priority=1)->[masochist_m]</li>
 				<li>rape_react_m(INITIATOR_thoughtLabel==my body feels broken, priority=1)->[broken2_m]</li>
-				<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>				
+				<li>rape_react_m(INITIATOR_thoughtLabel==dizzy, priority=1)->[broken1_m]</li>		
+				<li>rape_react_m->[rape_react_n]</li>
+				<li>rape_react_f->[rape_react_n]</li>
+				<li>masochist_m->[masochist_n]</li>
+				<li>masochist_f->[masochist_n]</li>
+				<li>broken2_m->[broken2_n]</li>
+				<li>broken2_f->[broken2_n]</li>
+				<li>broken1_m->[broken2_n]</li>
+				<li>broken1_f->[broken2_n]</li>
 		<!-- ===Nouns=== -->
 		<li>rapist(INITIATOR_opinion>=25, priority=1)->[RECIPIENT_nameDef]</li>
-		<li>rapist(INITIATOR_trait==masochist, priority=2)->[master]</li>
-		<li>rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[master]</li>						
+		<li>rapist(INITIATOR_trait==masochist, priority=2)->[master]</li>					
 			<li>master->master</li>
 			<li>master(RECIPIENT_gender==Male)->daddy</li>
 			<li>master->[RECIPIENT_nameDef]</li>
@@ -366,22 +357,20 @@
 				<li>human_breed(INITIATOR_gender==Male)->[human_breed_m]</li>
 				<li>human_breed(INITIATOR_gender==Female)->[human_breed_f]</li>
 					<li>human_breed_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-					<li>human_breed_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
 					<li>human_breed_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-					<li>human_breed_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
-					
+
+					<li>zoophile_f->[zoophile_n]</li>	
+					<li>zoophile_m->[zoophile_n]</li>	
+					<li>human_breed_m->[human_breed_n]</li>	
+					<li>human_breed_f->[human_breed_n]</li>	
+				
 			<li>r_logentry(INITIATOR_alienRace!=Human, RECIPIENT_alienRace==Human, priority=1)->[animal_breed_with_reply]</li>
 			
-			<li>r_logentry(INITIATOR_alienRace!=Human, priority=0.5)->[animal_breed]</li>		
-				<li>animal_breed(INITIATOR_kind==husky)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==labrador retriever)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==yorkshire terrier)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==warg)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==timber wolf)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==arctic wolf)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==fennec fox)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==red fox)->[canine_breed]</li>
-				<li>animal_breed(INITIATOR_kind==arctic fox)->[canine_breed]</li>
+			<li>r_logentry(INITIATOR_alienRace!=Human, priority=0.5)->[animal_breed]</li>	
+				<li>animal_breed(INITIATOR_gender==Male)->[animal_breed_m]</li>	
+				<li>animal_breed(INITIATOR_gender==Female)->[animal_breed_f]</li>	
+					<li>animal_breed_m->[animal_breed_n]</li>
+					<li>animal_breed_f->[animal_breed_n]</li>
 				
 			<!-- ===Verbs=== -->
 			<li>fuck->breed</li>	
@@ -389,49 +378,56 @@
 			<!-- ===Nouns=== -->		
 			<li>animal_noun->[RECIPIENT_nameDef]</li>
 			<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-			<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
 			<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
 			<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
 			
 			<!-- ====Animal Genitals=== -->
-			<li>animal_genitals_initiator(INITIATOR_alienRace==Human, priority=5)->[animal_genitals_recipient]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_alienRace==Human, priority=5)->[animal_genitals_initiator]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_initiator]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-			<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-					<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-					<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-					<li>canine_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-					<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-			<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-					<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-					<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-					<li>canine_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-					<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-			<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-			<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-			<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-			<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-			<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-			<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-			<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-			<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>		
+			<li>animal_genitals_initiator(INITIATOR_gender==Male, priority=5)->[animal_penis_initiator]</li>
+			<li>animal_genitals_initiator(INITIATOR_gender==Female, priority=5)->[animal_vagina_initiator]</li>
+			<li>animal_genitals_recipient(RECIPIENT_gender==Male, priority=5)->[animal_penis_recipient]</li>
+			<li>animal_genitals_recipient(RECIPIENT_gender==Female, priority=5)->[animal_vagina_recipient]</li>
+			
+			<li>animal_penis_initiator(INITIATOR_alienRace==Human, priority=5)->[penis]</li>
+				<li>animal_penis_initiator->[penis]</li>
+				<li>animal_penis_initiator->[INITIATOR_kind] [penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_alienRace==Human, priority=5)->[penis]</li>
+				<li>animal_penis_recipient->[penis]</li>
+				<li>animal_penis_recipient->[RECIPIENT_kind] [penis]</li>
+			<li>animal_vagina_initiator(INITIATOR_alienRace==Human, priority=5)->[vagina]</li>
+				<li>animal_vagina_initiator->[vagina]</li>
+				<li>animal_vagina_initiator->[INITIATOR_kind] [vagina]</li>
+			<li>animal_vagina_recipient(RECIPIENT_alienRace==Human, priority=5)->[vagina]</li>
+				<li>animal_vagina_recipient->[vagina]</li>
+				<li>animal_vagina_recipient->[RECIPIENT_kind] [vagina]</li>
+			<li>animal_ass_initiator(INITIATOR_alienRace==Human, priority=5)->[ass]</li>
+				<li>animal_ass_initiator->[ass]</li>
+				<li>animal_ass_initiator->[INITIATOR_kind] [ass]</li>
+			<li>animal_ass_recipient(RECIPIENT_alienRace==Human, priority=5)->[ass]</li>
+				<li>animal_ass_recipient->[ass]</li>
+				<li>animal_ass_recipient->[RECIPIENT_kind] [ass]</li>
+			
+			<li>animal_penis_recipient(RECIPIENT_kind==husky, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==warg, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_penis]</li>
+			<li>animal_penis_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==husky, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==labrador retriever, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==warg, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==timber wolf, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==arctic wolf, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==fennec fox, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==red fox, priority=1)->[canine_penis]</li>
+			<li>animal_penis_initiator(RECIPIENT_kind==arctic fox, priority=1)->[canine_penis]</li>
+					<li>canine_penis->red rocket</li>
+					<li>canine_penis->knot</li>
+					<li>canine_penis->[penis]</li>
+
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -445,11 +441,14 @@
 		<li>r_logentry(INITIATOR_alienRace==Human, priority=2)->[human_react]</li>				
 			<li>human_react(RECIPIENT_gender==Male)->[human_react_m]</li>
 				<li>human_react_m(INITIATOR_trait==zoophile, priority=2)->[zoophile_m]</li>
-				<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
 			<li>human_react(RECIPIENT_gender==Female)->[human_react_f]</li>	
-				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>
-				<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>				
+				<li>human_react_f(INITIATOR_trait==zoophile, priority=2)->[zoophile_f]</li>			
 		<li>r_logentry(INITIATOR_alienRace!=Human, priority=1)->...</li>
+		
+			<li>zoophile_f->[zoophile_n]</li>	
+			<li>zoophile_m->[zoophile_n]</li>	
+			<li>human_react_m->[human_react_n]</li>	
+			<li>human_react_f->[human_react_n]</li>	
 			
 		<!-- ===Verbs=== -->
 			<li>fuck->breed</li>	
@@ -457,49 +456,55 @@
 		<!-- ===Nouns=== -->
 		<li>animal_noun->[RECIPIENT_nameDef]</li>
 		<li>animal_noun(RECIPIENT_gender==Male)->boy</li>
-		<li>animal_noun(RECIPIENT_gender==Male)->stud</li>
 		<li>animal_noun(RECIPIENT_gender==Female)->girl</li>
 		<li>animal_noun(RECIPIENT_gender==Female)->lady</li>
+
+		<!-- ====Animal Genitals=== -->
+		<li>animal_genitals_initiator(INITIATOR_gender==Male, priority=5)->[animal_penis_initiator]</li>
+		<li>animal_genitals_initiator(INITIATOR_gender==Female, priority=5)->[animal_vagina_initiator]</li>
+		<li>animal_genitals_recipient(RECIPIENT_gender==Male, priority=5)->[animal_penis_recipient]</li>
+		<li>animal_genitals_recipient(RECIPIENT_gender==Female, priority=5)->[animal_vagina_recipient]</li>
+			
+		<li>animal_penis_initiator(INITIATOR_alienRace==Human, priority=5)->[penis]</li>
+			<li>animal_penis_initiator->[penis]</li>
+			<li>animal_penis_initiator->[INITIATOR_kind] [penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Human, priority=5)->[penis]</li>
+			<li>animal_penis_recipient->[penis]</li>
+			<li>animal_penis_recipient->[RECIPIENT_kind] [penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Human, priority=5)->[vagina]</li>
+			<li>animal_vagina_initiator->[vagina]</li>
+			<li>animal_vagina_initiator->[INITIATOR_kind] [vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Human, priority=5)->[vagina]</li>
+			<li>animal_vagina_recipient->[vagina]</li>
+			<li>animal_vagina_recipient->[RECIPIENT_kind] [vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Human, priority=5)->[ass]</li>
+			<li>animal_ass_initiator->[ass]</li>
+			<li>animal_ass_initiator->[INITIATOR_kind] [ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Human, priority=5)->[ass]</li>
+			<li>animal_ass_recipient->[ass]</li>
+			<li>animal_ass_recipient->[RECIPIENT_kind] [ass]</li>
 		
-		<!-- ===Animal Genitals=== -->
-		<li>animal_genitals_initiator(INITIATOR_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==member, priority=5)->[animal_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==colonist, priority=5)->[animal_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==member, priority=5)->[animal_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==husky, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==warg, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_genitals_recipient]</li>
-		<li>animal_genitals_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_genitals_recipient]</li>
-				<li>canine_genitals_recipient(RECIPIENT_gender==Male)->red rocket</li>
-				<li>canine_genitals_recipient(RECIPIENT_gender==Male)->knot</li>
-				<li>canine_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>canine_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==husky, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==labrador retriever, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==yorkshire terrier, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==warg, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==timber wolf, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==arctic wolf, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==fennec fox, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==red fox, priority=1)->[canine_genitals_initiator]</li>
-		<li>animal_genitals_initiator(INITIATOR_kind==arctic fox, priority=1)->[canine_genitals_initiator]</li>
-				<li>canine_genitals_initiator(INITIATOR_gender==Male)->red rocket</li>
-				<li>canine_genitals_initiator(INITIATOR_gender==Male)->knot</li>
-				<li>canine_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-				<li>canine_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-		<li>animal_genitals_initiator(INITIATOR_gender==Male)->[INITIATOR_kind] [penis]</li>
-		<li>animal_genitals_initiator(INITIATOR_gender==Female)->[INITIATOR_kind] [vagina]</li>
-		<li>animal_genitals_initiator(INITIATOR_gender==Male)->[penis]</li>
-		<li>animal_genitals_initiator(INITIATOR_gender==Female)->[vagina]</li>
-		<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[RECIPIENT_kind] [penis]</li>
-		<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[RECIPIENT_kind] [vagina]</li>
-		<li>animal_genitals_recipient(RECIPIENT_gender==Male)->[penis]</li>
-		<li>animal_genitals_recipient(RECIPIENT_gender==Female)->[vagina]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==husky, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==labrador retriever, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==warg, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==timber wolf, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==arctic wolf, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==fennec fox, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==red fox, priority=1)->[canine_penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_kind==arctic fox, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==husky, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==labrador retriever, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==yorkshire terrier, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==warg, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==timber wolf, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==arctic wolf, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==fennec fox, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==red fox, priority=1)->[canine_penis]</li>
+		<li>animal_penis_initiator(RECIPIENT_kind==arctic fox, priority=1)->[canine_penis]</li>
+				<li>canine_penis->red rocket</li>
+				<li>canine_penis->knot</li>
+				<li>canine_penis->[penis]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

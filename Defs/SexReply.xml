@@ -5,137 +5,281 @@
 	</InteractionDef>
 
 <!-- ===AnalSex=== -->
+
+	<!-- ===Penetrated=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Anal_Sex_Reply</defName>
 		<label>analsex — react to</label>
 		<symbol>UI/Icons/AnalSexMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! [fuck] my [ass]! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! [lover], fill my [ass] with your [cum]! </li>
-					<!-- ===Female Initiator=== -->	
-					<li>sex_react_f->[exclaim_low]! Your [ass] is so good, [lover]!</li>
-					<li>sex_react_f->[exclaim_low]! [lover] I'm gonna fill your [ass] with [cum]![exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! [fuck] my [ass]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], fill my [ass] with your [cum]!</li>
+					<!-- ===Replying to a Male=== -->
+					
+					<!-- ===Replying to a Female=== -->	
+					<li>sex_react_f->[exclaim_low]! [lover], fill my [ass] with your futa [penis]!</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>			
+	
+	<!-- ===Penetrator=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Anal_Sex_Reply_Reverse</defName>
+		<label>analsex — react to</label>
+		<symbol>UI/Icons/AnalSexMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! Your [ass] is so good, [lover]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover] I'm gonna fill your [ass] with [cum]![exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+
+					<!-- ===Replying to a Female=== -->	
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 
+
 <!-- ===VaginalSex=== -->
+
+	<!-- ===Penetrated=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Vaginal_Sex_Reply</defName>
 		<label>vaginalsex — react to</label>
 		<symbol>UI/Icons/VaginalSexMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! [fuck] my [vagina]!</li>
-					<li>sex_react_m->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! Your [penis] is so good, [lover]! [exclaim_low]!</li>	
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low]! Your [vagina] is [wet]!</li>
-					<li>sex_react_f->[exclaim_low]! Your [vagina] is so good! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! [lover], I'm gonna fill your [vagina] with [cum] [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! [fuck] my [vagina]!</li>
+					<li>sex_react_n->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! Your [penis] is so good, [lover]! [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+						
+					<!-- ===Replying to a Female=== -->	
+					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 	
+	<!-- ===Penetrator=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Vaginal_Sex_Reply_Reverse</defName>
+		<label>vaginalsex — react to</label>
+		<symbol>UI/Icons/VaginalSexMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! Your [vagina] is [wet]!</li>
+					<li>sex_react_n->[exclaim_low]! Your [vagina] is so good! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], I'm gonna fill your [vagina] with [cum] [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+	
+					<!-- ===Replying to a Female=== -->			
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
 <!-- ===Hand_Job=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Hand_Job_Reply</defName>
 		<label>handjob — react to</label>
 		<symbol>UI/Icons/HandjobMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! Your [penis] is so nice, [lover]</li>
-					<li>sex_react_m->Does this feel good, [lover]?</li>
-					<li>sex_react_m->[exclaim_low]! [lover], cover my face in your [cum]! [exclaim_low]</li>	
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low]! I'm gonna cum!</li>
-					<li>sex_react_f->[exclaim_low]! Just like that, [lover]! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! You know how to handle a [penis], [lover]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! Your [penis] is so nice, [lover]</li>
+					<li>sex_react_n->Does this feel good, [lover]?</li>
+					<li>sex_react_n->[exclaim_low]! [lover], cover my face in your [cum]! [exclaim_low]</li>
+					<!-- ===Replying to a Male=== -->
+						
+					<!-- ===Replying to a Female=== -->						
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
+	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Hand_Job_Reply_Reverse</defName>
+		<label>handjob — react to</label>
+		<symbol>UI/Icons/HandjobMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! I'm gonna cum!</li>
+					<li>sex_react_n->[exclaim_low]! Just like that, [lover]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! You know how to handle a [penis], [lover]!</li>
+					<!-- ===Replying to a Male=== -->
+	
+					<!-- ===Replying to a Female=== -->						
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
 
 <!-- ===Foot_Job=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Foot_Job_Reply</defName>
 		<label>footjob — react to</label>
 		<symbol>UI/Icons/FootjobMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->Does it feel good like this, [lover]?</li>
-					<li>sex_react_m->[exclaim_low], You're this hard just from my feet, [lover]?</li>
-					<li>sex_react_m->[exclaim_low],how's that, [lover]?</li>			
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low], you're good with your toes, [lover]!</li>
-					<li>sex_react_f->[exclaim_low]! [lover], your feet are gonna make me cum! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->Does it feel good like this, [lover]?</li>
+					<li>sex_react_n->[exclaim_low], You're this hard just from my feet, [lover]?</li>
+					<li>sex_react_n->[exclaim_low], how's that, [lover]?</li>		
+					<!-- ===Replying to a Male=== -->
+						
+					<!-- ===Replying to a Female=== -->					
+
 			</rulesStrings>
 		</logRulesInitiator>
-	</InteractionDef>			
+	</InteractionDef>		
+
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Foot_Job_Reply_Reverse</defName>
+		<label>footjob — react to</label>
+		<symbol>UI/Icons/FootjobMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low], you're good with your toes, [lover]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], your feet are gonna make me cum! [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+
+					<!-- ===Replying to a Female=== -->						
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
 	
 <!-- ===Fingering_Sex=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Fingering_Sex_Reply</defName>
 		<label>fingering — react to</label>
 		<symbol>UI/Icons/FingeringMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! You're good with your fingers, [lover]!</li>
-					<li>sex_react_m->[exclaim_low]! [lover], I'm [wet] just from your fingers! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! You're gonna make me cum! [exclaim_low]!</li>
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low]! You're [wet]!</li>
-					<li>sex_react_f->[exclaim_low], how's that?</li>
-					<li>sex_react_f->Does that feel good?</li>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! You're [wet]!</li>
+					<li>sex_react_n->[exclaim_low], how's that?</li>
+					<li>sex_react_n->Does that feel good?</li>
+					<!-- ===Replying to a Male=== -->
+
+					<!-- ===Replying to a Female=== -->						
+					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Fingering_Sex_Reply_Reverse</defName>
+		<label>fingering — react to</label>
+		<symbol>UI/Icons/FingeringMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! You're good with your fingers, [lover]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], I'm [wet] just from your fingers! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! You're gonna make me cum! [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+					
+					<!-- ===Replying to a Female=== -->						
+
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
 <!-- ===Fisting_Sex=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Fisting_Sex_Reply</defName>
 		<label>fisting — react to</label>
 		<symbol>UI/Icons/FistingMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! Fuck! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>		
-					<!-- ===Female Initiator=== -->	
-					<li>sex_react_f->[exclaim_low]! Fuck! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>			
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! You like this fist, [lover]?</li>
+					<li>sex_react_n->[exclaim_low]! Does it hurt?</li>
+					<li>sex_react_n->[exclaim_low]!</li>						
+					<!-- ===Replying to a Male=== -->
+
+					<!-- ===Replying to a Female=== -->	
+		
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Fisting_Sex_Reply_Reverse</defName>
+		<label>fisting — react to</label>
+		<symbol>UI/Icons/FistingMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! Fuck! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! [exclaim_low]! [exclaim_high]!</li>
+					<!-- ===Replying to a Male=== -->
+							
+					<!-- ===Replying to a Female=== -->	
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	
 <!-- ===Breast_Job=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Breast_Job_Reply</defName>
 		<label>breastjob — react to</label>
 		<symbol>UI/Icons/BreastjobMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m(INITIATOR_thoughtLabel==producing milk)->[exclaim_low]! Your [penis] is pushing milk out of my [boobs]!</li>
-					<li>sex_react_m(INITIATOR_thoughtLabel==producing milk)->[exclaim_low]! You're making some milk come out!</li>
-					<li>sex_react_m->[exclaim_low]! Does that feel good, [lover]?</li>
-					<li>sex_react_m->[exclaim_low]! You like these [boobs], [lover]?</li>
-					<li>sex_react_m->[exclaim_low]! [lover], your [penis] is throbbing between my [boobs]!</li>	
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f(RECIPIENT_thoughtLabel==producing milk)->[exclaim_low]! Your [boobs] are leaking some milk!</li>
-					<li>sex_react_f(RECIPIENT_thoughtLabel==producing milk)->[exclaim_low]! There's some milk coming out of them!</li>
-					<li>sex_react_f(RECIPIENT_thoughtLabel==producing milk)->[exclaim_low]! Your milk is running down my [penis]!</li>
-					<li>sex_react_f->[exclaim_low]! Your [boobs] are amazing, [lover]!</li>
-					<li>sex_react_f->[exclaim_low]! They're so soft, [lover]! [exclaim_low]</li>
-					<li>sex_react_f->[exclaim_low]! I'm gonna cover your [boobs] in my [cum], [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_react_n->[exclaim_low]! Does that feel good, [lover]?</li>
+					<li>sex_react_n->[exclaim_low]! You like these [boobs], [lover]?</li>
+					<li>sex_react_n->[exclaim_low]! [lover], your [penis] is throbbing between my [boobs]!</li>	
+					<!-- ===Replying to a Male=== -->
+					
+					<!-- ===Replying to a Female=== -->						
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
+	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Breast_Job_Reply_Reverse</defName>
+		<label>breastjob — react to</label>
+		<symbol>UI/Icons/BreastjobMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->						
+					<li>sex_react_n->[exclaim_low]! Your [boobs] are amazing, [lover]!</li>
+					<li>sex_react_n->[exclaim_low]! They're so soft, [lover]! [exclaim_low]</li>
+					<li>sex_react_n->[exclaim_low]! I'm gonna cover your [boobs] in my [cum], [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+
+					<!-- ===Replying to a Female=== -->						
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
 	
 <!-- ===Scissoring_Sex=== -->
 	<InteractionDef ParentName="SexReply">
@@ -144,11 +288,14 @@
 		<symbol>UI/Icons/ScissoringMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]!</li>						
-					<!-- ===Female Initiator=== -->	
-					<li>sex_react_f->[exclaim_low]! You know how to work your hips, [lover]!</li>
-					<li>sex_react_f->[exclaim_low]! [lover], your [wet] [vagina] feels amazing! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! You know how to work your hips, [lover]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], your [wet] [vagina] feels amazing! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+											
+					<!-- ===Replying to a Female=== -->		
+					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
@@ -160,68 +307,133 @@
 		<symbol>UI/Icons/MutualMasturbationMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! Watching you stroke your [penis] makes me so horny, [lover]!</li>
-					<li>sex_react_m->[exclaim_low]! Now you, [lover] [exclaim_low]!</li>	
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low]! Your [wet] [vagina] is making me so hard, [lover]!</li>
-					<li>sex_react_f->[exclaim_low]! I'm gonna shoot my [cum] just watching you, [lover]!</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! Watching you stroke yourself makes me so horny, [lover]!</li>
+					<li>sex_react_n->[exclaim_low]! Now you, [lover], [exclaim_low]!</li>	
+					<!-- ===Replying to a Male=== -->
+					
+					<!-- ===Replying to a Female=== -->						
+					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 	
 <!-- ===Rimming_Sex=== -->
+	
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Rimming_Sex_Reply</defName>
 		<label>rimming — react to</label>
 		<symbol>UI/Icons/RimmingMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! You're good with your tongue, [lover]! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! my [ass]! [exclaim_low]!</li>				
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low]! You're good with your tongue, [lover]! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! my [ass]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->*[exclaim_oral]* Euoor [ass] taasde soo *[exclaim_oral]* guud!</li>
+					<li>sex_react_n->*[exclaim_oral]* I loov dis [ass] *[exclaim_oral]*!</li>
+					<li>sex_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*!</li>
+					<!-- ===Replying to a Male=== -->
+								
+					<!-- ===Replying to a Female=== -->						
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Rimming_Sex_Reply_Reverse</defName>
+		<label>rimming — react to</label>
+		<symbol>UI/Icons/RimmingMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! You're good with your tongue, [lover]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! My [ass]! [exclaim_low]!</li>	
+					<!-- ===Replying to a Male=== -->
+								
+					<!-- ===Replying to a Female=== -->						
+
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
 <!-- ===Cunnilingus_Sex=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Cunnilingus_Sex_Reply</defName>
 		<label>cunnilingus — react to</label>
 		<symbol>UI/Icons/CunnilingusMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! You're good with your tongue, [lover]! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! I'm gonna-[exclaim_low]!</li>				
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->*[exclaim_oral]* Euoor [vagina] taasde soo *[exclaim_oral]* guud!</li>
-					<li>sex_react_f->*[exclaim_oral]* I loov dis [vagina] *[exclaim_oral]*!</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->*[exclaim_oral]* Euoor [vagina] taasde soo *[exclaim_oral]* guud!</li>
+					<li>sex_react_n->*[exclaim_oral]* I loov dis [vagina] *[exclaim_oral]*!</li>
+					<!-- ===Replying to a Male=== -->
+			
+					<!-- ===Replying to a Female=== -->						
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>			
+	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Cunnilingus_Sex_Reply_Reverse</defName>
+		<label>cunnilingus — react to</label>
+		<symbol>UI/Icons/CunnilingusMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! You're good with your tongue, [lover]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! I'm gonna-[exclaim_low]!</li>	
+					<li>sex_react_n->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+								
+					<!-- ===Replying to a Female=== -->						
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 
 <!-- ===Fellatio_Sex=== -->
 
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>Fellatio_Sex_Reply</defName>
 		<label>fellatio — react to</label>
 		<symbol>UI/Icons/FellatioMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->*[exclaim_oral]* Euoor [penis] taadse soo *[exclaim_oral]* guud!</li>
-					<li>sex_react_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>				
-					<!-- ===Female Initiator=== -->						
-					<li>sex_react_f->[exclaim_low]! I'm gonna shoot my [cum] down your throat, [lover]! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! You're good with your mouth, [lover]! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! I'm gonna cum! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->*[exclaim_oral]* Euoor [penis] taadse soo *[exclaim_oral]* guud!</li>
+					<li>sex_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+					<!-- ===Replying to a Male=== -->
+									
+					<!-- ===Replying to a Female=== -->					
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
+	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>Fellatio_Sex_Reply_Reverse</defName>
+		<label>fellatio — react to</label>
+		<symbol>UI/Icons/FellatioMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! I'm gonna shoot my [cum] down your throat, [lover]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! You're good with your mouth, [lover]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! I'm gonna cum! [exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+		
+					<!-- ===Replying to a Female=== -->						
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
 	
 <!-- ===Sixtynine_Sex=== -->
 	<InteractionDef ParentName="SexReply">
@@ -230,32 +442,54 @@
 		<symbol>UI/Icons/SixtynineMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>	
-					<!-- ===Female Initiator=== -->					
-					<li>sex_react_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+					<!-- ===Replying to a Male=== -->
+						
+					<!-- ===Replying to a Female=== -->				
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
 	
 <!-- ===Double Penetration=== -->
+
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="SexReply">
 		<defName>DoublePenetration_Sex_Reply</defName>
 		<label>doublepenetration — react to</label>
 		<symbol>UI/Icons/DoublePenetrationMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Male Initiator=== -->
-					<li>sex_react_m->[exclaim_low]! [fuck] my [ass] and [fuck] my [vagina]!</li>
-					<li>sex_react_m->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>
-					<li>sex_react_m->[exclaim_low]! Your [penis]s are so good, [lover]! [exclaim_low]!</li>		
-					<!-- ===Female Initiator=== -->
-					<li>sex_react_f->[exclaim_low]! Your [vagina] is [wet]!</li>
-					<li>sex_react_f->[exclaim_low]! Your [ass] and [vagina] feel so good! [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! [lover], I'm gonna fill your holes with [cum] [exclaim_low]!</li>
-					<li>sex_react_f->[exclaim_low]! [lover], both of your holes...[exclaim_low]!</li>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! [fuck] my holes!</li>
+					<li>sex_react_n->[exclaim_low]! [exclaim_low]! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! Your [penis]s are so good, [lover]! [exclaim_low]!</li>		
+					<!-- ===Replying to a Male=== -->
+					
+					<!-- ===Replying to a Female=== -->	
+
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="SexReply">
+		<defName>DoublePenetration_Sex_Reply_Reverse</defName>
+		<label>doublepenetration — react to</label>
+		<symbol>UI/Icons/DoublePenetrationMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Neutral=== -->	
+					<li>sex_react_n->[exclaim_low]! Your holes feel so good! [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], I'm gonna fill your holes with [cum] [exclaim_low]!</li>
+					<li>sex_react_n->[exclaim_low]! [lover], both of your holes...[exclaim_low]!</li>
+					<!-- ===Replying to a Male=== -->
+	
+					<!-- ===Replying to a Female=== -->	
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
 </Defs>
 

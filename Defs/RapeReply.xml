@@ -5,502 +5,748 @@
 	</InteractionDef>
 	
 <!-- ===AnalRape=== -->
+
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Anal_Rape_Reply</defName>
 		<label>analrape — react to</label>
 		<symbol>UI/Icons/AnalRapeMote</symbol>
 		<logRulesInitiator>
-			<rulesStrings>				
+			<rulesStrings>								
+					<!-- ===Masochist Neutral=== -->	
+					<li>masochist_n->[exclaim_high]! [fuck] my [ass], [rapist]!</li>
+					<li>masochist_n->[exclaim_high]! Fill my [ass] with your [cum], [rapist]! [exclaim_high]!</li>
+					<li>masochist_n->[exclaim_high]! [fuck] my [exclaim_high] [ass] [exclaim_high]!</li>
+					<li>masochist_n->[exclaim_high]! Pump me full of [cum], [rapist]!</li>
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
+					<li>broken2_n->[exclaim_low]...more [penis]...my [ass]...</li>
+					<li>broken2_n->[exclaim_low]...[penis]...in my-[exclaim_low]...[ass]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [ass]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[ass]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>		
+					<li>broken1_n->[exclaim_high]! Please, [exclaim_high] my [ass] can't handle anymore [penis]!</li>
+					<li>broken1_n->[exclaim_high]! How many times has my [ass]...[exclaim_high]!</li>
+					<li>broken1_n->How many times...[exclaim_high]!</li>
+					<li>broken1_n->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist]! [exclaim_high]!</li>
+					<li>broken1_n->[exclaim_high]! Hasn't my [ass] been pumped full of enough [cum], [rapist]? [exclaim_high]!</li>
+					<li>broken1_n->No, my [ass] is too sore already! [exclaim_high]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_high]!</li>
+					<li>rape_react_n->Wait no! [exclaim_high]!</li>
+					<li>rape_react_n->Please don't! [exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Get off of me!</li>
+					<li>rape_react_n->[exclaim_high]! Get it out!</li>
+					<li>rape_react_n->[exclaim_high]! It hurts!</li>
+					<li>rape_react_n->[exclaim_high]! Pull out!</li>
+					<li>rape_react_n->Not my assho- [exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Not my asshole!</li>
+					<li>rape_react_n->[exclaim_high]! Not there!</li>
+					<li>rape_react_n->[RECIPIENT_nameDef], please don't- [exclaim_high]!</li>
+					<li>rape_react_n->Not my asshole, [rapist]! [exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Get out of my asshole, [rapist]!</li>
+					<li>rape_react_n->[exclaim_high]! Pull it out, [rapist]!</li>
+					<li>rape_react_n->[exclaim_high]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_high]!</li>
+					
 					<!-- ===Masochist Victim of Male Rapist=== -->					
-					<li>masochist_m->[exclaim_high]! [fuck] my [ass], [rapist]!</li>
-					<li>masochist_m->[exclaim_high]! Fill my [ass] with your [cum], [rapist]! [exclaim_high]!</li>
-					<li>masochist_m->[exclaim_high]! [fuck] my [exclaim_high] [ass] [exclaim_high]!</li>
-					<li>masochist_m->[exclaim_high]! Pump me full of [cum], [rapist]!</li>
+					
 					<!-- ===Broken Victim of Male Rapist=== -->					
-					<li>broken2_m->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
-					<li>broken2_m->[exclaim_low]...more [penis]...my [ass]...</li>
-					<li>broken2_m->[exclaim_low]...[penis]...in my-[exclaim_low]...[ass]...</li>
-					<li>broken2_m->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...where...? My [ass]...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...[ass]-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>		
-					<li>broken1_m->[exclaim_high]! Please, [exclaim_high] my [ass] can't handle anymore [penis]!</li>
-					<li>broken1_m->[exclaim_high]! How many times has my [ass]...[exclaim_high]!</li>
-					<li>broken1_m->How many times...[exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist]! [exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! Hasn't my [ass] been pumped full of enough [cum], [rapist]? [exclaim_high]!</li>
-					<li>broken1_m->No, my [ass] is too sore already! [exclaim_high]!</li>
+					
 					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_high]!</li>
-					<li>rape_react_m->Wait no! [exclaim_high]!</li>
-					<li>rape_react_m->Please don't! [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get off of me!</li>
-					<li>rape_react_m->[exclaim_high]! Get it out!</li>
-					<li>rape_react_m->[exclaim_high]! It hurts!</li>
-					<li>rape_react_m->[exclaim_high]! Pull out!</li>
-					<li>rape_react_m->Not my assho- [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Not my asshole!</li>
-					<li>rape_react_m->[exclaim_high]! Not there!</li>
-					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_high]!</li>
-					<li>rape_react_m->Not my asshole, [rapist]! [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get out of my asshole, [rapist]!</li>
-					<li>rape_react_m->[exclaim_high]! Pull it out, [rapist]!</li>
-					<li>rape_react_m->[exclaim_high]! Get off me, [rapist]!</li>
-					<li>rape_react_m->Stop, [rapist]! [exclaim_high]!</li>
+					
 					<!-- ===Masochist Victim of Female Rapist=== -->					
-					<li>masochist_f->[exclaim_f]! I'm your dildo, [rapist]!</li>
-					<li>masochist_f->[exclaim_f]! Please, [fuck] my [penis] with your [ass], [rapist]! [exclaim_f]!</li>
+
 					<!-- ===Broken Victim of Female Rapist=== -->		
-					<li>broken2_f->[exclaim_low]...[ass]-[exclaim_low]...[cum]...</li>
-					<li>broken2_f->[exclaim_low]...[ass]...on my-[exclaim_low]...[penis]...</li>
-					<li>broken2_f->[exclaim_low]...Wha...? [ass]?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Please, [exclaim_low] I can't handle anymore [ass]!</li>
-					<li>broken1_f->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
-					<li>broken1_f->No, my [penis] is sore! [exclaim_high]!</li>
+
 					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Please don't! [exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! Get it out!</li>
-					<li>rape_react_f->[exclaim_low]! Pull out!</li>
-					<li>rape_react_f->[RECIPIENT_nameDef], please don't- [exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! Get your asshole off of me, [rapist]!</li>
-					<li>rape_react_f->[exclaim_low]! Get off me, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>							
+						
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>			
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Anal_Rape_Reply_Reverse</defName>
+		<label>analrape — react to</label>
+		<symbol>UI/Icons/AnalRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>								
+					<!-- ===Masochist Neutral=== -->	
+					<li>masochist_n->[exclaim_f]! I'm your dildo, [rapist]!</li>
+					<li>masochist_n->[exclaim_f]! Please, [fuck] my [penis] with your [ass], [rapist]! [exclaim_f]!</li>
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...[ass]-[exclaim_low]...[cum]...</li>
+					<li>broken2_n->[exclaim_low]...[ass]...on my-[exclaim_low]...[penis]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? [ass]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, [exclaim_low] I can't handle anymore [ass]!</li>
+					<li>broken1_n->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->No, my [penis] is sore! [exclaim_high]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get it out!</li>
+					<li>rape_react_n->[exclaim_low]! Pull out!</li>
+					<li>rape_react_n->[RECIPIENT_nameDef], please don't- [exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your asshole off of me, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->
+												
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
 
 <!-- ===VaginalRape=== -->
+
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Vaginal_Rape_Reply</defName>
 		<label>vaginalrape — react to</label>
 		<symbol>UI/Icons/VaginalRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>			
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_high]! [fuck] my [vagina], [rapist]!</li>
-					<li>masochist_m->[exclaim_high]! Fill my [vagina] with your [cum], [rapist]! [exclaim_high]!</li>
-					<li>masochist_m->[exclaim_high]! [fuck] my [exclaim_high] [vagina] [exclaim_high]!</li>
-					<li>masochist_m->[exclaim_high]! Pump me full of [cum], [rapist]!</li>
-					<li>masochist_m->[exclaim_high]! Impregnate me! [exclaim_high]!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
-					<li>broken2_m->[exclaim_low]...more [penis]...my [vagina]...</li>
-					<li>broken2_m->[exclaim_low]...[penis]...in my-[exclaim_low]...[vagina]...</li>
-					<li>broken2_m->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...where...? My [vagina]...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...[vagina]-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...cum...[exclaim_low]...inside...</li>
-					<li>broken1_m->[exclaim_high]! Please, [exclaim_high] my [vagina] can't take one more [penis]!</li>
-					<li>broken1_m->[exclaim_high]! How many times has my [vagina] been [fuck]-[exclaim_high]!</li>
-					<li>broken1_m->How many times...[exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist]! [exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! Hasn't my [vagina] been pumped full of enough [cum], [rapist]? [exclaim_high]!</li>
-					<li>broken1_m->No, my [vagina] is too sore already! [exclaim_high]!</li>
+					<!-- ===Masochist Neutral=== -->	
+					<li>masochist_n->[exclaim_high]! [fuck] my [vagina], [rapist]!</li>
+					<li>masochist_n->[exclaim_high]! Fill my [vagina] with your [cum], [rapist]! [exclaim_high]!</li>
+					<li>masochist_n->[exclaim_high]! [fuck] my [exclaim_high] [vagina] [exclaim_high]!</li>
+					<li>masochist_n->[exclaim_high]! Pump me full of [cum], [rapist]!</li>
+					<li>masochist_n->[exclaim_high]! Impregnate me! [exclaim_high]!</li>
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
+					<li>broken2_n->[exclaim_low]...more [penis]...my [vagina]...</li>
+					<li>broken2_n->[exclaim_low]...[penis]...in my-[exclaim_low]...[vagina]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [vagina]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[vagina]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...cum...[exclaim_low]...inside...</li>
+					<li>broken1_n->[exclaim_high]! Please, [exclaim_high] my [vagina] can't take one more [penis]!</li>
+					<li>broken1_n->[exclaim_high]! How many times has my [vagina] been [fuck]-[exclaim_high]!</li>
+					<li>broken1_n->How many times...[exclaim_high]!</li>
+					<li>broken1_n->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist]! [exclaim_high]!</li>
+					<li>broken1_n->[exclaim_high]! Hasn't my [vagina] been pumped full of enough [cum], [rapist]? [exclaim_high]!</li>
+					<li>broken1_n->No, my [vagina] is too sore already! [exclaim_high]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_high]!</li>
+					<li>rape_react_n->Wait no! [exclaim_high]!</li>
+					<li>rape_react_n->Please don't! [exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Get off of me!</li>
+					<li>rape_react_n->[exclaim_high]! Get it out!</li>
+					<li>rape_react_n->[exclaim_high]! It hurts!</li>
+					<li>rape_react_n->[exclaim_high]! Pull out!</li>
+					<li>rape_react_n->Not my pus- [exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Not my pussy!</li>
+					<li>rape_react_n->[exclaim_high]! You'll get me pregnant, [rapist]!</li>
+					<li>rape_react_n->[RECIPIENT_nameDef], please don't- [exclaim_high]!</li>
+					<li>rape_react_n->Oh please don't cum inside, [RECIPIENT_nameDef]! [exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Get out of my [vagina], [rapist]!</li>
+					<li>rape_react_n->[exclaim_high]! Pull it out, [rapist]!</li>
+					<li>rape_react_n->[exclaim_high]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_high]!</li>		
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
 					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_high]!</li>
-					<li>rape_react_m->Wait no! [exclaim_high]!</li>
-					<li>rape_react_m->Please don't! [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get off of me!</li>
-					<li>rape_react_m->[exclaim_high]! Get it out!</li>
-					<li>rape_react_m->[exclaim_high]! It hurts!</li>
-					<li>rape_react_m->[exclaim_high]! Pull out!</li>
-					<li>rape_react_m->Not my pus- [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Not my pussy!</li>
-					<li>rape_react_m->[exclaim_high]! You'll get me pregnant, [rapist]!</li>
-					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_high]!</li>
-					<li>rape_react_m->Oh please don't cum inside, [RECIPIENT_nameDef]! [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get out of my [vagina], [rapist]!</li>
-					<li>rape_react_m->[exclaim_high]! Pull it out, [rapist]!</li>
-					<li>rape_react_m->[exclaim_high]! Get off me, [rapist]!</li>
-					<li>rape_react_m->Stop, [rapist]! [exclaim_high]!</li>						
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_low]! I'm your dildo, [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! Please, [fuck] my [penis] with your [vagina], [rapist]! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Female Rapist=== -->	
-					<li>broken2_f->[exclaim_low]...[vagina]...on my-[exclaim_low]...[penis]...</li>
-					<li>broken2_f->[exclaim_low]...Wha...? [vagina]?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Please, [exclaim_low] I can't handle anymore [vagina]!</li>
-					<li>broken1_f->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
 					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Please don't! [exclaim_low]!</li>
-					<li>rape_react_f->[RECIPIENT_nameDef], please don't... I'll cum inside! [exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! Get off of my [penis], [rapist]!</li>
-					<li>rape_react_f->[exclaim_low]! Get off me, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>
+												
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Vaginal_Rape_Reply_Reverse</defName>
+		<label>vaginalrape — react to</label>
+		<symbol>UI/Icons/VaginalRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>			
+					<!-- ===Masochist Neutral=== -->	
+					<li>masochist_n->[exclaim_low]! I'm your dildo, [rapist]!</li>
+					<li>masochist_n->[exclaim_low]! Please, [fuck] my [penis] with your [vagina], [rapist]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...[vagina]...on my-[exclaim_low]...[penis]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? [vagina]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, [exclaim_low] I can't handle anymore [vagina]!</li>
+					<li>broken1_n->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->[RECIPIENT_nameDef], please don't... I'll cum inside! [exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off of my [penis], [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>					
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->
+												
+					
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
 <!-- ===HandjobRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Handjob_Rape_Reply</defName>
 		<label>handjobrape — react to</label>
 		<symbol>UI/Icons/HandjobRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>		
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_low]! [rapist], cover my face in your [cum]!</li>
-					<li>masochist_m->[exclaim_low]! Use my hands however you want, [rapist]! </li>
-					<li>masochist_m->[exclaim_low]! Does this feel good, [rapist]?</li>
-					<li>masochist_m->Shoot your [cum] all over me [rapist]!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
-					<li>broken2_m->More [penis]s...[exclaim_low]</li>
-					<li>broken2_m->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my hands...? Like this?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...hands? [exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...[cum]...[exclaim_low]...for me?...</li>
-					<li>broken1_m->[exclaim_low]! Please, I don't think I can handle one more [penis]!</li>
-					<li>broken1_m->[exclaim_low]! How many [penis]s have I-[exclaim_low]!</li>
-					<li>broken1_m->How many times...[exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! Please don't cover me in more [cum]...[exclaim_low]!</li>
-					<li>broken1_m->Haven't I jacked off enough [penis]s, [rapist]? [exclaim_low]! </li>
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! [rapist], cover my face in your [cum]!</li>
+					<li>masochist_n->[exclaim_low]! Use my hands however you want, [rapist]! </li>
+					<li>masochist_n->[exclaim_low]! Does this feel good, [rapist]?</li>
+					<li>masochist_n->Shoot your [cum] all over me [rapist]!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
+					<li>broken2_n->More [penis]s...[exclaim_low]</li>
+					<li>broken2_n->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my hands...? Like this?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...hands? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...[cum]...[exclaim_low]...for me?...</li>
+					<li>broken1_n->[exclaim_low]! Please, I don't think I can handle one more [penis]!</li>
+					<li>broken1_n->[exclaim_low]! How many [penis]s have I-[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! Please don't cover me in more [cum]...[exclaim_low]!</li>
+					<li>broken1_n->Haven't I jacked off enough [penis]s, [rapist]? [exclaim_low]! </li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your stinking [penis] away from me, [rapist]!</li>
+						
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
 					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_m->Wait no! [exclaim_low]!</li>
-					<li>rape_react_m->Please don't! [exclaim_low]!</li>
-					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-					<li>rape_react_m->[exclaim_low]! Get off me, [rapist]!</li>
-					<li>rape_react_m->[exclaim_low]! Get your stinking [penis] away from me, [rapist]!</li>
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_low]! My [penis] is yours, [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! Please, [rapist], you're too good to me! [exclaim_low]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], I'm gonna shoot my [cum]! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Female Rapist=== -->
-					<li>broken2_f->[exclaim_low]...your hands...on my-[exclaim_low]...[penis]...</li>
-					<li>broken2_f->[exclaim_low]...Wha...? Hands?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Please, [exclaim_low] I can't handle anymore!</li>
-					<li>broken1_f->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
 					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Please don't! [exclaim_low]!</li>
-					<li>rape_react_f->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! [exclaim_low]! Get your hands off me, [rapist]!</li>
-					<li>rape_react_f->[exclaim_low]! Get off me, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>							
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Handjob_Rape_Reply_Reverse</defName>
+		<label>handjobrape — react to</label>
+		<symbol>UI/Icons/HandjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>		
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! My [penis] is yours, [rapist]!</li>
+					<li>masochist_n->[exclaim_low]! Please, [rapist], you're too good to me! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist], I'm gonna shoot my [cum]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...your hands...on my-[exclaim_low]...[penis]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? Hands?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, [exclaim_low] I can't handle anymore!</li>
+					<li>broken1_n->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! [exclaim_low]! Get your hands off me, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>		
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->
+										
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
 	
 <!-- ===FootjobRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Footjob_Rape_Reply</defName>
 		<label>footjobrape — react to</label>
 		<symbol>UI/Icons/FootjobRapeMote</symbol>
 		<logRulesInitiator>
 		<rulesStrings>			
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_low]! Please, [rapist], cover my feet with your [cum]!</li>
-					<li>masochist_m->[exclaim_low]! These feet are yours, [rapist]! </li>
-					<li>masochist_m->[exclaim_low]! Does this feel good, [rapist]?</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->More [penis]s...[exclaim_low]</li>
-					<li>broken2_m->[exclaim_low]...Wha...? [exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my feet...? Like this?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...feet? [exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_m->[exclaim_low]! Please, I don't want one more stinking [penis] touching my feet!</li>
-					<li>broken1_m->[exclaim_low]! How many [penis]s have I-[exclaim_low]!</li>
-					<li>broken1_m->How many times...[exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_m->Please don't get [cum] all over my feet again...[exclaim_low]!</li>
-					<li>broken1_m->Can't I at least just use my hands, [rapist]? [exclaim_low]! </li>
-					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_m->Wait no! [exclaim_low]!</li>
-					<li>rape_react_m->Please don't! [exclaim_low]!</li>
-					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-					<li>rape_react_m->[exclaim_low]! Get off me, [rapist]!</li>
-					<li>rape_react_m->[exclaim_low]! Get your stinking [penis] away from my feet, [rapist]!</li>
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_low]! My [penis] is yours, [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], I'm gonna shoot my [cum]! [exclaim_low]!</li>
-					<li>masochist_f->[exclaim_low]! Punish my [penis], [rapist]! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Female Rapist=== -->
-					<li>broken2_f->[exclaim_low]...your feet...on my-[exclaim_low]...[penis]...</li>
-					<li>broken2_f->[exclaim_low]...Wha...? Feet?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->Just lie down here?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Please, [exclaim_low] I can't handle anymore!</li>
-					<li>broken1_f->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
-					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Please don't! [exclaim_low]!</li>
-					<li>rape_react_f->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! [exclaim_low]! Get your feet off me, [rapist]!</li>
-					<li>rape_react_f->[exclaim_low]! Step off, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>												
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! Please, [rapist], cover my feet with your [cum]!</li>
+					<li>masochist_n->[exclaim_low]! These feet are yours, [rapist]! </li>
+					<li>masochist_n->[exclaim_low]! Does this feel good, [rapist]?</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->More [penis]s...[exclaim_low]</li>
+					<li>broken2_n->[exclaim_low]...Wha...? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my feet...? Like this?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...feet? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, I don't want one more stinking [penis] touching my feet!</li>
+					<li>broken1_n->[exclaim_low]! How many [penis]s have I-[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->Please don't get [cum] all over my feet again...[exclaim_low]!</li>
+					<li>broken1_n->Can't I at least just use my hands, [rapist]? [exclaim_low]! </li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your stinking [penis] away from my feet, [rapist]!</li>
+					
+					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
 
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Footjob_Rape_Reply_Reverse</defName>
+		<label>footjobrape — react to</label>
+		<symbol>UI/Icons/FootjobRapeMote</symbol>
+		<logRulesInitiator>
+		<rulesStrings>			
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! My [penis] is yours, [rapist]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist], I'm gonna shoot my [cum]! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! Punish my [penis], [rapist]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...your feet...on my-[exclaim_low]...[penis]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? Feet?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->Just lie down here?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [penis]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[penis]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, [exclaim_low] I can't handle anymore!</li>
+					<li>broken1_n->[exclaim_low]! How many times has my [penis]...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! [exclaim_low]! Get your feet off me, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Step off, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>	
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
 <!-- ===FingeringRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Fingering_Rape_Reply</defName>
 		<label>fingeringrape — react to</label>
 		<symbol>UI/Icons/FingeringRapeMote</symbol>
 		<logRulesInitiator>
-			<rulesStrings>				
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_low]! [rapist], you're too good to me! [exclaim_low]!</li>
-					<li>masochist_m->[exclaim_low]! This hole is yours, [rapist]! </li>
-					<li>masochist_m->[exclaim_low]! [rapist], [fuck] me with those fingers!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...Wha...? [exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...your fingers...[exclaim_low]!</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my [vagina]-[exclaim_low]...so wet...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...[vagina]? [exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_m->[exclaim_low]! Please, I don't want any more fingers digging around in my [vagina]!</li>
-					<li>broken1_m->[exclaim_low]! How many times has this made me-[exclaim_low]!</li>
-					<li>broken1_m->How many times...[exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! Just because I'm wet doesn't mean I...[exclaim_low]!</li>
-					<li>broken1_m->Won't you ever leave me alone, [rapist]? [exclaim_low]! </li>
+			<rulesStrings>								
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! My fingers are yours, [rapist]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist], you're so wet! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! Is this good, [rapist]?</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...your [vagina]-[exclaim_low]...so wet...</li>
+					<li>broken2_n->[exclaim_low]...Wha...? My fingers?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->Just like this?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? Your [vagina]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, [exclaim_low] I can't handle anymore!</li>
+					<li>broken1_n->[exclaim_low]! How many times have I...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My hands are tired, [rapist]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Let go! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [rapist]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get my fingers out of your stinking hole, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>	
+									
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
 					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_m->Wait no! [exclaim_low]!</li>
-					<li>rape_react_m->Please don't! [exclaim_low]!</li>
-					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-					<li>rape_react_m->[exclaim_low]! Get your fingers off me, [rapist]!</li>
-					<li>rape_react_m->[exclaim]! Get those out of me, [rapist]!!</li>
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_low]! My fingers are yours, [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], you're so wet! [exclaim_low]!</li>
-					<li>masochist_f->[exclaim_low]! Is this good, [rapist]?</li>
-					<!-- ===Broken Victim of Female Rapist=== -->
-					<li>broken2_f->[exclaim_low]...your [vagina]-[exclaim_low]...so wet...</li>
-					<li>broken2_f->[exclaim_low]...Wha...? My fingers?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->Just like this?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...where...? Your [vagina]...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Please, [exclaim_low] I can't handle anymore!</li>
-					<li>broken1_f->[exclaim_low]! How many times have I...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My hands are tired, [rapist]! [exclaim_low]!</li>
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
 					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Let go! [exclaim_low]!</li>
-					<li>rape_react_f->Oh just leave me alone, [rapist]...[exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! Get my fingers out of your stinking hole, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>						
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fingering_Rape_Reply_Reverse</defName>
+		<label>fingeringrape — react to</label>
+		<symbol>UI/Icons/FingeringRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>							
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! [rapist], you're too good to me! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! This hole is yours, [rapist]! </li>
+					<li>masochist_n->[exclaim_low]! [rapist], [fuck] me with those fingers!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...Wha...? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...your fingers...[exclaim_low]!</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my [vagina]-[exclaim_low]...so wet...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[vagina]? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, I don't want any more fingers digging around in my [vagina]!</li>
+					<li>broken1_n->[exclaim_low]! How many times has this made me-[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! Just because I'm wet doesn't mean I...[exclaim_low]!</li>
+					<li>broken1_n->Won't you ever leave me alone, [rapist]? [exclaim_low]! </li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your fingers off me, [rapist]!</li>
+					<li>rape_react_n->[exclaim]! Get those out of me, [rapist]!!</li>
+							
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->					
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
 <!-- ===FistingRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Fisting_Rape_Reply</defName>
 		<label>fistingrape — react to</label>
 		<symbol>UI/Icons/FistingRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>									
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_high]! [fuck] me with that fist, [rapist]! </li>
-					<li>masochist_m->[exclaim_high]! [rapist]! [exclaim_high]!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...Wha...? [exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...your fist...[exclaim_low]!</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my [ass]-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...whole fist...[exclaim_low]...in there?</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_m->No please, another fist will destroy my [ass]! [exclaim_high]!</li>
-					<li>broken1_m->How many fists have I taken up my-[exclaim_high]!</li>
-					<li>broken1_m->How many times...[exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! When will you give me a break, [rapist]! [exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! How many fists do I need to take? [exclaim_high]!</li>
-					<li>broken1_m->Won't you ever leave me alone, [rapist]? [exclaim_high]! </li>
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_high]! [fuck] me with that fist, [rapist]! </li>
+					<li>masochist_n->[exclaim_high]! [rapist]! [exclaim_high]!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...Wha...? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...your fist...[exclaim_low]!</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my [ass]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...whole fist...[exclaim_low]...in there?</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->No please, another fist will destroy my [ass]! [exclaim_high]!</li>
+					<li>broken1_n->How many fists have I taken up my-[exclaim_high]!</li>
+					<li>broken1_n->How many times...[exclaim_high]!</li>
+					<li>broken1_n->[exclaim_high]! When will you give me a break, [rapist]! [exclaim_high]!</li>
+					<li>broken1_n->[exclaim_high]! How many fists do I need to take? [exclaim_high]!</li>
+					<li>broken1_n->Won't you ever leave me alone, [rapist]? [exclaim_high]! </li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_high]!</li>
+					<li>rape_react_n->Wait no! [exclaim_high]!</li>
+					<li>rape_react_n->Please don't! [exclaim_high]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_high]!</li>
+					<li>rape_react_n->[exclaim_high]! Get your fucking fist out of me, [rapist]!</li>
+									
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
 					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_high]!</li>
-					<li>rape_react_m->Wait no! [exclaim_high]!</li>
-					<li>rape_react_m->Please don't! [exclaim_high]!</li>
-					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get your fucking fist out of me, [rapist]!</li>
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_high]! [fuck] me with your fist, [rapist]!</li>
-					<li>masochist_f->[exclaim_high]! [rapist]! [exclaim_high]!</li>				
-					<!-- ===Broken Victim of Female Rapist=== -->
-					<li>broken2_f->[exclaim_low]...Wha...? [exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...your fist...[exclaim_low]!</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my [ass]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...whole fist...[exclaim_low]...in there?</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->No please, another fist will destroy my [ass]! [exclaim_high]!</li>
-					<li>broken1_f->How many fists have I taken up my-[exclaim_high]!</li>
-					<li>broken1_f->How many times...[exclaim_high]!</li>
-					<li>broken1_f->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist!] [exclaim_high]!</li>
-					<li>broken1_f->[exclaim_high]! How many fists do I need to take? [exclaim_high]!</li>
-					<li>broken1_f->Won't you ever leave me alone, [rapist]? [exclaim_high]!</li>
-					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_high]!</li>
-					<li>rape_react_f->Wait no! [exclaim_high]!</li>
-					<li>rape_react_f->Let go! [exclaim_high]!</li>
-					<li>rape_react_f->Oh just leave me alone, [rapist]...[exclaim_high]!</li>
-					<li>rape_react_f->[exclaim_high]! Get your fucking fist out of me, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_high]!</li>																		
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fisting_Rape_Reply_Reverse</defName>
+		<label>fistingrape — react to</label>
+		<symbol>UI/Icons/FistingRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>									
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! My fist is yours, [rapist]! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...Wha...? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my fist...[exclaim_low]!</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...your [ass]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...whole fist...[exclaim_low]...in there?</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->How many times...[exclaim_high]!</li>
+					<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->Won't you ever leave me alone, [rapist]? [exclaim_low]! </li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your fucking ass away from me, [rapist]!</li>
+									
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
 <!-- ===BreastjobRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Breastjob_Rape_Reply</defName>
 		<label>breastjobrape — react to</label>
 		<symbol>UI/Icons/BreastjobRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_low]! these [boobs] are yours, [rapist]! </li>
-					<li>masochist_m->[exclaim_low]! [fuck] my [boobs], [rapist]! [exclaim_low]!</li>
-					<li>masochist_m->[exclaim_low]! [rapist], cover my [boobs] with your [cum]! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...Wha...? More [penis]?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...My [boobs]?...Like this?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...you want to use these?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...[penis]...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_m->[exclaim_low], just use my [boobs] and get it over with...[exclaim_low]!</li>
-					<li>broken1_m->How many [penis]s have I-[exclaim_low]!</li>
-					<li>broken1_m->How many times...[exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! Please don't get [cum] all over my [boobs] again...[exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! these [boobs] are yours, [rapist]! </li>
+					<li>masochist_n->[exclaim_low]! [fuck] my [boobs], [rapist]! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist], cover my [boobs] with your [cum]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...Wha...? More [penis]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...My [boobs]?...Like this?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...you want to use these?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...[penis]...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low], just use my [boobs] and get it over with...[exclaim_low]!</li>
+					<li>broken1_n->How many [penis]s have I-[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! Please don't get [cum] all over my [boobs] again...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your [penis] out of my [boobs], [rapist]!</li>
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
 					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_m->Wait no! [exclaim_low]!</li>
-					<li>rape_react_m->Please don't! [exclaim_low]!</li>
-					<li>rape_react_m->Oh just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-					<li>rape_react_m->[exclaim_low]! Get your [penis] out of my [boobs], [rapist]!</li>
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_low]! I don't deserve your [boobs], [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], your [boobs] are so soft! [exclaim_low]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], you're gonna make me cover your [boobs] in [cum]! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Female Rapist=== -->
-					<li>broken2_f->[exclaim_low]...Wha...? [exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...your [boobs]...[exclaim_low]!</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my [penis]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...so soft...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Just because I'm hard doesn't-[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->Won't you ever leave me alone, [rapist]? [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
-					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Let go! [exclaim_low]!</li>
-					<li>rape_react_f->Oh just leave me alone, [rapist]...[exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! Get your [boobs] off me, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>																												
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Breastjob_Rape_Reply_Reverse</defName>
+		<label>breastjobrape — react to</label>
+		<symbol>UI/Icons/BreastjobRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! I don't deserve your [boobs], [rapist]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist], your [boobs] are so soft! [exclaim_low]!</li>
+					<li>masochist_n->[exclaim_low]! [rapist], you're gonna make me cover your [boobs] in [cum]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...Wha...? [exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...your [boobs]...[exclaim_low]!</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my [penis]-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...so soft...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Just because I'm hard doesn't-[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->Won't you ever leave me alone, [rapist]? [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Let go! [exclaim_low]!</li>
+					<li>rape_react_n->Oh just leave me alone, [rapist]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your [boobs] off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>	
+					
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>	
@@ -512,409 +758,448 @@
 		<symbol>UI/Icons/ScissoringRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-				<!-- ===Masochist Victim of Male Rapist=== -->
-				<li>masochist_m->[exclaim_low]! This [vagina] is yours, [rapist]! </li>
-				<li>masochist_m->[exclaim_low]! I don't deserve your [vagina], [rapist]! [exclaim_low]!</li>		
-				<!-- ===Broken Victim of Male Rapist=== -->	
-				<li>broken2_m->[exclaim_low]...Wha...? [vagina]?...[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...My hips...moving on their own...[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-				<li>broken2_m->Just lie down here?...[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...[vagina]...[exclaim_low]...grinding...</li>
-				<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-				<li>broken1_m->[exclaim_low], just grind my [pussy] and get it over with...[exclaim_low]!</li>
-				<li>broken1_m->How many times...[exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
-				<!-- ===Victim of Male Rapist=== -->
-				<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-				<li>rape_react_m->Please don't! [exclaim_low]!</li>
-				<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_low]!</li>
-				<li>rape_react_m->[exclaim_low]...just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-				<li>rape_react_m->[exclaim_low]! Get your stinking cunt off me, [rapist]!</li>
-				<li>rape_react_m->[exclaim_low]! Get off me, [rapist]!</li>
-				<li>rape_react_m->Stop, [rapist]...[exclaim_low]!</li>
-				<!-- ===Masochist Victim of Female Rapist=== -->
-				<li>masochist_f->[exclaim_low]! This [vagina] is yours, [rapist]! </li>
-				<li>masochist_f->[exclaim_low]! I don't deserve your [vagina], [rapist]! [exclaim_low]!</li>	
-				<!-- ===Broken Victim of Female Rapist=== -->
-				<li>broken2_f->[exclaim_low]...Wha...? [vagina]?...[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...My hips...moving on their own...[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-				<li>broken2_f->Just lie down here?...[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...[vagina]...[exclaim_low]...grinding...</li>
-				<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-				<li>broken1_f->[exclaim_low], just grind my [pussy] and get it over with...[exclaim_low]!</li>
-				<li>broken1_f->How many times...[exclaim_low]!</li>
-				<li>broken1_f->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-				<li>broken1_f->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
-				<!-- ===Victim of Female Rapist=== -->
-				<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-				<li>rape_react_f->Please don't! [exclaim_low]!</li>
-				<li>rape_react_f->[RECIPIENT_nameDef], please don't- [exclaim_low]!</li>
-				<li>rape_react_f->[exclaim_low]...just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
-				<li>rape_react_f->[exclaim_low]! Get your stinking cunt off me, [rapist]!</li>
-				<li>rape_react_f->[exclaim_low]! Get off me, [rapist]!</li>
-				<li>rape_react_f->Stop, [rapist]...[exclaim_low]!</li>
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! This [vagina] is yours, [rapist]! </li>
+					<li>masochist_n->[exclaim_low]! I don't deserve your [vagina], [rapist]! [exclaim_low]!</li>		
+					<!-- ===Broken Neutral=== -->	
+					<li>broken2_n->[exclaim_low]...Wha...? [vagina]?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...My hips...moving on their own...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->Just lie down here?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...[vagina]...[exclaim_low]...grinding...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low], just grind my [pussy] and get it over with...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->[RECIPIENT_nameDef], please don't- [exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]...just leave me alone, [RECIPIENT_nameDef]...[exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get your stinking cunt off me, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]...[exclaim_low]!</li>
+				
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>	
 	
 <!-- ===RimmingRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Rimming_Rape_Reply</defName>
 		<label>rimmingrape — react to</label>
 		<symbol>UI/Icons/RimmingRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-				<!-- ===Masochist Victim of Male Rapist=== -->	
-				<li>masochist_m->[exclaim_low]! This [ass] is yours, [rapist]! </li>
-				<li>masochist_m->[exclaim_low], [rapist]! [fuck] my [ass] with that tongue! [exclaim_low]!</li>
-				<!-- ===Broken Victim of Male Rapist=== -->	
-				<li>broken2_m->[exclaim_low]...Wha...? Tongue on my-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...my [ass]-[exclaim_low]...wet...</li>
-				<li>broken2_m->[exclaim_low]...your tongue...[exclaim_low]</li>
-				<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-				<li>broken1_m->[exclaim_low], just get this over with...[exclaim_low]!</li>
-				<li>broken1_m->How many times...[exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-				<li>broken1_m->My [ass] can't handle another tongue-fucking...[exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+					
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->*[exclaim_oral]* Dis tongue *[exclaim_oral]* ess euoors, [rapist]! *[exclaim_oral]* </li>
+				<li>masochist_n->*[exclaim_oral]* [rapist]! [fuck] my mouf *[exclaim_oral]* wiv euorr [ass]! *[exclaim_oral]*</li>
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->*[exclaim_oral]*...Wha...? Your [ass]?...*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...I don't-*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...my tongue-*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...your [ass]...*[exclaim_oral]*</li>
+				<li>broken2_n->*[exclaim_oral]*...I can't-*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...Please...*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...No more-*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...It feels-*[exclaim_oral]*...</li>
+				<li>broken1_n->I don't want to taste another-*[exclaim_oral]* [ass]! *[exclaim_oral]*</li>
+				<li>broken1_n->How many times...*[exclaim_oral]*</li>
+				<li>broken1_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				<!-- ===Neutral=== -->
+				<li>rape_react_n->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [ass] oouv my mouph! *[exclaim_oral]*</li>
+				<li>rape_react_n->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist] *[exclaim_oral]*</li>
+				<li>rape_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
 				<!-- ===Victim of Male Rapist=== -->
-				<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-				<li>rape_react_m->Get your-[exclaim_low]...[derogadj] tongue out of my-[exclaim_low]...[ass], [rapist]!</li>
-				<li>rape_react_m->Get your-[exclaim_low]...[derogadj] mouth away from my-[exclaim_low]...[ass], [rapist]!</li>
-				<!-- ===Masochist Victim of Female Rapist=== -->	
-				<li>masochist_f->[exclaim_low]! This [ass] is yours, [rapist]! </li>
-				<li>masochist_f->[exclaim_low], [rapist]! [fuck] my [ass] with that tongue! [exclaim_low]!</li>
-				<!-- ===Broken Victim of Female Rapist=== -->	
-				<li>broken2_f->[exclaim_low]...Wha...? Tongue on my-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...my [ass]-[exclaim_low]...wet...</li>
-				<li>broken2_f->[exclaim_low]...your tongue...[exclaim_low]</li>
-				<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-				<li>broken1_f->[exclaim_low], just get this over with...[exclaim_low]!</li>
-				<li>broken1_f->How many times...[exclaim_low]!</li>
-				<li>broken1_f->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-				<li>broken1_f->My [ass] can't handle another tongue-fucking...[exclaim_low]!</li>
-				<li>broken1_f->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
-				<!-- ===Victim of Female Rapist=== -->
-				<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-				<li>rape_react_f->Get your-[exclaim_low]...[derogadj] tongue out of my-[exclaim_low]...[ass], [rapist]!</li>
-				<li>rape_react_f->Get your-[exclaim_low]...[derogadj] mouth away from my-[exclaim_low]...[ass], [rapist]!</li>
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
-	<!-- ===2 Initiator=== -->
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="RapeReply">
-		<defName>Rimming_RapeF</defName>
+		<defName>Rimming_Rape_Reply_Reverse</defName>
 		<label>rimmingrapef — react to</label>
 		<symbol>UI/Icons/RimmingRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>
-				<!-- ===Masochist Victim of Male Rapist=== -->	
-				<li>masochist_m->*[exclaim_oral]* Dis tongue *[exclaim_oral]* ess euoors, [rapist]! *[exclaim_oral]* </li>
-				<li>masochist_m->*[exclaim_oral]* [rapist]! [fuck] my mouf *[exclaim_oral]* wiv euorr [ass]! *[exclaim_oral]*</li>
-				<!-- ===Broken Victim of Male Rapist=== -->	
-				<li>broken2_m->*[exclaim_oral]*...Wha...? Your [ass]?...*[exclaim_oral]*...</li>
-				<li>broken2_m->*[exclaim_oral]*...I don't-*[exclaim_oral]*...</li>
-				<li>broken2_m->*[exclaim_oral]*...my tongue-*[exclaim_oral]*...</li>
-				<li>broken2_m->*[exclaim_oral]*...your [ass]...*[exclaim_oral]*</li>
-				<li>broken2_m->*[exclaim_oral]*...I can't-*[exclaim_oral]*...</li>
-				<li>broken2_m->*[exclaim_oral]*...Please...*[exclaim_oral]*...</li>
-				<li>broken2_m->*[exclaim_oral]*...No more-*[exclaim_oral]*...</li>
-				<li>broken2_m->*[exclaim_oral]*...It feels-*[exclaim_oral]*...</li>
-				<li>broken1_m->I don't want to taste another-*[exclaim_oral]* [ass]! *[exclaim_oral]*</li>
-				<li>broken1_m->How many times...*[exclaim_oral]*</li>
-				<li>broken1_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->[exclaim_low]! This [ass] is yours, [rapist]! </li>
+				<li>masochist_n->[exclaim_low], [rapist]! [fuck] my [ass] with that tongue! [exclaim_low]!</li>
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->[exclaim_low]...Wha...? Tongue on my-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...my [ass]-[exclaim_low]...wet...</li>
+				<li>broken2_n->[exclaim_low]...your tongue...[exclaim_low]</li>
+				<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+				<li>broken1_n->[exclaim_low], just get this over with...[exclaim_low]!</li>
+				<li>broken1_n->How many times...[exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+				<li>broken1_n->My [ass] can't handle another tongue-fucking...[exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+				<!-- ===Neutral=== -->
+				<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+				<li>rape_react_n->Get your-[exclaim_low]...[derogadj] tongue out of my-[exclaim_low]...[ass], [rapist]!</li>
+				<li>rape_react_n->Get your-[exclaim_low]...[derogadj] mouth away from my-[exclaim_low]...[ass], [rapist]!</li>
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
 				<!-- ===Victim of Male Rapist=== -->
-				<li>rape_react_f->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [ass] oouv my mouph! *[exclaim_oral]*</li>
-				<li>rape_react_f->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist] *[exclaim_oral]*</li>
-				<li>rape_react_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
-				<!-- ===Masochist Victim of Female Rapist=== -->	
-				<li>masochist_f->*[exclaim_oral]* Dis tongue *[exclaim_oral]* ess euoors, [rapist]! *[exclaim_oral]* </li>
-				<li>masochist_f->*[exclaim_oral]* [rapist]! [fuck] my mouf *[exclaim_oral]* wiv euorr [ass]! *[exclaim_oral]*</li>
-				<!-- ===Broken Victim of Female Rapist=== -->	
-				<li>broken2_f->*[exclaim_oral]*...Wha...? Your [ass]?...*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...I don't-*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...my tongue-*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...your [ass]...*[exclaim_oral]*</li>
-				<li>broken2_f->*[exclaim_oral]*...I can't-*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...Please...*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...No more-*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...It feels-*[exclaim_oral]*...</li>
-				<li>broken1_f->I don't want to taste another-*[exclaim_oral]* [ass]! *[exclaim_oral]*</li>
-				<li>broken1_f->How many times...*[exclaim_oral]*</li>
-				<li>broken1_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
-				<!-- ===Victim of Female Rapist=== -->
-				<li>rape_react_f->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [ass] oouv my mouph! *[exclaim_oral]*</li>
-				<li>rape_react_f->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist] *[exclaim_oral]*</li>
-				<li>rape_react_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>	
 	
 <!-- ===CunnilingusRape=== -->
+
+	<!-- ===Giver=== -->	
 	<InteractionDef ParentName="RapeReply">
 		<defName>Cunnilingus_Rape_Reply</defName>
 		<label>cunnilingusrape — react to</label>
 		<symbol>UI/Icons/CunnilingusRapeMote</symbol>
 		<logRulesInitiator>
-			<rulesStrings>				
-				<!-- ===Masochist Victim of Male Rapist=== -->	
-				<li>masochist_m->[exclaim_low]! [fuck] my [vagina] with that tongue, [rapist]!</li>
-				<li>masochist_m->[exclaim_low]! You're too good to me, [rapist]! [exclaim_low]!</li>
-				<li>masochist_m->[exclaim_low]! [rapist], this [vagina] is yours! [exclaim_low]!</li>
-				<!-- ===Broken Victim of Male Rapist=== -->	
-				<li>broken2_m->[exclaim_low]...Wha...? Tongue on my-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...my [vagina]-[exclaim_low]...so wet...</li>
-				<li>broken2_m->[exclaim_low]...your tongue...[exclaim_low]</li>
-				<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-				<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-				<li>broken1_m->[exclaim_low], just because I'm wet doesn't mean I like it...[exclaim_low]!</li>
-				<li>broken1_m->How many times...[exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! Don't cover my [vagina] with your nasty slobber again, [rapist]! [exclaim_low]!</li>
-				<li>broken1_m->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+			<rulesStrings>	
+			
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->*[exclaim_oral]* My tongue *[exclaim_oral]* ess euoors, [rapist]!</li>
+				<li>masochist_n->*[exclaim_oral]* [rapist], I dund desurph *[exclaim_oral]* to tasd euoor [vagina] *[exclaim_oral]*</li>
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->...Wha...? [vagina]?...*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...[vagina]...*[exclaim_oral]*...wet...</li>
+				<li>broken2_n->[exclaim_low]...I don't-*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...my mouth...? Like this?...*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...it...tastes-*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+				<li>broken1_n->How many [vagina]s do I have to-*[exclaim_oral]*!</li>
+				<li>broken1_n->How many times...*[exclaim_oral]*!</li>
+				<li>broken1_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				<li>broken1_n->If I have to taste any more [vagina] I'm going to be sick! *[exclaim_oral]*</li>
+				<!-- ===Neutral=== -->
+				<li>rape_react_n->Hey sto- [exclaim_oral]!</li>
+				<li>rape_react_n->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [vagina] oouv my mouph! *[exclaim_oral]*</li>
+				<li>rape_react_n->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist]! *[exclaim_oral]*</li>
+				<li>rape_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>	
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
 				<!-- ===Victim of Male Rapist=== -->
-				<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-				<li>rape_react_m->Wait no! [exclaim_low]!</li>
-				<li>rape_react_m->Please don't! [exclaim_low]!</li>
-				<li>rape_react_m->Get your-[exclaim_low]...[derogadj] tongue out of my-[exclaim_low]...[vagina], [rapist]!</li>
-				<li>rape_react_m->Get your-[exclaim_low]...[derogadj] mouth away from my-[exclaim_low]...[vagina], [rapist]!</li>
-				<!-- ===Masochist Victim of Female Rapist=== -->
-				<li>masochist_f->*[exclaim_oral]* My tongue *[exclaim_oral]* ess euoors, [rapist]!</li>
-				<li>masochist_f->*[exclaim_oral]* [rapist], I dund desurph *[exclaim_oral]* to tasd euoor [vagina] *[exclaim_oral]*</li>
-				<!-- ===Broken Victim of Female Rapist=== -->
-				<li>broken2_f->...Wha...? [vagina]?...*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...[vagina]...*[exclaim_oral]*...wet...</li>
-				<li>broken2_f->[exclaim_low]...I don't-*[exclaim_oral]*...</li>
-				<li>broken2_f->[exclaim_low]...my mouth...? Like this?...*[exclaim_oral]*...</li>
-				<li>broken2_f->*[exclaim_oral]*...it...tastes-*[exclaim_oral]*...</li>
-				<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-				<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-				<li>broken1_f->How many [vagina]s do I have to-*[exclaim_oral]*!</li>
-				<li>broken1_f->How many times...*[exclaim_oral]*!</li>
-				<li>broken1_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
-				<li>broken1_f->If I have to taste any more [vagina] I'm going to be sick! *[exclaim_oral]*</li>
-				<!-- ===Victim of Female Rapist=== -->
-				<li>rape_react_f->Hey sto- [exclaim_oral]!</li>
-				<li>rape_react_f->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [vagina] oouv my mouph! *[exclaim_oral]*</li>
-				<li>rape_react_f->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist]! *[exclaim_oral]*</li>
-				<li>rape_react_f->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Cunnilingus_Rape_Reply_Reverse</defName>
+		<label>cunnilingusrape — react to</label>
+		<symbol>UI/Icons/CunnilingusRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>		
+			
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->[exclaim_low]! [fuck] my [vagina] with that tongue, [rapist]!</li>
+				<li>masochist_n->[exclaim_low]! You're too good to me, [rapist]! [exclaim_low]!</li>
+				<li>masochist_n->[exclaim_low]! [rapist], this [vagina] is yours! [exclaim_low]!</li>
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->[exclaim_low]...Wha...? Tongue on my-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...my [vagina]-[exclaim_low]...so wet...</li>
+				<li>broken2_n->[exclaim_low]...your tongue...[exclaim_low]</li>
+				<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+				<li>broken1_n->[exclaim_low], just because I'm wet doesn't mean I like it...[exclaim_low]!</li>
+				<li>broken1_n->How many times...[exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! Don't cover my [vagina] with your nasty slobber again, [rapist]! [exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+				<!-- ===Neutral=== -->
+				<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+				<li>rape_react_n->Wait no! [exclaim_low]!</li>
+				<li>rape_react_n->Please don't! [exclaim_low]!</li>
+				<li>rape_react_n->Get your-[exclaim_low]...[derogadj] tongue out of my-[exclaim_low]...[vagina], [rapist]!</li>
+				<li>rape_react_n->Get your-[exclaim_low]...[derogadj] mouth away from my-[exclaim_low]...[vagina], [rapist]!</li>
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
+				<!-- ===Victim of Male Rapist=== -->
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
+	
 <!-- ===FellatioRape=== -->
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>Fellatio_Rape_Reply</defName>
 		<label>fellatiorape — react to</label>
 		<symbol>UI/Icons/FellatioRapeMote</symbol>
 		<logRulesInitiator>
-			<rulesStrings>				
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
-					<li>masochist_m->*[exclaim_oral]* [fuck] my throat *[exclaim_oral]* wiv oour [penis]! *[exclaim_oral]*</li>
-					<li>masochist_m->*[exclaim_oral]* My mouf *[exclaim_oral]* is euoors, [rapist]! *[exclaim_oral]*</li>
-					<li>masochist_m->*[exclaim_oral]* I'll swalloow *[exclaim_oral]* euoor [cum], [rapist]! *[exclaim_oral]*</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->*[exclaim_oral]*...[penis]s...*[exclaim_oral]*...[cum]...</li>
-					<li>broken2_m->More [penis]s...*[exclaim_oral]*</li>
-					<li>broken2_m->[exclaim_low]...Wha...? [penis]?...*[exclaim_oral]*...</li>
-					<li>broken2_m->[exclaim_low]...I don't-*[exclaim_oral]*...</li>
-					<li>broken2_m->[exclaim_low]...my mouth...? Like this?...*[exclaim_low]*...</li>
-					<li>broken2_m->*[exclaim_oral]*...my...throat-*[exclaim_oral]*...</li>
-					<li>broken2_m->[exclaim_low]...I can't-*[exclaim_oral]*...</li>
-					<li>broken2_m->[exclaim_low]...Please...*[exclaim_oral]*...</li>
-					<li>broken2_m->[exclaim_low]...No more-*[exclaim_oral]*...</li>
-					<li>broken2_m->*[exclaim_oral]*...It's so-*[exclaim_oral]*...</li>
-					<li>broken2_m->*[exclaim_oral]*...[cum]...*[exclaim_oral]*...for me?...</li>
-					<li>broken1_m->How many [penis]s do I have to-*[exclaim_oral]*!</li>
-					<li>broken1_m->How many times...*[exclaim_oral]*!</li>
-					<li>broken1_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
-					<li>broken1_m->If I have to swallow any more [cum] I'm going to be sick! *[exclaim_oral]*</li>
-					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- *[exclaim_oral]*!</li>
-					<li>rape_react_m->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
-					<li>rape_react_m->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [penis] oouv my mouph! *[exclaim_oral]*</li>
-					<li>rape_react_m->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist]! *[exclaim_oral]*</li>
-					<!-- ===Masochist Victim of Female Rapist=== -->
-					<li>masochist_f->[exclaim_low]! My [penis] is yours, [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! Please, [rapist], you're too good to me! [exclaim_low]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], I'm gonna shoot my [cum] down your throat! [exclaim_low]!</li>
-					<li>masochist_f->[exclaim_low]! [rapist], Your mouth is too good! [exclaim_low]!</li>						
-					<!-- ===Broken Victim of Female Rapist=== -->
-					<li>broken2_f->[exclaim_low]...Wha...? Mouth on my-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my [penis]-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-*[exclaim_low]*...</li>
-					<li>broken2_f->[exclaim_low]...licking...[exclaim_low]...there...[exclaim_low]</li>
-					<li>broken2_f->[exclaim_low]...your mouth...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<!-- ===Victim of Female Rapist=== -->
-					<li>broken1_f->[exclaim_low], just because I'm hard doesn't mean I like it...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! Don't cover my [penis] with your nasty slobber again, [rapist]! [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Get your-[exclaim_low]...[derogadj] mouth off my-[exclaim_low]...[penis], [rapist]!</li>
-					<li>rape_react_f->[exclaim_low]...Stop, [rapist], I'm [exclaim_low] gonna...[exclaim_low]!</li>																		
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>		
-
-<!-- ===SixtynineRape=== -->
-	<!-- ===1 Initiator=== -->
-	<InteractionDef ParentName="RapeReply">
-		<defName>Sixtynine_Rape_Reply</defName>
-		<label>sixtyninerape — react to</label>
-		<symbol>UI/Icons/SixtynineRapeMote</symbol>
-		<logRulesInitiator>
-			<rulesStrings>
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_low]! I'm yours, [rapist]! </li>
-					<li>masochist_m->[exclaim_low], [rapist]! [fuck] my face! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...Wha...?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...My hips...moving on their own...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->Just lie down here?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_m->[exclaim_low], just get this over with...[exclaim_low]!</li>
-					<li>broken1_m->How many times...[exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_m->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
-					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_m->[exclaim_low] get off of me, [rapist]!</li>	
-					<!-- ===Masochist Victim of Female Rapist=== -->	
-					<li>masochist_f->[exclaim_low]! I'm yours, [rapist]! </li>
-					<li>masochist_f->[exclaim_low], [rapist]! [fuck] my face! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Female Rapist=== -->	
-					<li>broken2_f->[exclaim_low]...Wha...?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...My hips...moving on their own...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->Just lie down here?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low], just get this over with...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
-					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low] get off of me, [rapist]!</li>		
+			<rulesStrings>			
+			
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				<li>masochist_n->*[exclaim_oral]* [fuck] my throat *[exclaim_oral]* wiv oour [penis]! *[exclaim_oral]*</li>
+				<li>masochist_n->*[exclaim_oral]* My mouf *[exclaim_oral]* is euoors, [rapist]! *[exclaim_oral]*</li>
+				<li>masochist_n->*[exclaim_oral]* I'll swalloow *[exclaim_oral]* euoor [cum], [rapist]! *[exclaim_oral]*</li>
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->*[exclaim_oral]*...[penis]s...*[exclaim_oral]*...[cum]...</li>
+				<li>broken2_n->More [penis]s...*[exclaim_oral]*</li>
+				<li>broken2_n->[exclaim_low]...Wha...? [penis]?...*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...I don't-*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...my mouth...? Like this?...*[exclaim_low]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...my...throat-*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...I can't-*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...Please...*[exclaim_oral]*...</li>
+				<li>broken2_n->[exclaim_low]...No more-*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...It's so-*[exclaim_oral]*...</li>
+				<li>broken2_n->*[exclaim_oral]*...[cum]...*[exclaim_oral]*...for me?...</li>
+				<li>broken1_n->How many [penis]s do I have to-*[exclaim_oral]*!</li>
+				<li>broken1_n->How many times...*[exclaim_oral]*!</li>
+				<li>broken1_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				<li>broken1_n->If I have to swallow any more [cum] I'm going to be sick! *[exclaim_oral]*</li>
+				<!-- ===Neutral=== -->
+				<li>rape_react_n->Hey sto- *[exclaim_oral]*!</li>
+				<li>rape_react_n->*[exclaim_oral]* *[exclaim_oral]* *[exclaim_oral]*</li>
+				<li>rape_react_n->*[exclaim_oral]* Ged oour [derogadj] *[exclaim_oral]* [penis] oouv my mouph! *[exclaim_oral]*</li>
+				<li>rape_react_n->*[exclaim_oral]* Phvuck *[exclaim_oral]* eoouh, [rapist]! *[exclaim_oral]*</li>
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
+				<!-- ===Victim of Male Rapist=== -->
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
 	
+	<!-- ===Reciever=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>Fellatio_Rape_Reply_Reverse</defName>
+		<label>fellatiorape — react to</label>
+		<symbol>UI/Icons/FellatioRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>				
+				
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->[exclaim_low]! My [penis] is yours, [rapist]!</li>
+				<li>masochist_n->[exclaim_low]! Please, [rapist], you're too good to me! [exclaim_low]!</li>
+				<li>masochist_n->[exclaim_low]! [rapist], I'm gonna shoot my [cum] down your throat! [exclaim_low]!</li>
+				<li>masochist_n->[exclaim_low]! [rapist], Your mouth is too good! [exclaim_low]!</li>						
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->[exclaim_low]...Wha...? Mouth on my-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...my [penis]-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I don't-*[exclaim_low]*...</li>
+				<li>broken2_n->[exclaim_low]...licking...[exclaim_low]...there...[exclaim_low]</li>
+				<li>broken2_n->[exclaim_low]...your mouth...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+				<!-- ===Neutral=== -->
+				<li>broken1_n->[exclaim_low], just because I'm hard doesn't mean I like it...[exclaim_low]!</li>
+				<li>broken1_n->How many times...[exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! When will you give me a break, [rapist]! [exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! Don't cover my [penis] with your nasty slobber again, [rapist]! [exclaim_low]!</li>
+				<li>broken1_n->[exclaim_low]! Won't you ever leave me alone, [rapist]?</li>
+				<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+				<li>rape_react_n->Get your-[exclaim_low]...[derogadj] mouth off my-[exclaim_low]...[penis], [rapist]!</li>
+				<li>rape_react_n->[exclaim_low]...Stop, [rapist], I'm [exclaim_low] gonna...[exclaim_low]!</li>
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
+				<!-- ===Victim of Male Rapist=== -->
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>		
+	
+
+<!-- ===DoublePenetrationRape=== -->
+	
+	<!-- ===Reciever=== -->
 	<InteractionDef ParentName="RapeReply">
 		<defName>DoublePenetration_Rape_Reply</defName>
 		<label>dprape — react to</label>
 		<symbol>UI/Icons/DoublePenetrationRapeMote</symbol>
 		<logRulesInitiator>
 			<rulesStrings>						
-					<!-- ===Masochist Victim of Male Rapist=== -->	
-					<li>masochist_m->[exclaim_high]! [fuck] my holes, [rapist]!</li>
-					<li>masochist_m->[exclaim_high]! Fill my [ass] and [vagina] with your [cum], [rapist]! [exclaim_high]!</li>
-					<li>masochist_m->[exclaim_high]! [fuck] my [exclaim_high] holes! [exclaim_high]!</li>
-					<li>masochist_m->[exclaim_high]! Pump me full of [cum], [rapist]!</li>
-					<li>masochist_m->[exclaim_high]! Impregnate me, [rapist]! [exclaim_high]!</li>
-					<!-- ===Broken Victim of Male Rapist=== -->	
-					<li>broken2_m->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
-					<li>broken2_m->[exclaim_low]...more [penis]...my holes...</li>
-					<li>broken2_m->[exclaim_low]...[penis]...in my-[exclaim_low]...holes...</li>
-					<li>broken2_m->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...where...? My holes...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...my...[vagina] and [ass]-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken2_m->[exclaim_low]...cum...[exclaim_low]...inside...</li>
-					<li>broken1_m->[exclaim_high]! Please, [exclaim_high] my holes can't take any more [penis]s!</li>
-					<li>broken1_m->[exclaim_high]! How many times have my [vagina] and [ass] been [fuck]-[exclaim_high]!</li>
-					<li>broken1_m->How many times...[exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist]! [exclaim_high]!</li>
-					<li>broken1_m->[exclaim_high]! Haven't my holes been pumped full of enough [cum], [rapist]? [exclaim_high]!</li>
-					<li>broken1_m->No, my body is too sore already! [exclaim_high]!</li>
-					<!-- ===Victim of Male Rapist=== -->
-					<li>rape_react_m->Hey sto- [exclaim_high]!</li>
-					<li>rape_react_m->Wait no! [exclaim_high]!</li>
-					<li>rape_react_m->Please don't! [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get off of me!</li>
-					<li>rape_react_m->[exclaim_high]! Get them out!</li>
-					<li>rape_react_m->[exclaim_high]! It hurts!</li>
-					<li>rape_react_m->[exclaim_high]! Pull out!</li>
-					<li>rape_react_m->[exclaim_high]! Not both of my-[exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! You'll get me pregnant, [rapist]!</li>
-					<li>rape_react_m->[RECIPIENT_nameDef], please don't- [exclaim_high]!</li>
-					<li>rape_react_m->Oh please don't cum inside, [RECIPIENT_nameDef]! [exclaim_high]!</li>
-					<li>rape_react_m->[exclaim_high]! Get your cocks out of my [vagina] and [ass], [rapist]!</li>
-					<li>rape_react_m->[exclaim_high]! Pull your [penis]s out, [rapist]!</li>
-					<li>rape_react_m->[exclaim_high]! Get off me, [rapist]!</li>
-					<li>rape_react_m->Stop, [rapist]! [exclaim_high]!</li>						
-					<!-- ===Masochist Victim of Female Rapist=== -->	
-					<li>masochist_f->[exclaim_low]! My [penis]s are yours, [rapist]!</li>
-					<li>masochist_f->[exclaim_low]! Please, [fuck] my [penis]s with your holes, [rapist]! [exclaim_low]!</li>
-					<!-- ===Broken Victim of Female Rapist=== -->	
-					<li>broken2_f->[exclaim_low]...[vagina]...[ass]...on my-[exclaim_low]...[penis]...</li>
-					<li>broken2_f->[exclaim_low]...Wha...?...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I don't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...where...? My [penis]s...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...body-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...my...[penis]s-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...I can't-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...Please...[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...No more-[exclaim_low]...</li>
-					<li>broken2_f->[exclaim_low]...It feels-[exclaim_low]...</li>
-					<li>broken1_f->[exclaim_low]! Please, [RECIPIENT_nameDef] My [penis]s can't handle anymore!</li>
-					<li>broken1_f->[exclaim_low]! How many times have my [penis]s...[exclaim_low]!</li>
-					<li>broken1_f->How many times...[exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
-					<li>broken1_f->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
-					<!-- ===Victim of Female Rapist=== -->
-					<li>rape_react_f->Hey sto- [exclaim_low]!</li>
-					<li>rape_react_f->Wait no! [exclaim_low]!</li>
-					<li>rape_react_f->Please don't! [exclaim_low]!</li>
-					<li>rape_react_f->[RECIPIENT_nameDef], please don't... I'll cum inside! [exclaim_low]!</li>
-					<li>rape_react_f->[exclaim_low]! Get off of my [penis]s, [rapist]!</li>
-					<li>rape_react_f->[exclaim_low]! Get off me, [rapist]!</li>
-					<li>rape_react_f->Stop, [rapist]! [exclaim_low]!</li>																																	
+				<!-- ===Masochist Neutral=== -->
+				<li>masochist_n->[exclaim_high]! [fuck] my holes, [rapist]!</li>
+				<li>masochist_n->[exclaim_high]! Fill my [ass] and [vagina] with your [cum], [rapist]! [exclaim_high]!</li>
+				<li>masochist_n->[exclaim_high]! [fuck] my [exclaim_high] holes! [exclaim_high]!</li>
+				<li>masochist_n->[exclaim_high]! Pump me full of [cum], [rapist]!</li>
+				<li>masochist_n->[exclaim_high]! Impregnate me, [rapist]! [exclaim_high]!</li>
+				<!-- ===Broken Neutral=== -->
+				<li>broken2_n->[exclaim_low]...[penis]s-[exclaim_low]...[cum]...</li>
+				<li>broken2_n->[exclaim_low]...more [penis]...my holes...</li>
+				<li>broken2_n->[exclaim_low]...[penis]...in my-[exclaim_low]...holes...</li>
+				<li>broken2_n->[exclaim_low]...Wha...? [penis]?...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...where...? My holes...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...my...[vagina] and [ass]-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+				<li>broken2_n->[exclaim_low]...cum...[exclaim_low]...inside...</li>
+				<li>broken1_n->[exclaim_high]! Please, [exclaim_high] my holes can't take any more [penis]s!</li>
+				<li>broken1_n->[exclaim_high]! How many times have my [vagina] and [ass] been [fuck]-[exclaim_high]!</li>
+				<li>broken1_n->How many times...[exclaim_high]!</li>
+				<li>broken1_n->[exclaim_high]! When will you...[exclaim_high]...give me a break, [rapist]! [exclaim_high]!</li>
+				<li>broken1_n->[exclaim_high]! Haven't my holes been pumped full of enough [cum], [rapist]? [exclaim_high]!</li>
+				<li>broken1_n->No, my body is too sore already! [exclaim_high]!</li>
+				<!-- ===Neutral=== -->
+				<li>rape_react_n->Hey sto- [exclaim_high]!</li>
+				<li>rape_react_n->Wait no! [exclaim_high]!</li>
+				<li>rape_react_n->Please don't! [exclaim_high]!</li>
+				<li>rape_react_n->[exclaim_high]! Get off of me!</li>
+				<li>rape_react_n->[exclaim_high]! Get them out!</li>
+				<li>rape_react_n->[exclaim_high]! It hurts!</li>
+				<li>rape_react_n->[exclaim_high]! Pull out!</li>
+				<li>rape_react_n->[exclaim_high]! Not both of my-[exclaim_high]!</li>
+				<li>rape_react_n->[exclaim_high]! You'll get me pregnant, [rapist]!</li>
+				<li>rape_react_n->[RECIPIENT_nameDef], please don't- [exclaim_high]!</li>
+				<li>rape_react_n->Oh please don't cum inside, [RECIPIENT_nameDef]! [exclaim_high]!</li>
+				<li>rape_react_n->[exclaim_high]! Get your cocks out of my [vagina] and [ass], [rapist]!</li>
+				<li>rape_react_n->[exclaim_high]! Pull your [penis]s out, [rapist]!</li>
+				<li>rape_react_n->[exclaim_high]! Get off me, [rapist]!</li>
+				<li>rape_react_n->Stop, [rapist]! [exclaim_high]!</li>						
+				
+				<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+				<!-- ===Broken Victim of Male Rapist=== -->					
+				
+				<!-- ===Victim of Male Rapist=== -->
+				
+				<!-- ===Masochist Victim of Female Rapist=== -->					
+				
+				<!-- ===Broken Victim of Female Rapist=== -->		
+				
+				<!-- ===Victim of Female Rapist=== -->	
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>		
+	
+	<!-- ===Giver=== -->
+	<InteractionDef ParentName="RapeReply">
+		<defName>DoublePenetration_Rape_Reply_Reverse</defName>
+		<label>dprape — react to</label>
+		<symbol>UI/Icons/DoublePenetrationRapeMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>						
+					<!-- ===Masochist Neutral=== -->
+					<li>masochist_n->[exclaim_low]! My [penis]s are yours, [rapist]!</li>
+					<li>masochist_n->[exclaim_low]! [fuck] my [penis]s , [rapist]! [exclaim_low]!</li>
+					<!-- ===Broken Neutral=== -->
+					<li>broken2_n->[exclaim_low]...[vagina]...[ass]...on my-[exclaim_low]...[penis]...</li>
+					<li>broken2_n->[exclaim_low]...Wha...?...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I don't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...where...? My [penis]s...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...body-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...my...[penis]s-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...I can't-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...Please...[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...No more-[exclaim_low]...</li>
+					<li>broken2_n->[exclaim_low]...It feels-[exclaim_low]...</li>
+					<li>broken1_n->[exclaim_low]! Please, [RECIPIENT_nameDef] My [penis]s can't handle anymore!</li>
+					<li>broken1_n->[exclaim_low]! How many times have my [penis]s...[exclaim_low]!</li>
+					<li>broken1_n->How many times...[exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! When will you...[exclaim_low]...give me a break, [rapist!] [exclaim_low]!</li>
+					<li>broken1_n->[exclaim_low]! My balls are totally drained, [rapist]! [exclaim_low]!</li>
+					<!-- ===Neutral=== -->
+					<li>rape_react_n->Hey sto- [exclaim_low]!</li>
+					<li>rape_react_n->Wait no! [exclaim_low]!</li>
+					<li>rape_react_n->Please don't! [exclaim_low]!</li>
+					<li>rape_react_n->[RECIPIENT_nameDef], please don't... I'll cum inside! [exclaim_low]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off of my [penis]s, [rapist]!</li>
+					<li>rape_react_n->[exclaim_low]! Get off me, [rapist]!</li>
+					<li>rape_react_n->Stop, [rapist]! [exclaim_low]!</li>						
+					<!-- ===Masochist Victim of Male Rapist=== -->					
+					
+					<!-- ===Broken Victim of Male Rapist=== -->					
+					
+					<!-- ===Victim of Male Rapist=== -->
+					
+					<!-- ===Masochist Victim of Female Rapist=== -->					
+					
+					<!-- ===Broken Victim of Female Rapist=== -->		
+					
+					<!-- ===Victim of Female Rapist=== -->	
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>	
 </Defs>

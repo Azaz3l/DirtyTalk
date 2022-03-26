@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>
+	
+	<!-- ===Chitchat=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName = "Chitchat"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+		<!-- ===Orgy=== -->	
+		<li>r_logentry(INITIATOR_thoughtDefName==AttendedOrgy, RECIPIENT_thoughtDefName==AttendedOrgy, tag=OrgyChat)->[orgychat]</li>
+			<li>orgychat->That orgy was pretty fun, huh?</li>
+			<li>orgychat->That orgy was hot!</li>
+			<li>orgychat(INITIATOR_thoughtLabel==horny, priority=1)->Thinking about that orgy makes me so horny!</li>
+		
+		
+		<!-- ===Reactions=== -->	
+		<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=9)->[orgysex_react]</li>
+			<li>orgysex_react(INITIATOR_opinion>=25)->[orgysex_react_good]</li>
+				<li>orgysex_react_good(INITIATOR_thoughtLabel==horny)->[orgysex_react_good_horny]</li>
+				<li>orgysex_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_good_horny]</li>
+					<li>orgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+					<li>orgysex_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+					<li>orgysex_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+				<li>orgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+				<li>orgysex_react_good->[cheer_reaction], [counterpart]!</li>
+			<li>orgysex_react(INITIATOR_opinion&lt;=-25)->[orgysex_react_bad]</li>
+				<li>orgysex_react_bad(INITIATOR_thoughtLabel==horny)->[orgysex_react_bad_horny]</li>
+				<li>orgysex_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_bad_horny]</li>
+					<li>orgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+					<li>orgysex_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+					<li>orgysex_react_bad_horny->[horny_sex_reaction]!</li>
+				<li>orgysex_react_bad->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
+			<li>orgysex_react->[orgysex_react_neutral]</li>
+				<li>orgysex_react_neutral(INITIATOR_thoughtLabel==horny)->[orgysex_react_neutral_horny]</li>
+				<li>orgysex_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[orgysex_react_neutral_horny]</li>
+					<li>orgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
+					<li>orgysex_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
+					<li>orgysex_react_neutral_horny->[horny_sex_reaction]!</li>
+				<li>orgysex_react_neutral->[cheer_reaction]!</li>	
+		
+		<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=9)->[gettingorgysex_react]</li>
+			<li>gettingorgysex_react(INITIATOR_opinion>=25)->[gettingorgysex_react_good]</li>
+				<li>gettingorgysex_react_good(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_good_horny]</li>
+				<li>gettingorgysex_react_good(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_good_horny]</li>
+					<li>gettingorgysex_react_good_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+					<li>gettingorgysex_react_good_horny->[horny_sex_reaction]! Get it [counterpart]! [cheer_reaction]</li>
+					<li>gettingorgysex_react_good_horny->[horny_sex_reaction]! You go [counterpart]!</li>
+				<li>gettingorgysex_react_good(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]!</li>
+				<li>gettingorgysex_react_good->[cheer_reaction], [counterpart]!</li>
+			<li>gettingorgysex_react(INITIATOR_opinion&lt;=-25)->[gettingorgysex_react_bad]</li>
+				<li>gettingorgysex_react_bad(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_bad_horny]</li>
+				<li>gettingorgysex_react_bad(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_bad_horny]</li>
+					<li>gettingorgysex_react_bad_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [leaving_sex_reaction]!</li>
+					<li>gettingorgysex_react_bad_horny->[horny_sex_reaction]! I wouldn't expect you to be good at that, [counterpart]!</li>
+					<li>gettingorgysex_react_bad_horny->[horny_sex_reaction]!</li>
+				<li>gettingorgysex_react_bad->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
+			<li>gettingorgysex_react->[gettingorgysex_react_neutral]</li>
+				<li>gettingorgysex_react_neutral(INITIATOR_thoughtLabel==horny)->[gettingorgysex_react_neutral_horny]</li>
+				<li>gettingorgysex_react_neutral(INITIATOR_thoughtLabel==sexually frustrated)->[gettingorgysex_react_neutral_horny]</li>
+					<li>gettingorgysex_react_neutral_horny(INITIATOR_moving==Yes, priority=1)->[horny_sex_reaction]! [cheer_reaction]!</li>
+					<li>gettingorgysex_react_neutral_horny->[horny_sex_reaction], [counterpart]!</li>
+					<li>gettingorgysex_react_neutral_horny->[horny_sex_reaction]!</li>
+				<li>gettingorgysex_react_neutral->[cheer_reaction]!</li>	
+				
+				<!-- ===Grunts=== -->	
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==OrgySex, priority=10)->[exclaim_low]</li>
+				<li>r_logentry(INITIATOR_moving==No, INITIATOR_jobDefName==GettinOrgySex, priority=10)->[exclaim_low]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName = "DeepTalk"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_jobDefName==OrgySex, priority=10)->[orgysex]</li>
+					<li>orgysex->Wow, nice moves, [RECIPIENT_nameDef]!</li>
+					<li>orgysex->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
+					<li>orgysex(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
+				<li>r_logentry(INITIATOR_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex]</li>
+					<li>gettingorgysex->Wow, nice moves, [RECIPIENT_nameDef]!</li>
+					<li>gettingorgysex->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
+					<li>gettingorgysex(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
+					
+			<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=10)->[orgysex_react]</li>
+					<li>orgysex_react->Wow, nice moves, [RECIPIENT_nameDef]!</li>
+					<li>orgysex_react->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
+					<li>orgysex_react(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
+				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex_react]</li>
+					<li>gettingorgysex_react->Wow, nice moves, [RECIPIENT_nameDef]!</li>
+					<li>gettingorgysex_react->Wow, you know how to do it, [RECIPIENT_nameDef]!</li>
+					<li>gettingorgysex_react(RECIPIENT_gender==Female)->Wow, you're so beautiful, [RECIPIENT_nameDef]!</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Insult" or defName="Slight"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_jobDefName==OrgySex, priority=10)->[orgysex]</li>
+					<li>orgysex->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
+			<li>r_logentry(INITIATOR_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex]</li>
+					<li>gettingorgysex->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
+			
+			<li>r_logentry(RECIPIENT_jobDefName==OrgySex, priority=10)->[orgysex_react]</li>
+					<li>orgysex_react->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>
+				<li>r_logentry(RECIPIENT_jobDefName==GettinOrgySex, priority=10)->[gettingorgysex_react]</li>
+					<li>gettingorgysex_react->[gross_sex_reaction], [RECIPIENT_nameDef]!</li>	
+		</value>
+	</li>
+	
+</operations>
+</Operation>
+</Patch>

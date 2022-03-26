@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>
+<!-- ====These are needed so bestiality conversations will treat aliens like humans instead of animals.
+I can't put every race that people might want here but these are a few of the top steam workshop ones.=== -->
+	<li Class="PatchOperationAdd"> 
+	<xpath>/Defs/RulePackDef[defName = "BestialityConstants"]/rulePack/rulesStrings</xpath>
+	<value>
+		<!-- ====Ratkin=== -->
+		<li>r_logentry(INITIATOR_alienRace==Ratkin, priority=2)->[human_breed]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Ratkin, RECIPIENT_alienRace==Ratkin, priority=1)->[animal_breed_with_reply]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Ratkin, priority=0.5)->[animal_breed]</li>	
+		<li>animal_penis_initiator(INITIATOR_alienRace==Ratkin, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Ratkin, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Ratkin, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Ratkin, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Ratkin, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Ratkin, priority=5)->[ass]</li>
+		
+		<!-- ====Bun=== -->
+		<li>r_logentry(INITIATOR_alienRace==Bun, priority=2)->[human_breed]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Bun, RECIPIENT_alienRace==Bun, priority=1)->[animal_breed_with_reply]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Bun, priority=0.5)->[animal_breed]</li>	
+		<li>animal_penis_initiator(INITIATOR_alienRace==Bun, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Bun, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Bun, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Bun, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Bun, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Bun, priority=5)->[ass]</li>
+		
+		<!-- ====Revia=== -->
+		<li>r_logentry(INITIATOR_alienRace==Revia, priority=2)->[human_breed]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Revia, RECIPIENT_alienRace==Revia, priority=1)->[animal_breed_with_reply]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Revia, priority=0.5)->[animal_breed]</li>	
+		<li>animal_penis_initiator(INITIATOR_alienRace==Revia, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Revia, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Revia, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Revia, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Revia, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Revia, priority=5)->[ass]</li>
+		
+		<!-- ====Rabbie=== -->
+		<li>r_logentry(INITIATOR_alienRace==Rabbie, priority=2)->[human_breed]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Rabbie, RECIPIENT_alienRace==Rabbie, priority=1)->[animal_breed_with_reply]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Rabbie, priority=0.5)->[animal_breed]</li>	
+		<li>animal_penis_initiator(INITIATOR_alienRace==Rabbie, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Rabbie, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Rabbie, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Rabbie, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Rabbie, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Rabbie, priority=5)->[ass]</li>
+		
+		<!-- ====Nyaron=== -->
+		<li>r_logentry(INITIATOR_alienRace==Nyaron, priority=2)->[human_breed]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Nyaron, RECIPIENT_alienRace==Nyaron, priority=1)->[animal_breed_with_reply]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Nyaron, priority=0.5)->[animal_breed]</li>	
+		<li>animal_penis_initiator(INITIATOR_alienRace==Nyaron, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Nyaron, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Nyaron, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Nyaron, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Nyaron, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Nyaron, priority=5)->[ass]</li>
+		
+		<!-- ====Dragonian=== -->
+		<li>r_logentry(INITIATOR_alienRace==Dragonian, priority=2)->[human_breed]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Dragonian, RECIPIENT_alienRace==Dragonian, priority=1)->[animal_breed_with_reply]</li>
+		<li>r_logentry(INITIATOR_alienRace!=Dragonian, priority=0.5)->[animal_breed]</li>	
+		<li>animal_penis_initiator(INITIATOR_alienRace==Dragonian, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Dragonian, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Dragonian, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Dragonian, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Dragonian, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Dragonian, priority=5)->[ass]</li>
+	</value>
+	</li>
+	
+	<li Class="PatchOperationAdd"> 
+	<xpath>/Defs/RulePackDef[defName = "BestialityReplyConstants"]/rulePack/rulesStrings</xpath>
+	<value>
+		<!-- ====Ratkin=== -->
+		<li>r_logentry(INITIATOR_alienRace==Ratkin, priority=2)->[human_react]</li>
+		<li>animal_penis_initiator(INITIATOR_alienRace==Ratkin, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Ratkin, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Ratkin, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Ratkin, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Ratkin, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Ratkin, priority=5)->[ass]</li>
+		
+		<!-- ====Bun=== -->
+		<li>r_logentry(INITIATOR_alienRace==Bun, priority=2)->[human_react]</li>
+		<li>animal_penis_initiator(INITIATOR_alienRace==Bun, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Bun, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Bun, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Bun, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Bun, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Bun, priority=5)->[ass]</li>
+		
+		<!-- ====Revia=== -->
+		<li>r_logentry(INITIATOR_alienRace==Revia, priority=2)->[human_react]</li>
+		<li>animal_penis_initiator(INITIATOR_alienRace==Revia, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Revia, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Revia, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Revia, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Revia, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Revia, priority=5)->[ass]</li>
+		
+		<!-- ====Rabbie=== -->
+		<li>r_logentry(INITIATOR_alienRace==Rabbie, priority=2)->[human_react]</li>
+		<li>animal_penis_initiator(INITIATOR_alienRace==Rabbie, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Rabbie, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Rabbie, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Rabbie, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Rabbie, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Rabbie, priority=5)->[ass]</li>
+		
+		<!-- ====Nyaron=== -->
+		<li>r_logentry(INITIATOR_alienRace==Nyaron, priority=2)->[human_react]</li>
+		<li>animal_penis_initiator(INITIATOR_alienRace==Nyaron, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Nyaron, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Nyaron, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Nyaron, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Nyaron, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Nyaron, priority=5)->[ass]</li>
+		
+		<!-- ====Dragonian=== -->
+		<li>r_logentry(INITIATOR_alienRace==Dragonian, priority=2)->[human_react]</li>
+		<li>animal_penis_initiator(INITIATOR_alienRace==Dragonian, priority=5)->[penis]</li>
+		<li>animal_penis_recipient(RECIPIENT_alienRace==Dragonian, priority=5)->[penis]</li>
+		<li>animal_vagina_initiator(INITIATOR_alienRace==Dragonian, priority=5)->[vagina]</li>
+		<li>animal_vagina_recipient(RECIPIENT_alienRace==Dragonian, priority=5)->[vagina]</li>
+		<li>animal_ass_initiator(INITIATOR_alienRace==Dragonian, priority=5)->[ass]</li>
+		<li>animal_ass_recipient(RECIPIENT_alienRace==Dragonian, priority=5)->[ass]</li>
+	</value>
+	</li>
+		
+</operations>
+</Operation>
+</Patch>

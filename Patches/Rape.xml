@@ -4,234 +4,439 @@
 <Operation Class="PatchOperationSequence">
 <operations>
 <!-- ===AnalRape=== -->
+	
+	<!-- ===Giver=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Anal" or defName="Rape_Reverse_Anal"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Anal"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
-				<li>r_logentry(priority=5,tag=Anal_Rape_Reply)->[rape]</li>				
+				<li>r_logentry(priority=5,tag=Anal_Rape_Reply)->[rape]</li>			
+					<!-- ===Neutral=== -->	
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Bend over!</li>
+					<li>rape_n->Spread those cheeks, [victim]!</li>
+					<li>rape_n->Gimme that asshole!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Bend over!</li>
-					<li>rape_m->Spread those cheeks, [victim]!</li>
-					<li>rape_m->Gimme that asshole!</li>	
-					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Stick that [penis] in my asshole, [victim], now!</li>
-					<li>rape_f->Gimme that [penis]!</li>					
+						
+					<!-- ===Female Rapist=== -->					
 
+		</value>
+	</li>	
+	
+	<!-- ===Reciever=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Anal"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Anal_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->	
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Stick that [penis] in my asshole, [victim], now!</li>
+					<li>rape_n->Gimme that [penis]!</li>	
+					<!-- ===Male Rapist=== -->	
+	
+					<!-- ===Female Rapist=== -->	
+					
 		</value>
 	</li>	
 
 <!-- ===VaginalRape=== -->	
-	<!-- ===1 Initiator=== -->
+
+	<!-- ===Giver=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Vaginal" or defName="Rape_Reverse_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 					
 				<li>r_logentry(priority=5,tag=Vaginal_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Bend over!</li>
+					<li>rape_n->Spread those legs, [victim]!</li>
+					<li>rape_n->Gimme that [vagina]!</li>	
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Bend over!</li>
-					<li>rape_m->Spread those legs, [victim]!</li>
-					<li>rape_m->Gimme that [vagina]!</li>		
-					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Stick that [penis] in my [vagina], [victim], now!</li>
-					<li>rape_f->Gimme that [penis]!</li>												
+						
+					<!-- ===Female Rapist=== -->													
 
 		</value>
 	</li>	
 	
-<!-- ===FootjobRape=== -->	
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Footjob" or defName="Rape_Reverse_Footjob"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
-
-				<li>r_logentry(priority=5,tag=Footjob_Rape_Reply)->[rape]</li>
+					
+				<li>r_logentry(priority=5,tag=Vaginal_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Stick that [penis] in my [vagina], [victim], now!</li>
+					<li>rape_n->Gimme that [penis]!</li>												
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Put those feet to use, [victim]!</li>		
+	
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Don't even think about getting your cum on me, [victim].</li>
-				    <li>rape_f->Pathetic!</li>
-					<li>rape_f->Look at you, [victim], pathetic!</li>
-					<li>rape_f->What are you hard for, [victim]?</li>
-					<li>rape_f->Lay down, [victim]!</li>									
-
+					
 		</value>
 	</li>	
 	
 <!-- ===HandjobRape=== -->	
+
+	<!-- ===Reciever=== -->	
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Handjob" or defName="Rape_Reverse_Handjob"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Handjob"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 	
 				<li>r_logentry(priority=5,tag=Handjob_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Get on your knees, [victim]!</li>
+					<li>rape_n->Put those soft hands to use, [victim]!!</li>
+					<li>rape_n->Handle this [penis], [victim]!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Get on your knees, [victim]!</li>
-					<li>rape_m->Put those soft hands to use, [victim]!!</li>
-					<li>rape_m->Handle this [penis], [victim]!</li>
-					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->What are you hard for, [victim]?</li>
-					<li>rape_f->Look at you, [victim], pathetic!</li>
-					<li>rape_f->Pathetic!</li>
-					<li>rape_f->Look at you, [victim], pathetic!</li>						
+					
+					<!-- ===Female Rapist=== -->						
 
 		</value>
 	</li>	
 	
-<!-- ===FingeringRape=== -->	
+	<!-- ===Giver=== -->	
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Fingering" or defName="Rape_Reverse_Fingering"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Handjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+	
+				<li>r_logentry(priority=5,tag=Handjob_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->What are you hard for, [victim]?</li>
+					<li>rape_n->Look at you, [victim], pathetic!</li>
+					<li>rape_n->Pathetic!</li>
+					<li>rape_n->Look at you, [victim], pathetic!</li>	
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->	
+										
+		</value>
+	</li>	
+	
+<!-- ===FootjobRape=== -->	
+
+	<!-- ===Reciever=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Footjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Footjob_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Put those feet to use, [victim]!</li>	
+					<!-- ===Male Rapist=== -->	
+						
+					<!-- ===Female Rapist=== -->	
+					
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Footjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Footjob_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Don't even think about getting your cum on me, [victim].</li>
+				    <li>rape_n->Pathetic!</li>
+					<li>rape_n->Look at you, [victim], pathetic!</li>
+					<li>rape_n->What are you hard for, [victim]?</li>
+					<li>rape_n->Lay down, [victim]!</li>	
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->	
+													
+		</value>
+	</li>	
+	
+
+	
+<!-- ===FingeringRape=== -->	
+
+	<!-- ===Reciever=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Fingering"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
 				<li>r_logentry(priority=5,tag=Fingering_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Put those fingers to good use, [victim]!</li>
+					<li>rape_n->Finger my [vagina], [victim]!</li>	
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->What are you so wet for, [victim]?</li>
-					<li>rape_m->Look at you, [victim], sopping!</li>
-					<li>rape_m->Gimme that [vagina]!</li>
+					
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Put those fingers to good use, [victim]!</li>
-					<li>rape_f->Finger my [vagina], [victim]!</li>										
+														
+
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Fingering"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Fingering_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->What are you so wet for, [victim]?</li>
+					<li>rape_n->Look at you, [victim], sopping!</li>
+					<li>rape_n->Gimme that [vagina]!</li>
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->	
+														
 
 		</value>
 	</li>	
 	
 <!-- ===FistingRape=== -->	
-	<!-- ===1 Initiator=== -->	
+
+	<!-- ===Giver=== -->	
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Fisting" or defName="Rape_Reverse_Fisting"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Fisting"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
 				<li>r_logentry(priority=5,tag=Fisting_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Get ready, [victim]!</li>
+					<li>rape_n->Hope you can take this fist, [victim]!</li>
+					<li>rape_n->I'm gonna fist-[fuck] that ass, [victim]!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Get ready, [victim]!</li>
+					
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Get ready, [victim]!</li>												
+			
+		</value>
+	</li>	
+	
+	<!-- ===Reciever=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Fisting"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(priority=5,tag=Fisting_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Shove it all the way in, [victim]!</li>
+				    <li>rape_n->Watch me take your whole fist, [victim]!</li>	
+					<!-- ===Male Rapist=== -->	
+
+					<!-- ===Female Rapist=== -->	
 
 		</value>
 	</li>	
 	
 <!-- ===BreastjobRape=== -->	
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Breastjob" or defName="Rape_Reverse_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
 				<li>r_logentry(priority=5,tag=Breastjob_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Gimme those [boobs]!</li>
+					<li>rape_n->I love these [boobs] around my [penis], [victim]</li>
+					<li>rape_n->My [penis] feels amazing between your [boobs], [victim]!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Gimme those [boobs]!</li>
-					<li>rape_m->I love these [boobs] around my [penis], [victim]</li>
-					<li>rape_m->My [penis] feels amazing between your [boobs], [victim]!</li>
+					
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Gimme that [penis]!</li>
-					<li>rape_f->Don't pretend you don't love these [boobs] around your [penis], [victim]!</li>
-					<li>rape_f->How do my [boobs] feel around your little [penis], [victim]?</li>			
+		
+
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Breastjob_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Gimme that [penis]!</li>
+					<li>rape_n->Don't pretend you don't love these [boobs] around your [penis], [victim]!</li>
+					<li>rape_n->How do my [boobs] feel around your [penis], [victim]?</li>	
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->	
+							
 
 		</value>
 	</li>	
 	
 <!-- ===ScissoringRape=== -->	
-	<!-- ===1 Initiator=== -->	
 	<li Class="PatchOperationAdd">
 		<xpath>/Defs/InteractionDef[defName="Rape_Scissoring" or defName="Rape_Reverse_Scissoring"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
 				<li>r_logentry(priority=5,tag=Scissoring_Rape_Reply)->[rape]</li>
+				<!-- ===Neutral=== -->
+				<li>rape_n->Get over here, [victim]!</li>
+				<li>rape_n->Lay down, [victim]!</li>
+				<li>rape_n->Spread those legs, [victim]!</li>
+				<li>rape_n->How do these lips feel against your [vagina], [victim]?</li>
 				<!-- ===Male Rapist=== -->	
-				<li>rape_m->Get over here, [victim]!</li>
-				<li>rape_m->Lay down, [victim]!</li>
-				<li>rape_m->Spread those legs, [victim]!</li>
-				<li>rape_m->How do these lips feel against your [vagina], [victim]?</li>
-				<!-- ===Female Rapist=== -->	
-				<li>rape_f->Get over here, [victim]!</li>
-				<li>rape_f->Lay down, [victim]!</li>
-				<li>rape_f->Spread those legs, [victim]!</li>
-				<li>rape_f->How do these lips feel against your [vagina], [victim]?</li>
 
+				<!-- ===Female Rapist=== -->	
+				
 		</value>
 	</li>	
 	
 <!-- ===RimmingRape=== -->	
-	<!-- ===1 Initiator=== -->	
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Rimming" or defName="Rape_Reverse_Rimming"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Rimming"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
 				<li>r_logentry(priority=5,tag=Rimming_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Taste this [ass], [victim]!</li>
+					<li>rape_n->Tongue this [ass], [victim]!</li>
+					<li>rape_n->Clean up this [ass], [victim]!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Gimme a taste of that [ass], [victim]!</li>
-					<li>rape_m->Spread those cheeks, [victim]!</li>
-					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Gimme a taste of that [ass], [victim]!</li>
-					<li>rape_f->Spread those cheeks, [victim]!</li>																							
+					
+					<!-- ===Female Rapist=== -->																						
 
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Rimming"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Rimming_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Gimme a taste of that [ass], [victim]!</li>
+					<li>rape_n->Spread those cheeks, [victim]!</li>
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->																						
+
+					
 		</value>
 	</li>	
 	
 <!-- ===CunnilingusRape=== -->	
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Cunnilingus" or defName="Rape_Reverse_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
 				<li>r_logentry(priority=5,tag=Cunnilingus_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Tongue my [vagina], [victim]!</li>
+					<li>rape_n->Munch on this [vagina], [victim]!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Gimme a taste of that [vagina], [victim]!</li>
-					<li>rape_m->Show me that [vagina], [victim]!</li>
+					
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Tongue my [vagina], [victim]!</li>
-					<li>rape_f->Munch on this [vagina], [victim]!</li>
-
+					
 		</value>
 	</li>		
 	
-<!-- ===FellatioRape=== -->	
+	<!-- ===Giver=== -->	
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_Fellatio" or defName="Rape_Reverse_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 
-				<li>r_logentry(priority=5,tag=Fellatio_Rape_Reply)->[rape]</li>
+				<li>r_logentry(priority=5,tag=Cunnilingus_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Gimme a taste of that [vagina], [victim]!</li>
+					<li>rape_n->Show me that [vagina], [victim]!</li>
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->[victim], get down and suck this [penis]!</li>
-					<li>rape_m->This [penis] is going down your throat, [victim]!</li>
-					<li>rape_m->Swallow my cum, [victim]!</li>
+					
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Gimme that [penis], [victim]!</li>
-					<li>rape_f->I want that [penis] in my mouth now!</li>
-					<li>rape_f->Fill my mouth with that [penis], [victim]!</li>			
+					
 
 		</value>
 	</li>	
 	
-<!-- ===Double Penetration Rape=== -->	
+<!-- ===FellatioRape=== -->	
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Rape_DoublePenetration" or defName="Rape_DoublePenetration"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Rape_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Fellatio_Rape_Reply)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->[victim], get down and suck this [penis]!</li>
+					<li>rape_n->This [penis] is going down your throat, [victim]!</li>
+					<li>rape_n->Swallow my cum, [victim]!</li>
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->		
+
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+				<li>r_logentry(priority=5,tag=Fellatio_Rape_Reply_Reverse)->[rape]</li>
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Gimme that [penis], [victim]!</li>
+					<li>rape_n->I want that [penis] in my mouth now!</li>
+					<li>rape_n->Let me taste that [penis], [victim]!</li>
+					<!-- ===Male Rapist=== -->	
+
+					<!-- ===Female Rapist=== -->	
+					
+		</value>
+	</li>	
+	
+<!-- ===Double Penetration Rape=== -->	
+
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_DoublePenetration" or defName="Rape_DoublePenetrationM"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 					
 				<li>r_logentry(priority=5,tag=DoublePenetration_Rape_Reply)->[rape]</li>		
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+					<li>rape_n->Bend over, [victim]!</li>
+					<li>rape_n->Spread those legs, [victim]!</li>
+					<li>rape_n->Take both of these [penis]s, [victim]!</li>
+					<li>rape_n->Gimme that [ass] and [vagina]!</li>		
 					<!-- ===Male Rapist=== -->	
-					<li>rape_m->Get over here, [victim]!</li>
-					<li>rape_m->Bend over, [victim]!</li>
-					<li>rape_m->Spread those legs, [victim]!</li>
-					<li>rape_m->Gimme that [ass] and [vagina]!</li>		
+					
 					<!-- ===Female Rapist=== -->	
-					<li>rape_f->Get over here, [victim]!</li>
-				    <li>rape_f->Stick those [penis]s in my [ass] and [vagina], [victim], now!</li>
-					<li>rape_f->Gimme those [penis]s!</li>		
 
+		</value>
+	</li>	
+	
+	<!-- ===Reciever=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Rape_Reverse_DoublePenetration" or defName="Rape_Reverse_DoublePenetrationM"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+					
+				<li>r_logentry(priority=5,tag=DoublePenetration_Rape_Reply_Reverse)->[rape]</li>		
+					<!-- ===Neutral=== -->
+					<li>rape_n->Get over here, [victim]!</li>
+				    <li>rape_n->Stick those [penis]s in my [vagina], [victim], now!</li>
+					 <li>rape_n->Shove those [penis]s in my holes, [victim], now!</li>
+					<li>rape_n->Gimme those [penis]s!</li>		
+					<li>rape_n->Fill me with those [penis]s!</li>	
+					<!-- ===Male Rapist=== -->	
+					
+					<!-- ===Female Rapist=== -->	
+					
 		</value>
 	</li>	
 

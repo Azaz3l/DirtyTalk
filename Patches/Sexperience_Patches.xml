@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>
+	
+	<!-- ===Chitchat=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName = "Chitchat"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+
+			<!-- ===Zoophilia=== -->	
+			<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtDefName==Bestiality_Honorable, tag=New_Colony_Zoophile)->[new_colony_zoophile]</li>
+			<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[gettingbred_react_zoophile]</li>
+			<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[bestiality_react_zoophile]</li>
+			<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[bestialityf_react_zoophile]</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==NewColonyOptimism, INITIATOR_thoughtDefName==Bestiality_Acceptable, tag=New_Colony_Zoophile)->[new_colony_zoophile]</li>
+			<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[gettingbred_react_zoophile]</li>
+			<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[bestiality_react_zoophile]</li>
+			<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[bestialityf_react_zoophile]</li>
+			
+			<li>raped_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[raped_react_rapist]</li>
+			<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[rapingcp_react_rapist]</li>
+			<li>raping_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[raping_react_rapist]</li>
+			<li>raped_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[raped_react_rapist]</li>
+			<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[rapingcp_react_rapist]</li>
+			<li>raping_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[raping_react_rapist]</li>
+			
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName = "DeepTalk"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			
+			<!-- ===Zoophilia=== -->	
+			<li>gettingbred(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Seems like the creature likes me!</li>
+			<li>bestiality(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Do you want a turn?</li>
+			<li>bestialityf(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Do you want a turn?</li>
+			<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Seems like the creature likes you!</li>
+			<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Mind if I have a turn?</li>
+			<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Mind if I have a turn?</li>
+			<li>gettingbred(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Seems like the creature likes me!</li>
+			<li>bestiality(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Do you want a turn?</li>
+			<li>bestialityf(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Do you want a turn?</li>
+			<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Seems like the creature likes you!</li>
+			<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Mind if I have a turn?</li>
+			<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Mind if I have a turn?</li>
+			
+			<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=9)->You really know how to dominate!</li>
+			<li>raping_react(INITIATOR_thoughtDefName==Rape_Honorable, priority=9)->You really know how to dominate!</li>
+			<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=9)->You really know how to dominate!</li>
+			<li>raping_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=9)->You really know how to dominate!</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Insult" or defName="Slight"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			
+			<!-- ===Zoophilia=== -->	
+			<li>gettingbred(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->No animal would ever trust you like this!</li>
+			<li>bestiality(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Quit staring, [insult]!</li>
+			<li>bestialityf(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Quit staring, [insult]!</li>
+			<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->The creature is just using you, it doesn't respect you!</li>
+			<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Pft, you can't even make the creature enjoy it!</li>
+			<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=9)->Pft, you can't even make the creature enjoy it!</li>
+			<li>gettingbred(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->No animal would ever trust you like this!</li>
+			<li>bestiality(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Quit staring, [insult]!</li>
+			<li>bestialityf(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Quit staring, [insult]!</li>
+			<li>gettingbred_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->The creature is just using you, it doesn't respect you!</li>
+			<li>bestiality_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Pft, you can't even make the creature enjoy it!</li>
+			<li>bestialityf_react(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=9)->Pft, you can't even make the creature enjoy it!</li>
+			
+			<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
+			<li>raping_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
+			<li>rapingcp_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
+			<li>raping_react(INITIATOR_thoughtDefName==Rape_Acceptable, priority=9)->You might as well be my bitch, [RECIPIENT_nameDef]!</li>
+		</value>
+	</li>
+	
+	<!-- ===Chitchat Replies=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<!-- ===Zoophilia=== -->	
+			<li>good_opinion(tag=Sexlife_Generic_Good_Zoophile, INITIATOR_thoughtDefName==Bestiality_Honorable, priority=1)->[good_opinion_zoophile]</li>
+			<li>good_opinion(tag=Sexlife_Generic_Good_Zoophile, INITIATOR_thoughtDefName==Acceptable_Honorable, priority=1)->[good_opinion_zoophile]</li>
+				
+			<li>bad_opinion_rapist(INITIATOR_thoughtDefName==Rape_Honorable, priority=1)->[bad_opinion2]</li>
+			<li>bad_opinion_rapist(INITIATOR_thoughtDefName==Rape_Acceptable, priority=1)->[bad_opinion2]</li>
+			
+			<li>good_opinion(tag=Sexlife_Generic_Good_Raped_Masochist, INITIATOR_thoughtDefName==BeenRaped_Submissive, INITIATOR_trait==masochist, priority=2)->[good_opinion_raped_masochist]</li>
+			<li>bad_opinion_rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=1)->[bad_opinion2]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good_Raped"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
+				<li>honor_rapist->They were only doing their duty, [RECIPIENT_nameDef]!</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[rapist]</li>
+			
+			<li>not_rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_reaction]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good_Raped_Masochist"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[rapist]</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[rapist]</li>
+			
+			<li>masochist_react(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[also_masochist]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good_Rapist"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
+					<li>honor_rapist->Great job!</li>
+					<li>honor_rapist->I'm glad you're fulfilling your duty, [RECIPIENT_nameDef]</li>	
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[also_rapist]</li>
+			
+			<li>r_logentry(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good_Rapistb"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
+					<li>honor_rapist->I'm just fulfilling my duty, [RECIPIENT_nameDef]!</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==Rape_Acceptable, priority=2)->[rapist]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Getting_Raped_React"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(RECIPIENT_thoughtDefName==Rape_Honorable, priority=2)->[rapist]</li>
+			<li>r_logentry(RECIPIENT_thoughtDefName==Rape_Acceptable, priority=2)->[rapist]</li>
+			
+			<li>r_logentry(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=3)->[masochist]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good_Zoophile"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[honor_zoophile]</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[also_zoophile]</li>
+				<li>honor_zoophile->Great!</li>
+				<li>honor_zoophile->There is nothing better than sex with an animal, [RECIPIENT_nameDef]!</li>
+				<li>honor_zoophile->[also_zoophile]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sexlife_Generic_Good_Zoophileb"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[honor_zoophile]</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[also_zoophile]</li>
+					<li>honor_zoophile->There is nothing better than sex with an animal, [RECIPIENT_nameDef]!</li>
+					<li>honor_zoophile->Why? Animals love to be bred!</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="New_Colony_Zoophile"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=1)->Same!</li>
+			<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=1)->Same!</li>
+		</value>
+	</li>
+	
+	<!-- ===Rulepacks=== -->	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/RulePackDef[defName="BestialityConstants"]/rulePack/rulesStrings</xpath>
+		<value>
+			<li>human_breed_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
+			<li>human_breed_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
+			<li>human_breed_m(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[zoophile_m]</li>
+			<li>human_breed_f(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[zoophile_f]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/RulePackDef[defName="BestialityReplyConstants"]/rulePack/rulesStrings</xpath>
+		<value>
+			<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_m]</li>
+			<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[zoophile_f]</li>
+			<li>human_react_m(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[zoophile_m]</li>
+			<li>human_react_f(INITIATOR_thoughtDefName==Bestiality_Acceptable, priority=2)->[zoophile_f]</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/RulePackDef[defName="RapeReplyConstants"]/rulePack/rulesStrings</xpath>
+		<value>
+			<li>rape_react_f(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_f]</li>
+			<li>rape_react_m(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_m]</li>
+			<li>rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[master]</li>	
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/RulePackDef[defName="SexualChitchatConstants"]/rulePack/rulesStrings</xpath>
+		<value>
+			<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Honorable, priority=1)->[disapprove]</li>
+			<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Honorable, priority=1)->[disapprove]</li>
+			<li>rival(RECIPIENT_trait==zoophile, INITIATOR_trait!=zoophile, INITIATOR_thoughtDefName!=Bestiality_Acceptable, priority=1)->[disapprove]</li>
+			<li>rival(RECIPIENT_trait==rapist, INITIATOR_trait!=rapist, INITIATOR_thoughtDefName!=Rape_Acceptable, priority=1)->[disapprove]</li>
+		</value>
+	</li>
+	
+</operations>
+</Operation>
+</Patch>

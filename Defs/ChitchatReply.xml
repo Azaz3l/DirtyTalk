@@ -14,9 +14,7 @@
 						<li>bad_opinion(INITIATOR_thoughtDefName==GotRaped, RECIPIENT_trait==rapist, priority=2)->[bad_opinion_rapist]</li>
 						<li>bad_opinion(INITIATOR_thoughtDefName==GotRaped, RECIPIENT_thoughtLabel==stole some lovin’, priority=2)->[bad_opinion_rapist]</li>
 							<li>bad_opinion_rapist(INITIATOR_trait==masochist, priority=1)->[bad_opinion2]</li>
-							<li>bad_opinion_rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=1)->[bad_opinion2]</li>
 							<li>bad_opinion_rapist(INITIATOR_trait==rapist, priority=1)->[bad_opinion2]</li>
-							<li>bad_opinion_rapist(INITIATOR_thoughtDefName==Rape_Honorable, priority=1)->[bad_opinion2]</li>
 							<li>bad_opinion_rapist->Fuck off, rapist!</li>
 							<li>bad_opinion_rapist->Leave me alone, rapist!</li>
 							<li>bad_opinion_rapist->Fuck off, you raping cunt!</li>
@@ -70,7 +68,6 @@
 							<li>good_opinion_ucraped->[RECIPIENT_nameDef], I...I was raped...*sobs*</li>
 							<li>good_opinion_ucraped->I...was taken advantage of...while I was unconscious...*sobs*</li>
 							<li>good_opinion_ucraped->I was raped...and I didn't even have a chance to defend myself...*sobs*</li>								
-						<li>good_opinion(tag=Sexlife_Generic_Good_Raped_Masochist, INITIATOR_thoughtDefName==BeenRaped_Submissive, INITIATOR_trait==masochist, priority=2)->[good_opinion_raped_masochist]</li>
 						<li>good_opinion(tag=Sexlife_Generic_Good_Raped_Masochist, INITIATOR_thoughtDefName==MasochistGotAnalRaped, INITIATOR_trait==masochist, priority=2)->[good_opinion_analraped_masochist]</li>
 							<li>good_opinion_analraped_masochist->[RECIPIENT_nameDef], I was raped...in the ass...it was [masochist_amazing]!</li>
 							<li>good_opinion_analraped_masochist->My asshole...*sniffles*...was violated...</li>
@@ -96,7 +93,6 @@
 						<!-- ===Zoophile=== -->
 						<li>good_opinion(tag=Sexlife_Generic_Good_Zoophile, INITIATOR_trait==zoophile, INITIATOR_thoughtLabel==sexually satisfied, priority=1)->[good_opinion_zoophile]</li>
 						<li>good_opinion(tag=Sexlife_Generic_Good_Zoophile, INITIATOR_trait==zoophile, INITIATOR_thoughtLabel==horny, priority=1)->[good_opinion_zoophile]</li>
-						<li>good_opinion(tag=Sexlife_Generic_Good_Zoophile, INITIATOR_thoughtDefName==Bestiality_Honorable, priority=1)->[good_opinion_zoophile]</li>
 							<li>good_opinion_zoophile->I've been having a good time with the animals!</li>	
 							<li>good_opinion_zoophile->The animals have been treating me well!</li>	
 						
@@ -125,15 +121,11 @@
 					<li>not_rapist(INITIATOR_melee_passion!=None, priority=1)->[violent_reaction]</li>
 						<li>violent_reaction->What!? Where is the [insult]!?</li>
 						<li>violent_reaction->What!? I'll kill the [insult]!</li>
-						<li>violent_reaction->I'll make the [insult] who did this regret it, [RECIPIENT_nameDef]!</li>
-					<li>not_rapist(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist_reaction]</li>
 					<li>not_rapist(INITIATOR_trait==masochist, priority=2)->[masochist_reaction]</li>
 					<li>not_rapist(INITIATOR_thoughtLabel==begging for more, priority=2)->[masochist_reaction]</li>
 						<li>masochist_reaction(INITIATOR_thoughtLabel!=sexually satisfied, INITIATOR_thoughtLabel!=ahegao)->Lucky!</li>
 						<li>masochist_reaction->Sounds hot!</li>
 						<li>masochist_reaction->Wow...any chance I could get their name?</li>
-					<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
-						<li>honor_rapist->They were only doing their duty, [RECIPIENT_nameDef]!</li>
 					<li>not_rapist->Oh, you poor thing!</li>
 					<li>not_rapist->I can't believe it! Are you okay?</li>
 					<li>not_rapist->Oh my...Are you alright?</li>
@@ -150,7 +142,6 @@
 		<logRulesInitiator>
 			<rulesStrings>
 				<li>r_logentry->[masochist_react]</li>	
-					<li>masochist_react(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[also_masochist]</li>
 					<li>masochist_react(INITIATOR_trait!=masochist, priority=2)->[also_masochist]</li>
 						<li>also_masochist(INITIATOR_thoughtLabel=horny, priority=1)->Lucky!</li>
 						<li>also_masochist(INITIATOR_thoughtLabel=horny, priority=1)->[expletive], I wish that were me...</li>
@@ -161,10 +152,9 @@
 						<li>also_masochist->That sounds so [expletive_adj] hot!</li>
 					<li>masochist_react(INITIATOR_trait==kind, priority=1)->You shouldn't be okay with people treating you like that!</li>
 					<li>masochist_react(INITIATOR_trait==kind, priority=1)->That's not okay!</li>
-					<li>masochist_react->...Good for you</li>
+					<li>masochist_react->...Good for you.</li>
 					<li>masochist_react->Oh, geez...</li>
 					<li>masochist_react(INITIATOR_trait==rapist, priority=2)->[rapist]</li>
-					<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[rapist]</li>
 						<li>rapist->Maybe I'll use you later...</li>
 						<li>rapist->Maybe I'll take a turn in a bit...</li>					
 			</rulesStrings>
@@ -178,11 +168,7 @@
 			<rulesStrings>
 				<li>r_logentry(INITIATOR_trait==rapist, priority=2)->[also_rapist]</li>
 					<li>also_rapist->Nice!</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
-					<li>honor_rapist->Great job!</li>
-					<li>honor_rapist->I'm glad you're fulfilling your duty, [RECIPIENT_nameDef]</li>			
 				<li>r_logentry(INITIATOR_trait==masochist, priority=2)->[masochist]</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=2)->[masochist]</li>
 					<li>masochist->Hot!</li>
 					<li>masochist->Sounds hot!</li>
 					<li>masochist->Do me next!</li>
@@ -198,13 +184,8 @@
 			<rulesStrings>
 				<li>r_logentry(INITIATOR_trait==zoophile, priority=2)->[also_zoophile]</li>
 					<li>also_zoophile->Nice!</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[honor_zoophile]</li>
-					<li>honor_zoophile->Great!</li>
-					<li>honor_zoophile->There is nothing better than sex with an animal, [RECIPIENT_nameDef]!</li>
 					<li>also_zoophile->Hot!</li>
 					<li>also_zoophile->Sounds hot!</li>
-					<li>honor_zoophile->Hot!</li>
-					<li>honor_zoophile->Sounds hot!</li>
 				<li>r_logentry(tag=Sexlife_Generic_Good_Zoophileb)->That is not okay, [RECIPIENT_nameDef]!</li>
 			</rulesStrings>
 		</logRulesInitiator>
@@ -218,9 +199,6 @@
 				<li>r_logentry(INITIATOR_trait==zoophile, priority=2)->[also_zoophile]</li>
 					<li>also_zoophile->Why not?</li>
 					<li>also_zoophile->The animal had a good time too!</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=2)->[honor_zoophile]</li>
-					<li>honor_zoophile->There is nothing better than sex with an animal, [RECIPIENT_nameDef]!</li>
-					<li>honor_zoophile->Why? Animals love to be bred!</li>
 			</rulesStrings>
 		</logRulesInitiator>
 	</InteractionDef>
@@ -232,8 +210,6 @@
 			<rulesStrings>
 				<li>r_logentry(INITIATOR_trait==rapist, priority=2)->[rapist]</li>
 					<li>rapist->Deal with it!</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==Rape_Honorable, priority=2)->[honor_rapist]</li>
-					<li>honor_rapist->I'm just fulfilling my duty, [RECIPIENT_nameDef]!</li>
 				<li>r_logentry->I know...</li>
 			</rulesStrings>
 		</logRulesInitiator>
@@ -244,11 +220,9 @@
 		<label>getting-raped-react</label>
 		<logRulesInitiator>
 			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtDefName==BeenRaped_Submissive, priority=3)->[masochist]</li>
 				<li>r_logentry(INITIATOR_trait==masochist, priority=3)->[masochist]</li>
 					<li>masochist->[exclaim]! I love when master treats me like this! [exclaim]!</li>
 				<li>r_logentry(RECIPIENT_trait==rapist, priority=2)->[rapist]</li>
-				<li>r_logentry(RECIPIENT_thoughtDefName==Rape_Honorable, priority=2)->[rapist]</li>
 					<li>rapist(INITIATOR_opinion>=25)->How could you, [RECIPIENT_nameDef]!?</li>
 					<li>rapist->Fuck you, [RECIPIENT_nameDef]!</li>
 				<li>r_logentry(RECIPIENT_moving==Yes)->Don't just walk away! Help me!</li>
@@ -292,8 +266,6 @@
 			<rulesStrings>
 				<li>r_logentry(INITIATOR_trait==zoophile, priority=1)->Me too!</li>
 				<li>r_logentry(INITIATOR_trait==zoophile, priority=1)->Same!</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=1)->Same!</li>
-				<li>r_logentry(INITIATOR_thoughtDefName==Bestiality_Honorable, priority=1)->Same!</li>
 				<li>r_logentry->...excuse me?</li>
 				<li>r_logentry->...what was that?</li>
 				<li>r_logentry->...did I just hear that right?</li>
@@ -333,95 +305,4 @@
 		</logRulesInitiator>
 	</InteractionDef>
 	
-	<InteractionDef ParentName="SexTalkReply">
-		<defName>OrgyChat</defName>
-		<label>orgy-chat</label>
-		<logRulesInitiator>
-			<rulesStrings>
-				<!-- ===Bad opinion of recipient=== -->
-					<li>r_logentry(INITIATOR_opinion&lt;-25, priority=1)->[bad_opinion]</li>
-						<li>bad_opinion(RECIPIENT_gender==Male)->It would've been much better without your nasty [penis] involved.</li>
-						<li>bad_opinion(RECIPIENT_gender==Female)->It would've been much better without your nasty [vagina] involved.</li>
-						<li>bad_opinion->It would've been much better without your nasty ass involved.</li>					
-					
-				<!-- ===Neutral opinion of recipient=== -->
-					<li>r_logentry->[neutral_opinion]</li>		
-						<li>neutral_opinion->Yeah, I had a good time, [counterpart].</li>	
-						
-				<!-- ===Good opinion of recipient generic=== -->
-					<li>r_logentry(INITIATOR_opinion>=25, priority=1)->[good_opinion]</li>
-					<li>good_opinion(INITIATOR_thoughtLabel==sexually frustrated, priority=1)->[good_opinion_horny]</li>						
-					<li>good_opinion(INITIATOR_thoughtLabel==horny, priority=1)->[good_opinion_horny]</li>
-						<li>good_opinion_horny(INITIATOR_gender==Male, RECIPIENT_gender==Male, INITIATOR_opinion>=50, INITIATOR_trait==gay)->It was even better with you involved, [counterpart]!</li>
-						<li>good_opinion_horny(INITIATOR_gender==Female, RECIPIENT_gender==Female, INITIATOR_opinion>=50, INITIATOR_trait==gay)->It was even better with you involved, [counterpart]!</li>
-						<li>good_opinion_horny(INITIATOR_gender==Female, RECIPIENT_gender==Male, INITIATOR_opinion>=50, INITIATOR_trait!=gay)->It was even better with you involved, [counterpart]!</li>
-						<li>good_opinion_horny(INITIATOR_gender==Male, RECIPIENT_gender==Female, INITIATOR_opinion>=50, INITIATOR_trait!=gay)->It was even better with you involved, [counterpart]!</li>
-						<li>good_opinion_horny->Just thinking about it makes me want to touch myself...</li>
-					<li>good_opinion->Yeah, we should do it again sometime!</li>
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>
-	
-    <InteractionDef ParentName="SexTalkReply">
-		<defName>Milking_Question</defName>
-		<label>milking-question</label>
-		<symbol>UI/Icons/MilkMote</symbol>
-		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, tag=Milking_Questiona, priority=1)->[is_milkproducing]</li>
-					<li>is_milkproducing(INITIATOR_opinion>=25)->They're [milkproducing] wonderfully, [counterpart]!</li>
-					<li>is_milkproducing(INITIATOR_opinion>=25)->They're [milkproducing] wonderfully, thank you!</li>
-					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->They're [milkproducing] more than your [boobs] possibly could, [counterpart]!</li>
-					<li>is_milkproducing->They're [milkproducing] well, [counterpart].</li>
-					<li>is_milkproducing->These [boobs] are [milkproducing] well, it feels great!</li>
-					<li>is_milkproducing->The [milkproduction] is coming along nicely, [counterpart].</li>
-				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, tag=Milking_Questionb, priority=1)->[not_milkproducing]</li>
-					<li>not_milkproducing(INITIATOR_opinion>=25)->They're not [milkproducing] at all, [counterpart]! It's [milkterrible]!</li>
-					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
-					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->They aren't [milkproducing] at all and you know it, [counterpart]!</li>
-					<li>not_milkproducing->They're not [milkproducing] at all, [counterpart]! It's [milkterrible]!</li>
-					<li>not_milkproducing->There's no milk coming out at all! It's [milkterrible]!</li>			
-				<li>r_logentry->...</li>				
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>
-	
-	<InteractionDef ParentName="SexTalkReply">
-		<defName>Milking_Questiona</defName>
-		<label>milking-question</label>
-		<symbol>UI/Icons/MilkMote</symbol>
-		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_milkproducing]</li>
-					<li>is_milkproducing(INITIATOR_opinion>=25)->That's great! My [boobs] are [milkproducing] nicely too!</li>
-					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->I should hope so...</li>
-					<li>is_milkproducing->That's good, [counterpart]. Mine are too.</li>
-					<li>is_milkproducing->My [boobs] are [milkproducing] well too, doesn't it feel nice?</li>
-				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_milkproducing]</li>
-					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
-					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->Your [boobs] are [milkproducing] better than mine? [milkterrible]!</li>
-					<li>not_milkproducing->I'm jealous!</li>	
-				<li>r_logentry->...</li>		
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>
-	
-	<InteractionDef ParentName="SexTalkReply">
-		<defName>Milking_Questionb</defName>
-		<label>milking-question</label>
-		<symbol>UI/Icons/MilkMote</symbol>
-		<logRulesInitiator>
-			<rulesStrings>
-				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_milkproducing]</li>
-					<li>is_milkproducing(INITIATOR_opinion>=25)->Your [breastcompliment] [boobs] will give us plenty of tasty milk soon enough, [counterpart]!</li>
-					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->You should be ashamed, [counterpart]!</li>
-					<li>is_milkproducing->I'm sure your [boobs] will get there, [counterpart].</li>
-				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_milkproducing]</li>
-					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] are dry too, [counterpart]! It is [milkterrible]!</li>
-					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->At least you're not [milkproducing] better than me...</li>
-					<li>not_milkproducing->I'm in the same boat, [counterpart]!</li>
-				<li>r_logentry->...</li>		
-			</rulesStrings>
-		</logRulesInitiator>
-	</InteractionDef>
 </Defs>

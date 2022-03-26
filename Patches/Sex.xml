@@ -3,217 +3,415 @@
 <Operation Class="PatchOperationSequence">
 <operations>
 <!-- ===AnalSex=== -->
+	<!-- ===Penetrator=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Anal" or defName="Sex_Reverse_Anal"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Anal"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Anal_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->I need that [ass], [lover]!</li>
-					<li>sex_m->Spread those cheeks, [lover]! [exclaim_low]!</li>
-					<li>sex_m->Want this [penis] up your [ass], [lover]? [exclaim_low]!</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->I need that [penis] in my [ass], [lover]!</li>
-					<li>sex_f->Wanna [fuck] this [ass], [lover]?</li>
-					<li>sex_f->[fuck] my [ass], [lover]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I need that [ass], [lover]!</li>
+					<li>sex_n->Spread those cheeks, [lover]! [exclaim_low]!</li>
+					<li>sex_n->Want this [penis] up your [ass], [lover]? [exclaim_low]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+					<li>sex_f->Want this futa [penis] up your [ass], [lover]? [exclaim_low]!</li>
+		</value>
+	</li>	
+	<!-- ===Penetrated=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Anal"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Anal_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I need that [penis] in my [ass], [lover]!</li>
+					<li>sex_n->Wanna [fuck] this [ass], [lover]?</li>
+					<li>sex_n->[fuck] my [ass], [lover]!</li>
+					<!-- ===Male Speaker=== -->
+				
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 
 <!-- ===VaginalSex=== -->
+	<!-- ===Penetrator=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Vaginal" or defName="Sex_Reverse_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Vaginal_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Hey, [lover], wanna [fuck]?</li>
-					<li>sex_m->I need your [vagina], [lover]!</li>
-					<li>sex_m->How about I [fuck] your [vagina], [lover]?</li>
-					<li>sex_m->How's this [penis] feel, [lover]? [exclaim_low]!</li>	
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->I want that [penis], [lover]!</li>
-					<li>sex_f->[lover], come here and [fuck] my [vagina].</li>
-					<li>sex_f->Wanna [fuck], [lover]?</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Hey, [lover], wanna [fuck]?</li>
+					<li>sex_n->I need your [vagina], [lover]!</li>
+					<li>sex_n->How about I [fuck] your [vagina], [lover]?</li>
+					<li>sex_n->How's this [penis] feel, [lover]? [exclaim_low]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+					<li>sex_f->How's this futa [penis] feel, [lover]? [exclaim_low]!</li>
+		</value>
+	</li>	
+	<!-- ===Penetrated=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Vaginal"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Vaginal_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I want that [penis], [lover]!</li>
+					<li>sex_n->[lover], come here and [fuck] my [vagina].</li>
+					<li>sex_n->Wanna [fuck], [lover]?</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 
 <!-- ===Handjob=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Handjob" or defName="Sex_Reverse_Handjob"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Handjob"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Hand_Job_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Wanna help me out with this, [lover]?</li>
-					<li>sex_m->Hey, [lover], want to jack me off?</li>
-					<li>sex_m->I really gotta cum, [lover].</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Whip out that [penis], [lover]!</li>
-					<li>sex_f->[lover], I wanna handle your [penis].</li>
-					<li>sex_f->I want your [cum] all over my face, [lover].</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Wanna help me out with this, [lover]?</li>
+					<li>sex_n->Hey, [lover], want to jack me off?</li>
+					<li>sex_n->I really gotta cum, [lover].</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Handjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Hand_Job_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Whip out that [penis], [lover]!</li>
+					<li>sex_n->[lover], I wanna handle your [penis].</li>
+					<li>sex_n->I want your [cum] all over my face, [lover].</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 	
 <!-- ===Footjob=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Footjob" or defName="Sex_Reverse_Footjob"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Footjob"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Foot_Job_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->I want to cover your toes in [cum], [lover]!</li>
-					<li>sex_m->Grind your soles into my [penis], [lover]!</li>
-					<li>sex_m->Hey, [lover], want to help me out with this?</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Lay down, [lover].</li>
-					<li>sex_f->Hehe, how do my feet feel, [lover]?</li>
-					<li>sex_f->[RECIPIENT_nameDef], you're this hard just from my feet?</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I want to cover your toes in [cum], [lover]!</li>
+					<li>sex_n->Grind your soles into my [penis], [lover]!</li>
+					<li>sex_n->Hey, [lover], want to help me out with this?</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Footjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Foot_Job_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Lay down, [lover].</li>
+					<li>sex_n->Hehe, how do my feet feel, [lover]?</li>
+					<li>sex_n->[RECIPIENT_nameDef], you're this hard just from my feet?</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 	
 <!-- ===Fingering=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Fingering" or defName="Sex_Reverse_Fingering"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Fingering"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Fingering_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->You're so wet, [lover]!</li>
-					<li>sex_m->Get ready for these magic fingers, [lover]!</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->I'm so horny, [lover]!</li>
-					<li>sex_f->[lover], I need those fingers in my [vagina]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I'm so horny, [lover]!</li>
+					<li>sex_n->[lover], I need those fingers in my [vagina]!</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Fingering"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Fingering_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->You're so wet, [lover]!</li>
+					<li>sex_n->Get ready for these magic fingers, [lover]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
 		</value>
 	</li>	
 	
 <!-- ===Fisting=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Fisting" or defName="Sex_Reverse_Fisting"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Fisting"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Fisting_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->[lover], I want to try to fit my whole fist in it!</li>
-					<li>sex_m->I want to fist-[fuck] that [ass]!</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->[lover], I want to try to fit my whole fist in it!</li>
-					<li>sex_f->I want to fist-[fuck] that [ass]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Try to fit your whole fist in, [lover]! [exclaim_high]!</li>
+					<li>sex_n->[exclaim_high]! I can take it!</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+
+		</value>
+	</li>		
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Fisting"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Fisting_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->[lover], think you can take my full fist?</li>
+					<li>sex_n->I want to fist-[fuck] that [ass]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
 		</value>
 	</li>		
 	
 <!-- ===Breastjob=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Breastjob" or defName="Sex_Reverse_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Breast_Job_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Use those [boobs], [lover]!</li>
-					<li>sex_m->Let me [fuck] those [boobs], [lover]!</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Slide that [penis] between these [boobs], [lover].</li>
-					<li>sex_f->Let me take care of that [penis], [lover].</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Use those [boobs], [lover]!</li>
+					<li>sex_n->Let me [fuck] those [boobs], [lover]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Breastjob"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Breast_Job_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Slide that [penis] between these [boobs], [lover].</li>
+					<li>sex_n->Let me take care of that [penis], [lover].</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 	
 <!-- ===Scissoring=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Scissoring" or defName="Sex_Reverse_Scissoring"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Scissoring"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Scissoring_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Here, [lover], lay down.</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Here, [lover], lay down.</li>
-					<li>sex_f->Let me grind that [vagina], [lover].</li>
-					<li>sex_f->How's my [vagina] feel on yours, [lover]?</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Here, [lover], lay down.</li>
+					<li>sex_n->Let me grind that [vagina], [lover].</li>
+					<li>sex_n->How's this [vagina] feel, [lover]?</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 	
 <!-- ===MutualMasturbation=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_MutualMasturbation" or defName="Sex_Reverse_MutualMasturbation"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_MutualMasturbation"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Mutual_Masturbation_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Start touching yourself, [lover].</li>
-					<li>sex_m->[lover], I want to watch you pleasure yourself.</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Start touching yourself, [lover].</li>
-					<li>sex_f->[lover], I want to watch you pleasure yourself.</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Start touching yourself, [lover].</li>
+					<li>sex_n->[lover], I want to watch you pleasure yourself.</li>
+					<!-- ===Male Speaker=== --> 
+
+					<!-- ===Female Speaker=== -->
+
 		</value>
 	</li>	
 	
 <!-- ===Rimming=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Rimming" or defName="Sex_Reverse_Rimming"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Rimming"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Rimming_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Show me that [ass], [lover]!</li>
-					<li>sex_m->I wanna eat that [ass], [lover]!</li>
-					<li>sex_m->[lover], gimme a taste of that [ass]!</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Show me that [ass], [lover]!</li>
-					<li>sex_f->I wanna eat that [ass], [lover]!</li>
-					<li>sex_f->[lover], gimme a taste of that [ass]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Taste that [ass], [lover]!</li>
+					<li>sex_n->Tongue this [ass], [lover]! [exclaim_low]!</li>
+					<li>sex_n->How's this [ass] taste, [lover]? [exclaim_low]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+					  
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Rimming"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Rimming_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Show me that [ass], [lover]!</li>
+					<li>sex_n->I wanna eat that [ass], [lover]!</li>
+					<li>sex_n->[lover], gimme a taste of that [ass]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
 		</value>
 	</li>	
 	
 
 <!-- ===Cunnilingus=== -->
+
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Cunnilingus" or defName="Sex_Reverse_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Cunnilingus_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Let me taste that [vagina], [lover]!</li>
-					<li>sex_m->Gimme some of that delicious [vagina], [lover]!</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Want a taste of this [vagina], [lover]?</li>
-					<li>sex_f->Munch on this [vagina], [lover]!</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Want a taste of this [vagina], [lover]?</li>
+					<li>sex_n->Munch on this [vagina], [lover]!</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
+		</value>
+	</li>	
+	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Cunnilingus"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Cunnilingus_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Let me taste that [vagina], [lover]!</li>
+					<li>sex_n->Gimme some of that delicious [vagina], [lover]!</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 	
 	
 <!-- ===Fellatio=== -->
+	
+	<!-- ===Reciever=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Fellatio" or defName="Sex_Reverse_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Fellatio_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Want a taste of this [penis], [lover]?</li>
-					<li>sex_m->[lover], I wanna shoot a load of [cum] down your throat.</li>
-					<li>sex_m->Let me [fuck] that pretty mouth, [lover].</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->I wanna swallow your [cum], [lover]!</li>
-					<li>sex_f->Fuck my mouth, [lover]!</li>
-					<li>sex_f->[lover], shove that [penis] down my throat!</li>
-					<li>sex_f->[lover], gimme a taste of that [penis].</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Want a taste of this [penis], [lover]?</li>
+					<li>sex_n->[lover], I wanna shoot a load of [cum] down your throat.</li>
+					<li>sex_n->Let me [fuck] that pretty mouth, [lover].</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
 		</value>
 	</li>	
 	
+	<!-- ===Giver=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_Fellatio"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=Fellatio_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I wanna swallow your [cum], [lover]!</li>
+					<li>sex_n->Fuck my mouth, [lover]!</li>
+					<li>sex_n->[lover], shove that [penis] down my throat!</li>
+					<li>sex_n->[lover], gimme a taste of that [penis].</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
+		</value>
+	</li>	
+	
+	
 <!-- ===Sixtynine=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_Sixtynine" or defName="Sex_Reverse_Sixtynine"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_Sixtynine"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=Sixtynine_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Here, [lover], lay down.</li>
-					<li>sex_m->Lay down and use my mouth, [lover].</li>
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->Here, [lover], lay down.</li>
-					<li>sex_f->Lay down and use my mouth, [lover].</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Here, [lover], lay down.</li>
+					<li>sex_n->Lay down and use my mouth, [lover].</li>
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+
 		</value>
 	</li>	
 	
 <!-- ===DoublePenetration=== -->
+
+	<!-- ===Giver=== -->
 	<li Class="PatchOperationAdd">
-		<xpath>/Defs/InteractionDef[defName="Sex_DoublePenetration" or defName="Sex_Reverse_DoublePenetration"]/logRulesInitiator/rulesStrings</xpath>
+		<xpath>/Defs/InteractionDef[defName="Sex_DoublePenetration" or defName="Sex_DoublePenetrationM"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 				<li>r_logentry(tag=DoublePenetration_Sex_Reply, priority=5)->[sex]</li>
-					<!-- ===Male Initiator=== -->
-					<li>sex_m->Hey, [lover], want these [penis]s?</li>
-					<li>sex_m->I need your [vagina] and [ass], [lover]!</li>
-					<li>sex_m->How about I [fuck] your [vagina] and [ass], [lover]?</li>
-					<li>sex_m->How do these [penis]s feel, [lover]? [exclaim_low]!</li>	
-					<!-- ===Female Initiator=== -->
-					<li>sex_f->I want those [penis]s, [lover]!</li>
-					<li>sex_f->[lover], come here and [fuck] my [vagina] and [ass].</li>
-					<li>sex_f->Wanna [fuck] me with those [penis]s, [lover]?</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->Hey, [lover], want these [penis]s?</li>
+					<li>sex_n->I need your [vagina] and [ass], [lover]!</li>
+					<li>sex_n->How about I [fuck] your [vagina] and [ass], [lover]?</li>
+					<li>sex_n->How do these [penis]s feel, [lover]? [exclaim_low]!</li>	
+					<!-- ===Male Speaker=== -->
+					
+					<!-- ===Female Speaker=== -->
+					
+		</value>
+	</li>	
+
+	<!-- ===Reciever=== -->
+	<li Class="PatchOperationAdd">
+		<xpath>/Defs/InteractionDef[defName="Sex_Reverse_DoublePenetration" or defName="Sex_Reverse_DoublePenetrationM"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+				<li>r_logentry(tag=DoublePenetration_Sex_Reply_Reverse, priority=5)->[sex]</li>
+					<!-- ===Neutral=== -->
+					<li>sex_n->I want those [penis]s, [lover]!</li>
+					<li>sex_n->[lover], come here and [fuck] my [vagina] and [ass].</li>
+					<li>sex_n->Wanna [fuck] me with those [penis]s, [lover]?</li>
+					<!-- ===Male Speaker=== -->
+
+					<!-- ===Female Speaker=== -->
+					
 		</value>
 	</li>	
 
@@ -228,6 +426,7 @@
 			</rulesStrings>
 		</value>
 	</li>
+	
 	<li Class="PatchOperationReplace">
 		<xpath>/Defs/RulePackDef[defName = "DoublePenetrationReverseRP"]/rulePack/rulesStrings</xpath>
 		<value>

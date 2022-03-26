@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- ===ChitchatReplies=== -->
+	<InteractionDef ParentName="SexTalkReply">
+		<defName>Milking_Question</defName>
+		<label>milking-question</label>
+		<symbol>UI/Icons/MilkMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, tag=Milking_Questiona, priority=1)->[is_milkproducing]</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->They're [milkproducing] wonderfully, [counterpart]!</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->They're [milkproducing] wonderfully, thank you!</li>
+					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->They're [milkproducing] more than your [boobs] possibly could, [counterpart]!</li>
+					<li>is_milkproducing->They're [milkproducing] well, [counterpart].</li>
+					<li>is_milkproducing->These [boobs] are [milkproducing] well, it feels great!</li>
+					<li>is_milkproducing->The [milkproduction] is coming along nicely, [counterpart].</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, tag=Milking_Questionb, priority=1)->[not_milkproducing]</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->They're not [milkproducing] at all, [counterpart]! It's [milkterrible]!</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
+					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->They aren't [milkproducing] at all and you know it, [counterpart]!</li>
+					<li>not_milkproducing->They're not [milkproducing] at all, [counterpart]! It's [milkterrible]!</li>
+					<li>not_milkproducing->There's no milk coming out at all! It's [milkterrible]!</li>			
+				<li>r_logentry->...</li>				
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
+	<InteractionDef ParentName="SexTalkReply">
+		<defName>Milking_Questiona</defName>
+		<label>milking-question</label>
+		<symbol>UI/Icons/MilkMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_milkproducing]</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->That's great! My [boobs] are [milkproducing] nicely too!</li>
+					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->I should hope so...</li>
+					<li>is_milkproducing->That's good, [counterpart]. Mine are too.</li>
+					<li>is_milkproducing->My [boobs] are [milkproducing] well too, doesn't it feel nice?</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_milkproducing]</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] just can't compare to your [breastcompliment] [boobs]!</li>
+					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->Your [boobs] are [milkproducing] better than mine? [milkterrible]!</li>
+					<li>not_milkproducing->I'm jealous!</li>	
+				<li>r_logentry->...</li>		
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+	
+	<InteractionDef ParentName="SexTalkReply">
+		<defName>Milking_Questionb</defName>
+		<label>milking-question</label>
+		<symbol>UI/Icons/MilkMote</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry(INITIATOR_thoughtLabel==producing milk, priority=1)->[is_milkproducing]</li>
+					<li>is_milkproducing(INITIATOR_opinion>=25)->Your [breastcompliment] [boobs] will give us plenty of tasty milk soon enough, [counterpart]!</li>
+					<li>is_milkproducing(INITIATOR_opinion&lt;=-25)->You should be ashamed, [counterpart]!</li>
+					<li>is_milkproducing->I'm sure your [boobs] will get there, [counterpart].</li>
+				<li>r_logentry(INITIATOR_thoughtLabel==not producing milk, priority=1)->[not_milkproducing]</li>
+					<li>not_milkproducing(INITIATOR_opinion>=25)->My [boobs] are dry too, [counterpart]! It is [milkterrible]!</li>
+					<li>not_milkproducing(INITIATOR_opinion&lt;=-25)->At least you're not [milkproducing] better than me...</li>
+					<li>not_milkproducing->I'm in the same boat, [counterpart]!</li>
+				<li>r_logentry->...</li>		
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+</Defs>	
